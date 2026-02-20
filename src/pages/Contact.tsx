@@ -197,9 +197,9 @@ const Contact = () => {
                           : "border-border bg-secondary/30 text-muted-foreground hover:border-primary/40 hover:text-foreground"
                       }`}
                     >
-                      <span className="block font-medium">Custom Experience</span>
+                      <span className="block font-medium">General Inquiry</span>
                       <span className="block text-xs mt-0.5 opacity-70">
-                        Private tour · Tailored to you
+                        Questions · Feedback · Other
                       </span>
                     </button>
                   </div>
