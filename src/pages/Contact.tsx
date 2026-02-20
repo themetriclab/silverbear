@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Mail, Send, Camera } from "lucide-react";
 import Navbar from "@/components/Navbar";
@@ -9,7 +10,15 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
 const Contact = () => {
+  const [searchParams] = useSearchParams();
   const [selectedTour, setSelectedTour] = useState("");
+
+  useEffect(() => {
+    const tourParam = searchParams.get("tour");
+    if (tourParam) {
+      setSelectedTour(tourParam);
+    }
+  }, [searchParams]);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
