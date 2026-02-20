@@ -1,0 +1,293 @@
+import loonImg from "@/assets/loon-chick.jpg";
+import mooseImg from "@/assets/moose.jpg";
+import polarBearImg from "@/assets/polar-bear.jpg";
+import waterfowlImg from "@/assets/waterfowl.jpg";
+import swanImg from "@/assets/swan.jpg";
+
+export interface TourFact {
+  label: string;
+  value: string;
+}
+
+export interface TourSection {
+  title: string;
+  content: string;
+}
+
+export interface Tour {
+  slug: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  image: string;
+  month: string;
+  season: string;
+  location: string;
+  duration: string;
+  difficulty: string;
+  groupSize: string;
+  highlights: string[];
+  animalFacts: TourFact[];
+  migrationInfo: TourSection;
+  whyPhotograph: TourSection;
+  whatToExpect: TourSection;
+  gearTips: string[];
+}
+
+export const tours: Tour[] = [
+  {
+    slug: "loon-photography-tours",
+    title: "Loons & Chicks Photography Tours",
+    subtitle: "Intimate encounters with the icons of the Canadian wilderness",
+    description:
+      "Capture loons and their chicks amid misty landscapes and calm waters, while mastering low-light photography with an expert guide.",
+    image: loonImg,
+    month: "June – July",
+    season: "Early Summer",
+    location: "Northern Ontario Lakes",
+    duration: "3 Days",
+    difficulty: "Beginner–Intermediate",
+    groupSize: "4–6 Photographers",
+    highlights: [
+      "Photograph loon parents carrying chicks on their backs",
+      "Dawn sessions on glassy, mist-covered lakes",
+      "Learn low-light and reflection photography techniques",
+      "Canoe-based approaches for water-level perspectives",
+      "Potential sightings of beavers, otters, and bald eagles",
+    ],
+    animalFacts: [
+      { label: "Scientific Name", value: "Gavia immer (Common Loon)" },
+      { label: "Wingspan", value: "Up to 136 cm (54 inches)" },
+      { label: "Dive Depth", value: "Can dive over 60 metres (200 ft)" },
+      { label: "Speed", value: "Over 120 km/h in flight" },
+      { label: "Lifespan", value: "Up to 30 years in the wild" },
+      { label: "Diet", value: "Primarily fish, also crustaceans and aquatic insects" },
+    ],
+    migrationInfo: {
+      title: "Migration & Seasonal Behaviour",
+      content:
+        "Common Loons breed on freshwater lakes across Canada from May through August. They are fiercely territorial during nesting season, making them relatively predictable to locate. By late September, they migrate south to coastal ocean waters along the Atlantic and Pacific coasts, and the Gulf of Mexico. June and July are ideal because chicks have recently hatched and ride on their parents' backs—a behaviour that lasts only a few weeks—producing some of the most iconic and tender wildlife imagery possible.",
+    },
+    whyPhotograph: {
+      title: "Why This Is the Perfect Time to Photograph Them",
+      content:
+        "Early summer offers calm lake conditions with stunning morning mist, creating ethereal backdrops. The chicks are small enough to ride on their parents' backs, a fleeting behaviour that typically lasts only 2–3 weeks. The long daylight hours of the Canadian summer provide extended golden-hour windows at both dawn and dusk. Loons are also most vocal during breeding season, giving you the chance to capture dramatic yodelling and wailing postures.",
+    },
+    whatToExpect: {
+      title: "What to Expect on This Tour",
+      content:
+        "Each day begins before dawn with a canoe launch onto mirror-still waters. Your guide positions the canoe at respectful distances from nesting territories, using years of experience to predict loon behaviour. Mid-morning sessions focus on technique workshops—exposure for dark plumage against bright water, capturing eye-level compositions, and freezing the split-second moment a loon surfaces with a fish. Afternoons are free for editing sessions and exploring surrounding trails.",
+    },
+    gearTips: [
+      "300–600mm telephoto lens (500mm recommended)",
+      "Fast lens (f/4 or wider) for dawn low-light conditions",
+      "Waterproof camera bag or dry bag",
+      "Polarizing filter for cutting water reflections",
+      "Beanbag or gimbal head for canoe stability",
+    ],
+  },
+  {
+    slug: "algonquin-park-photography-tours",
+    title: "Algonquin Park Photography Tours",
+    subtitle: "Moose, loons, and boreal wilderness in Canada's iconic park",
+    description:
+      "A guided wildlife photo tour by boat in Ontario's Algonquin Park. Capture moose, loons, beavers, and more in their natural habitat.",
+    image: mooseImg,
+    month: "September – October",
+    season: "Autumn",
+    location: "Algonquin Provincial Park, Ontario",
+    duration: "4 Days",
+    difficulty: "All Levels",
+    groupSize: "4–8 Photographers",
+    highlights: [
+      "Photograph bull moose during the dramatic rutting season",
+      "Autumn foliage creating vibrant backdrops",
+      "Boat-based photography for unique water-level angles",
+      "Potential sightings of wolves, black bears, and foxes",
+      "Night photography sessions for star trails over the park",
+    ],
+    animalFacts: [
+      { label: "Scientific Name", value: "Alces alces (Moose)" },
+      { label: "Height", value: "Up to 2.1 m (6.9 ft) at the shoulder" },
+      { label: "Weight", value: "Males up to 700 kg (1,500 lbs)" },
+      { label: "Antler Span", value: "Up to 1.8 m (6 ft) across" },
+      { label: "Population in Algonquin", value: "Approximately 3,000 moose" },
+      { label: "Diet", value: "Aquatic vegetation, willow, birch, and aspen" },
+    ],
+    migrationInfo: {
+      title: "Seasonal Movement & Behaviour",
+      content:
+        "Moose in Algonquin Park don't migrate long distances but shift between seasonal habitats. In summer, they frequent lakes and wetlands to feed on aquatic plants and escape insects. Come autumn, bull moose enter the rut—a period of intense activity where they thrash vegetation, vocalize, and compete for mates. This makes September and October prime months, as moose are highly active, less wary, and often found in open areas. The surrounding hardwood forest erupts in brilliant reds, oranges, and yellows, providing spectacular natural backdrops.",
+    },
+    whyPhotograph: {
+      title: "Why Autumn Is the Best Season",
+      content:
+        "The fall rut drives bull moose into the open, dramatically increasing sighting frequency. Their massive antlers are fully developed and velvet-free, creating powerful portrait subjects. The autumn colour palette of Algonquin's maple and birch forests transforms every frame into a work of art. Cooler temperatures also mean more comfortable shooting conditions and reduced insect activity. Morning fog rolling across the lakes adds atmospheric depth that elevates simple wildlife shots into fine-art compositions.",
+    },
+    whatToExpect: {
+      title: "What to Expect on This Tour",
+      content:
+        "Days begin with pre-dawn departures by boat to known moose feeding areas. Your guide uses cow calls to attract bulls during the rut, creating controlled yet thrilling photographic opportunities. Mid-day workshops cover composition with fall colours, exposure bracketing for high-contrast forest scenes, and post-processing techniques. Late afternoons are spent along Highway 60 corridor, a famous moose-spotting route, followed by optional night photography sessions.",
+    },
+    gearTips: [
+      "70–200mm and 100–400mm zoom lenses for versatility",
+      "Wide-angle lens for landscape-wildlife combinations",
+      "Tripod with fluid head for video and stable long exposures",
+      "Rain cover—autumn weather can be unpredictable",
+      "Warm layers for early morning boat sessions",
+    ],
+  },
+  {
+    slug: "polar-bear-photography-tour",
+    title: "Polar Bear Photography Tours",
+    subtitle: "Face to face with the Arctic's apex predator",
+    description:
+      "Join a polar bear photography tour in the Arctic tundra and capture these majestic animals along with other Arctic wildlife.",
+    image: polarBearImg,
+    month: "October – November",
+    season: "Late Autumn",
+    location: "Churchill, Manitoba – Polar Bear Capital of the World",
+    duration: "5 Days",
+    difficulty: "Intermediate–Advanced",
+    groupSize: "6–10 Photographers",
+    highlights: [
+      "Photograph polar bears from a specialized Tundra Buggy",
+      "Witness bears sparring and play-fighting before freeze-up",
+      "Potential sightings of Arctic foxes, ptarmigan, and snowy owls",
+      "Northern Lights photography opportunities",
+      "Learn Arctic wildlife photography techniques from experts",
+    ],
+    animalFacts: [
+      { label: "Scientific Name", value: "Ursus maritimus" },
+      { label: "Weight", value: "Males up to 800 kg (1,760 lbs)" },
+      { label: "Standing Height", value: "Up to 3 m (10 ft)" },
+      { label: "Swimming Range", value: "Can swim over 100 km without rest" },
+      { label: "Population", value: "Approx. 26,000 worldwide" },
+      { label: "Fur", value: "Transparent hollow hairs over black skin" },
+    ],
+    migrationInfo: {
+      title: "The Great Gathering at Hudson Bay",
+      content:
+        "Every autumn, roughly 1,000 polar bears congregate along the western coast of Hudson Bay near Churchill, Manitoba, waiting for the sea ice to form. This annual gathering is one of the greatest wildlife spectacles on Earth. The bears have spent the summer fasting on land and are eager to return to the ice to hunt ringed seals. October and November mark the peak of this congregation, with bears sparring, socializing, and resting on the tundra. Once the bay freezes—usually by mid-November—the bears disperse onto the ice and become nearly impossible to photograph.",
+    },
+    whyPhotograph: {
+      title: "A Narrow Window of Opportunity",
+      content:
+        "The pre-freeze-up period offers the highest concentration of polar bears in an accessible location anywhere in the world. Bears are relatively relaxed and exhibit fascinating social behaviours—mock fights, curious investigations of Tundra Buggies, and tender moments between mothers and cubs. The Arctic light during October and November is low and golden for much of the day, creating dramatic side-lighting and long shadows. There's also the chance of photographing bears under the Northern Lights, producing truly once-in-a-lifetime images.",
+    },
+    whatToExpect: {
+      title: "What to Expect on This Tour",
+      content:
+        "You'll travel in heated Tundra Buggies—purpose-built vehicles that elevate you safely above bear height while providing stable shooting platforms. Full days are spent on the tundra with bears often approaching within metres of the buggy. Guides provide real-time coaching on exposure for white fur against snow, capturing action during sparring, and creative compositions with the vast Arctic landscape. Evening sessions may include Northern Lights photography and image review workshops.",
+    },
+    gearTips: [
+      "200–500mm or 100–400mm telephoto zoom",
+      "Wide-angle lens for environmental portraits and Northern Lights",
+      "Extra batteries—cold drains them rapidly",
+      "Hand and toe warmers for extended outdoor sessions",
+      "Lens hood to block wind and reduce flare in low Arctic sun",
+    ],
+  },
+  {
+    slug: "ontario-waterfowl-photography-tours",
+    title: "Ontario Waterfowl Photography Tours",
+    subtitle: "Ducks, herons, and shorebirds in serene wetland sanctuaries",
+    description:
+      "Capture stunning images of ducks, swans, ospreys, and other birdlife in calm natural settings across southern Ontario's wetlands.",
+    image: waterfowlImg,
+    month: "March – May",
+    season: "Spring",
+    location: "Southern Ontario Wetlands & Conservation Areas",
+    duration: "2 Days",
+    difficulty: "Beginner-Friendly",
+    groupSize: "4–6 Photographers",
+    highlights: [
+      "Photograph courtship displays and breeding plumage",
+      "Species include wood ducks, hooded mergansers, great blue herons",
+      "Blind-based photography for close, undisturbed encounters",
+      "Spring wildflowers and fresh green foliage as backdrops",
+      "Learn bird behaviour prediction for better compositions",
+    ],
+    animalFacts: [
+      { label: "Species Diversity", value: "Over 30 waterfowl species in Ontario" },
+      { label: "Wood Duck", value: "Often called North America's most beautiful duck" },
+      { label: "Great Blue Heron Height", value: "Up to 137 cm (4.5 ft) tall" },
+      { label: "Osprey Dive Speed", value: "Can plunge at 50 km/h into water" },
+      { label: "Hooded Merganser", value: "Males have a dramatic fan-shaped crest" },
+      { label: "Migration Scale", value: "Millions of waterfowl pass through Ontario annually" },
+    ],
+    migrationInfo: {
+      title: "The Spring Migration Flyway",
+      content:
+        "Ontario sits along the Atlantic and Mississippi flyways, two of the four major migratory bird routes in North America. Each spring, millions of waterfowl funnel through the province heading north to breeding grounds across the Canadian Shield and Arctic. Southern Ontario's wetlands serve as critical stopover sites where birds rest and refuel. March through May sees waves of different species arriving—early migrants like mallards and Canada geese give way to colourful wood ducks, teal, and diving ducks by mid-spring. This staggered arrival means every visit offers different species and behaviours.",
+    },
+    whyPhotograph: {
+      title: "Spring Plumage at Its Finest",
+      content:
+        "Spring is when waterfowl are in their most stunning breeding plumage. Males display brilliant colours and elaborate patterns to attract mates, making them extraordinarily photogenic. Courtship behaviours—head-bobbing, wing-flapping, synchronized swimming—provide dynamic action shots. The fresh green vegetation and blooming wildflowers of spring wetlands create vibrant, clean backgrounds that make subjects pop. Morning light reflecting off calm water produces beautiful catchlights in birds' eyes and mirror-like reflections.",
+    },
+    whatToExpect: {
+      title: "What to Expect on This Tour",
+      content:
+        "Sessions take place from carefully positioned photography blinds at the water's edge, allowing incredibly close encounters without disturbing the birds. Your guide helps you read bird behaviour to anticipate action—knowing when a heron is about to strike or when a duck will flap its wings. Workshops cover fast shutter speed techniques for freezing wing motion, using natural light for fill, and composition rules specific to bird photography. This tour is ideal for beginners wanting to build foundational wildlife photography skills.",
+    },
+    gearTips: [
+      "400–600mm telephoto lens for frame-filling shots from blinds",
+      "1.4x teleconverter for extra reach",
+      "Fast memory cards for continuous burst shooting",
+      "Camouflage lens cover to avoid startling wary species",
+      "Knee pads or ground pad for low-angle shooting",
+    ],
+  },
+  {
+    slug: "swan-and-cygnets-photography-tours",
+    title: "Swan & Cygnet Photography Tour",
+    subtitle: "Grace, elegance, and tender family moments on the water",
+    description:
+      "Capture graceful swans and their babies up close in calm, scenic wetlands—perfect for creating soft, intimate wildlife images.",
+    image: swanImg,
+    month: "May – June",
+    season: "Late Spring",
+    location: "Ontario Lakeshores & Rivers",
+    duration: "2 Days",
+    difficulty: "Beginner-Friendly",
+    groupSize: "4–6 Photographers",
+    highlights: [
+      "Photograph cygnets riding on their parents' backs",
+      "Capture the iconic heart-shaped pose of mating pairs",
+      "Soft morning light on calm waterways",
+      "Learn to create painterly, fine-art wildlife images",
+      "Potential bonus subjects: kingfishers, turtles, dragonflies",
+    ],
+    animalFacts: [
+      { label: "Species", value: "Mute Swan (Cygnus olor) & Trumpeter Swan (Cygnus buccinator)" },
+      { label: "Wingspan", value: "Up to 2.4 m (8 ft)—among the largest flying birds" },
+      { label: "Weight", value: "Up to 12 kg (26 lbs)" },
+      { label: "Mate Bond", value: "Swans typically mate for life" },
+      { label: "Clutch Size", value: "4–8 eggs per nest" },
+      { label: "Cygnet Colour", value: "Grey-brown, turning white in first year" },
+    ],
+    migrationInfo: {
+      title: "Resident & Migratory Populations",
+      content:
+        "Ontario hosts both resident Mute Swans (originally introduced from Europe) and native Trumpeter Swans, which were nearly extinct in the province by the 1900s but have been successfully reintroduced. Trumpeter Swans migrate short distances within Ontario, moving from breeding lakes to larger, ice-free waters in winter. Mute Swans tend to be more sedentary. May and June are the prime months because cygnets hatch in late May and are small, fluffy, and endearingly clumsy for only a few weeks. This brief window captures the most emotionally compelling family interactions.",
+    },
+    whyPhotograph: {
+      title: "Fleeting Moments of Tenderness",
+      content:
+        "Newborn cygnets are only small enough to ride on their parents' backs for about 2–3 weeks, making this an extremely time-sensitive photographic opportunity. The combination of pure white adult plumage against green spring vegetation creates high-contrast, visually striking images. Swans are relatively approachable compared to many wild birds, allowing for intimate compositions with shorter lenses. The calm waters of late spring mornings produce perfect reflections, doubling the visual impact of every shot.",
+    },
+    whatToExpect: {
+      title: "What to Expect on This Tour",
+      content:
+        "This tour focuses on patience and artistry. Sessions begin at golden hour when light is soft and warm. Your guide knows the nesting territories and positions you at respectful distances where swans are comfortable and natural in their behaviour. Workshops emphasize creating fine-art wildlife images—using negative space, backlighting, high-key exposure techniques, and intentional blur for painterly effects. This is a contemplative, rewarding tour perfect for photographers who value beauty and emotion over action.",
+    },
+    gearTips: [
+      "70–200mm f/2.8 for intimate, shallow depth-of-field portraits",
+      "300–400mm for tighter compositions without disturbing nests",
+      "Tripod with low-angle capability for water-level shots",
+      "Reflector disc for filling shadows in backlit scenes",
+      "Lens cloth—expect morning dew and mist on glass",
+    ],
+  },
+];
