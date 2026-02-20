@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Send, Camera } from "lucide-react";
+import { Mail, Send, Camera } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { tours } from "@/data/tours";
@@ -77,20 +77,8 @@ const Contact = () => {
                 {
                   icon: Mail,
                   label: "Email",
-                  value: "info@wildlifediscovered.ca",
-                  href: "mailto:info@wildlifediscovered.ca",
-                },
-                {
-                  icon: Phone,
-                  label: "Phone",
-                  value: "+1 (705) 555-0192",
-                  href: "tel:+17055550192",
-                },
-                {
-                  icon: MapPin,
-                  label: "Location",
-                  value: "Ontario, Canada",
-                  href: undefined,
+                  value: "wildifediscovered@outlook.com",
+                  href: "mailto:wildifediscovered@outlook.com",
                 },
               ].map((item) => (
                 <div key={item.label} className="flex items-start gap-4">
