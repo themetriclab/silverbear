@@ -152,14 +152,12 @@ const TourDetail = () => {
           <p className="text-muted-foreground mb-8 max-w-lg mx-auto">
             Secure your spot on the {tour.title}. Limited to {tour.groupSize} per expedition.
           </p>
-          <a
-            href="https://wildlifediscovered.ca/"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to={`/contact?tour=${tour.slug}`}
             className="inline-block px-10 py-4 bg-primary text-primary-foreground font-medium tracking-widest uppercase text-sm hover:bg-primary/90 transition-colors"
           >
             Book This Tour
-          </a>
+          </Link>
         </motion.section>
 
         {/* Other Tours */}
