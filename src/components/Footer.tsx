@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
     <footer id="contact" className="py-16 px-6 bg-secondary/30 border-t border-border">
@@ -45,14 +47,12 @@ const Footer = () => {
             <p className="text-muted-foreground text-sm mb-4">
               Interested in a photography tour? Reach out to plan your next adventure.
             </p>
-            <a
-              href="https://wildlifediscovered.ca/contact-us/"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/contact"
               className="inline-block px-6 py-2.5 border border-primary text-primary text-sm font-medium tracking-wider uppercase hover:bg-primary hover:text-primary-foreground transition-all duration-300"
             >
               Contact Us
-            </a>
+            </Link>
           </div>
         </div>
 

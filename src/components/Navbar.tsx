@@ -7,7 +7,7 @@ const navItems = [
   { label: "Home", href: "/#home" },
   { label: "Tours", href: "/#tours" },
   { label: "About", href: "/#about" },
-  { label: "Contact", href: "/#contact" },
+  { label: "Contact", href: "/contact" },
 ];
 
 const Navbar = () => {
@@ -36,15 +36,25 @@ const Navbar = () => {
 
         {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-8">
-          {navItems.map((item) => (
-            <a
-              key={item.label}
-              href={item.href}
-              className="text-sm font-medium tracking-widest uppercase text-foreground/80 hover:text-primary transition-colors duration-300"
-            >
-              {item.label}
-            </a>
-          ))}
+          {navItems.map((item) =>
+            item.href.startsWith("/") && !item.href.startsWith("/#") ? (
+              <Link
+                key={item.label}
+                to={item.href}
+                className="text-sm font-medium tracking-widest uppercase text-foreground/80 hover:text-primary transition-colors duration-300"
+              >
+                {item.label}
+              </Link>
+            ) : (
+              <a
+                key={item.label}
+                href={item.href}
+                className="text-sm font-medium tracking-widest uppercase text-foreground/80 hover:text-primary transition-colors duration-300"
+              >
+                {item.label}
+              </a>
+            )
+          )}
         </div>
 
         {/* Mobile toggle */}
@@ -67,16 +77,27 @@ const Navbar = () => {
             className="md:hidden bg-background/98 backdrop-blur-md border-t border-border"
           >
             <div className="px-6 py-6 flex flex-col gap-4">
-              {navItems.map((item) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  onClick={() => setMobileOpen(false)}
-                  className="text-sm font-medium tracking-widest uppercase text-foreground/80 hover:text-primary transition-colors"
-                >
-                  {item.label}
-                </a>
-              ))}
+              {navItems.map((item) =>
+                item.href.startsWith("/") && !item.href.startsWith("/#") ? (
+                  <Link
+                    key={item.label}
+                    to={item.href}
+                    onClick={() => setMobileOpen(false)}
+                    className="text-sm font-medium tracking-widest uppercase text-foreground/80 hover:text-primary transition-colors"
+                  >
+                    {item.label}
+                  </Link>
+                ) : (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    onClick={() => setMobileOpen(false)}
+                    className="text-sm font-medium tracking-widest uppercase text-foreground/80 hover:text-primary transition-colors"
+                  >
+                    {item.label}
+                  </a>
+                )
+              )}
             </div>
           </motion.div>
         )}
