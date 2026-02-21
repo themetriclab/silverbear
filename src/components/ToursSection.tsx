@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Calendar } from "lucide-react";
 import { tours } from "@/data/tours";
+import DiagonalSplitImage from "@/components/DiagonalSplitImage";
 
 const ToursSection = () => {
   return (
@@ -34,12 +35,21 @@ const ToursSection = () => {
                 className="group block bg-card border border-border rounded-lg overflow-hidden hover:border-primary/40 transition-all duration-500"
               >
                 <div className="relative overflow-hidden aspect-[16/10]">
-                  <img
-                    src={tour.image}
-                    alt={tour.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    loading="lazy"
-                  />
+                  {tour.image2 ? (
+                    <DiagonalSplitImage
+                      image1={tour.image}
+                      image2={tour.image2}
+                      alt={tour.title}
+                      className="w-full h-full transition-transform duration-700 group-hover:scale-110"
+                    />
+                  ) : (
+                    <img
+                      src={tour.image}
+                      alt={tour.title}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      loading="lazy"
+                    />
+                  )}
                   <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
                 </div>
                 <div className="p-6">

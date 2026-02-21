@@ -27,6 +27,7 @@ export interface Tour {
   subtitle: string;
   description: string;
   image: string;
+  image2?: string;
   month: string;
   season: string;
   location: string;
@@ -267,12 +268,13 @@ export const tours: Tour[] = [
       "A non-refundable $2,000 CAD deposit is required at time of booking. Balance in full is due 90 days prior to departure. Fees are based on double occupancy — single rooms available for an additional supplement. We accept e-transfer, PayPal (add 3.7%), or bank wire (add $17.50). Travel and health insurance are highly recommended.",
   },
   {
-    slug: "ontario-waterfowl-photography-tours",
-    title: "Waterfowl Photography Workshops",
-    subtitle: "Photograph diving ducks, swans, osprey, and terns from a custom-built low-angle photography boat on Lake Ontario",
+    slug: "waterfowl-and-swan-photography-tours",
+    title: "Waterfowl & Swan Photography Workshops",
+    subtitle: "Photograph diving ducks, fighting swans, osprey, terns, and tender swan families from a custom-built low-angle photography boat",
     description:
-      "Join Wildlife Discovered for an intimate waterfowl photography workshop aboard a custom-built boat designed for low-angle bird photography. Capture stunning images of diving ducks, fighting swans, osprey hunting, and terns in flight across southern Ontario's waters.",
+      "Join Wildlife Discovered for an intimate waterfowl and swan photography workshop aboard a custom-built boat on southern Ontario's waters. Two seasonal options: late April for dramatic swan fights, diving ducks, and osprey — or late May for swan cygnets, terns in flight, and fine-art family portraits.",
     image: waterfowlImg,
+    image2: swanImg,
     month: "April – May",
     season: "Spring",
     location: "Southern Ontario, Lake Ontario",
@@ -280,46 +282,47 @@ export const tours: Tour[] = [
     difficulty: "All Levels",
     groupSize: "Maximum 4 Photographers",
     highlights: [
-      "Photograph from a custom-built boat designed specifically for low-angle waterfowl photography",
-      "Capture trumpeter swans and mute swans in dramatic mating displays and territorial fights",
-      "Osprey photography in flight — hunting, carrying fish, and building nests",
-      "Common and arctic terns in flight dragging their bills through the water",
-      "Gorgeous long-tailed ducks and other diving duck species in breeding plumage",
+      "Photograph from a custom-built boat designed specifically for low-angle waterfowl and swan photography",
+      "Late April: Capture fighting swans, mating displays, diving ducks, and osprey building nests",
+      "Late May: Photograph swan cygnets riding on parents' backs and terns dragging bills through water",
+      "Osprey photography in flight — hunting, carrying fish, and delivering to nests",
+      "Gorgeous long-tailed ducks, coots, red-winged blackbirds, and more in breeding plumage",
       "Flight photography skills and camera setup covered during the workshop",
     ],
     animalFacts: [
       { label: "Species Diversity", value: "Over 30 waterfowl species in Ontario" },
+      { label: "Trumpeter Swan", value: "North America's heaviest native flying bird — mates for life" },
+      { label: "Mute Swan", value: "Introduced from Europe, known for dramatic fights and displays" },
       { label: "Long-tailed Duck", value: "Can dive over 60 m deep — one of the deepest diving ducks" },
-      { label: "Trumpeter Swan", value: "North America's heaviest native flying bird" },
-      { label: "Mute Swan", value: "Introduced from Europe, known for dramatic displays" },
       { label: "Osprey", value: "Dives feet-first to catch fish from up to 40 m above water" },
-      { label: "Common Tern", value: "Plunge-dives and drags bill through water while hunting" },
+      { label: "Cygnet Window", value: "Cygnets ride on parents' backs for only 2–3 weeks" },
     ],
     migrationInfo: {
-      title: "Spring Migration & Waterfowl Concentrations",
+      title: "Spring Migration & Seasonal Waterfowl Behaviour",
       content:
-        "Ontario sits along the Atlantic and Mississippi flyways, two of the four major migratory bird routes in North America. Each spring, large congregations of ducks, swans, and terns move into southern Ontario's waters as they head north to breeding grounds. The late April workshop offers the best concentrations of diving ducks, fighting swans in full display, early terns, and osprey building nests. By late May, swan cygnets have hatched and osprey are actively hunting — offering a completely different but equally compelling set of subjects.",
+        "Ontario sits along the Atlantic and Mississippi flyways, two of the four major migratory bird routes in North America. Each spring, large congregations of ducks, swans, and terns move into southern Ontario's waters. The late April workshop offers the peak of diving ducks, fighting swans in full territorial display, early terns, and osprey building nests. By late May, swan cygnets have hatched and are small enough to ride on their parents' backs — a tender behaviour lasting only 2–3 weeks. Ontario hosts both resident mute swans and native trumpeter swans, which were nearly extinct by the 1900s but have been successfully reintroduced.",
     },
     whyPhotograph: {
-      title: "Why Spring Is the Best Time for Waterfowl Photography",
+      title: "Two Seasons, Two Experiences — Both Extraordinary",
       content:
-        "Spring brings waterfowl in their most stunning breeding plumage. Mute swans engage in spectacular fights and mating displays, while trumpeter swans protect their mates with dramatic posturing. Osprey are actively hunting and carrying fish and nesting materials, providing incredible flight photography opportunities. The custom boat offers perfect sun angles and pleasant backgrounds — far superior to shooting from shore. Red-winged blackbirds in full display, coots with brilliant bills, and diving ducks round out an extraordinary diversity of subjects.",
+        "Late April brings waterfowl in their most stunning breeding plumage. Mute swans engage in spectacular fights and mating displays, while trumpeter swans protect their mates with dramatic posturing. Osprey are actively hunting and carrying fish and nesting materials. By late May, the mood shifts to tenderness — newborn cygnets ride on their parents' backs, pure white adult plumage glows against green spring vegetation, and calm morning waters produce perfect reflections. The custom boat offers perfect sun angles and pleasant backgrounds at all times — far superior to shooting from shore.",
     },
     whatToExpect: {
-      title: "What to Expect on This Waterfowl Photography Workshop",
+      title: "What to Expect on This Workshop",
       content:
-        "Meet at the hotel just before sunrise and head to the dock. You'll photograph from a custom-built boat specifically designed for low-angle waterfowl photography in absolute comfort, with perfect sun angles and clean backgrounds. Morning sessions run until the light becomes too harsh, then midday is yours — download images or explore the beaches of Lake Ontario. Afternoons and evenings bring a second session in warm golden light. Your guide provides personalized instruction on flight photography techniques and camera setup throughout.",
+        "Meet at the hotel just before sunrise and head to the dock. You'll photograph from a custom-built boat specifically designed for low-angle waterfowl and swan photography in absolute comfort, with perfect sun angles and clean backgrounds. Morning sessions run until the light becomes too harsh, then midday is yours — download images or explore the beaches of Lake Ontario. Afternoons and evenings bring a second session in warm golden light. Your guide provides personalized instruction on flight photography, fine-art techniques, and camera setup throughout.",
     },
     gearTips: [
       "100–400mm or 200–600mm zoom lens for flight photography versatility",
+      "70–200mm f/2.8 for intimate swan and cygnet portraits with shallow depth of field",
       "Fast lens (f/4 or wider) for freezing wing motion in early light",
       "Fast memory cards for continuous burst shooting during flight sequences",
       "Polarizing filter for cutting glare on the water surface",
       "Warm layered clothing — spring mornings on the water can be cold",
     ],
     pricing: [
-      { label: "2-Day Late April Waterfowl Workshop", price: "$985.00", dates: "April 2026", availability: "Full" },
-      { label: "2-Day Late May Waterfowl Workshop", price: "$985.00", dates: "May 2026", availability: "Full" },
+      { label: "2-Day Late April — Ducks, Fighting Swans & Osprey", price: "$985.00", dates: "April 2026", availability: "Full" },
+      { label: "2-Day Late May — Cygnets, Terns & Osprey", price: "$985.00", dates: "May 2026", availability: "Full" },
     ],
     priceIncludes: [
       "Personalized instruction and camera setup for flight and low-level photography",
@@ -332,56 +335,5 @@ export const tours: Tour[] = [
     ],
     paymentPolicy:
       "A non-refundable 50% deposit plus 13% Ontario sales tax is required to reserve your spot. Balance in full is due 2 months prior to the workshop start date. We accept PayPal or E-transfers. Travel insurance and health insurance are highly recommended.",
-  },
-  {
-    slug: "swan-and-cygnets-photography-tours",
-    title: "Swan & Cygnet Photography Tour",
-    subtitle: "Grace, elegance, and tender family moments on the water",
-    description:
-      "Capture graceful swans and their babies up close in calm, scenic wetlands—perfect for creating soft, intimate wildlife images.",
-    image: swanImg,
-    month: "May – June",
-    season: "Late Spring",
-    location: "Ontario Lakeshores & Rivers",
-    duration: "2 Days",
-    difficulty: "Beginner-Friendly",
-    groupSize: "4 Photographers",
-    highlights: [
-      "Photograph cygnets riding on their parents' backs",
-      "Capture the iconic heart-shaped pose of mating pairs",
-      "Soft morning light on calm waterways",
-      "Learn to create painterly, fine-art wildlife images",
-      "Potential bonus subjects: kingfishers, turtles, dragonflies",
-    ],
-    animalFacts: [
-      { label: "Species", value: "Mute Swan (Cygnus olor) & Trumpeter Swan (Cygnus buccinator)" },
-      { label: "Wingspan", value: "Up to 2.4 m (8 ft)—among the largest flying birds" },
-      { label: "Weight", value: "Up to 12 kg (26 lbs)" },
-      { label: "Mate Bond", value: "Swans typically mate for life" },
-      { label: "Clutch Size", value: "4–8 eggs per nest" },
-      { label: "Cygnet Colour", value: "Grey-brown, turning white in first year" },
-    ],
-    migrationInfo: {
-      title: "Resident & Migratory Populations",
-      content:
-        "Ontario hosts both resident Mute Swans (originally introduced from Europe) and native Trumpeter Swans, which were nearly extinct in the province by the 1900s but have been successfully reintroduced. Trumpeter Swans migrate short distances within Ontario, moving from breeding lakes to larger, ice-free waters in winter. Mute Swans tend to be more sedentary. May and June are the prime months because cygnets hatch in late May and are small, fluffy, and endearingly clumsy for only a few weeks. This brief window captures the most emotionally compelling family interactions.",
-    },
-    whyPhotograph: {
-      title: "Fleeting Moments of Tenderness",
-      content:
-        "Newborn cygnets are only small enough to ride on their parents' backs for about 2–3 weeks, making this an extremely time-sensitive photographic opportunity. The combination of pure white adult plumage against green spring vegetation creates high-contrast, visually striking images. Swans are relatively approachable compared to many wild birds, allowing for intimate compositions with shorter lenses. The calm waters of late spring mornings produce perfect reflections, doubling the visual impact of every shot.",
-    },
-    whatToExpect: {
-      title: "What to Expect on This Tour",
-      content:
-        "This tour focuses on patience and artistry. Sessions begin at golden hour when light is soft and warm. Your guide knows the nesting territories and positions you at respectful distances where swans are comfortable and natural in their behaviour. Workshops emphasize creating fine-art wildlife images—using negative space, backlighting, high-key exposure techniques, and intentional blur for painterly effects. This is a contemplative, rewarding tour perfect for photographers who value beauty and emotion over action.",
-    },
-    gearTips: [
-      "70–200mm f/2.8 for intimate, shallow depth-of-field portraits",
-      "300–400mm for tighter compositions without disturbing nests",
-      "Tripod with low-angle capability for water-level shots",
-      "Reflector disc for filling shadows in backlit scenes",
-      "Lens cloth—expect morning dew and mist on glass",
-    ],
   },
 ];

@@ -4,6 +4,7 @@ import { ArrowLeft, Calendar, MapPin, Clock, Users, Mountain, Camera, ChevronRig
 import { tours } from "@/data/tours";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import DiagonalSplitImage from "@/components/DiagonalSplitImage";
 
 const fadeUp = {
   initial: { opacity: 0, y: 30 },
@@ -35,7 +36,11 @@ const TourDetail = () => {
 
       {/* Hero */}
       <section className="relative h-[70vh] md:h-[80vh] overflow-hidden">
-        <img src={tour.image} alt={tour.title} className="absolute inset-0 w-full h-full object-cover" />
+        {tour.image2 ? (
+          <DiagonalSplitImage image1={tour.image} image2={tour.image2} alt={tour.title} className="absolute inset-0 w-full h-full" />
+        ) : (
+          <img src={tour.image} alt={tour.title} className="absolute inset-0 w-full h-full object-cover" />
+        )}
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-background/20" />
         <div className="relative z-10 flex flex-col justify-end h-full max-w-7xl mx-auto px-6 pb-16">
           <Link
@@ -237,12 +242,16 @@ const TourDetail = () => {
                 className="group block bg-card border border-border rounded-lg overflow-hidden hover:border-primary/40 transition-all duration-500"
               >
                 <div className="relative overflow-hidden aspect-[16/10]">
-                  <img
-                    src={t.image}
-                    alt={t.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    loading="lazy"
-                  />
+                  {t.image2 ? (
+                    <DiagonalSplitImage image1={t.image} image2={t.image2} alt={t.title} className="w-full h-full transition-transform duration-700 group-hover:scale-110" />
+                  ) : (
+                    <img
+                      src={t.image}
+                      alt={t.title}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      loading="lazy"
+                    />
+                  )}
                 </div>
                 <div className="p-4">
                   <p className="text-xs text-primary font-medium tracking-wider uppercase mb-1">{t.month}</p>
