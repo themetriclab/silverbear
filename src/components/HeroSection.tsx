@@ -12,7 +12,7 @@ const HeroSection = () => {
         className="absolute inset-0 w-full h-full object-cover"
       >
         <source
-          src="https://videos.files.wordpress.com/cdh8oVe2/sequence-01_2.mp4"
+          src="/videos/Header_Ai.mp4"
           type="video/mp4"
         />
       </video>
