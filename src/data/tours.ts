@@ -47,7 +47,7 @@ export const tours: Tour[] = [
     location: "Northern Ontario Lakes",
     duration: "3 Days",
     difficulty: "Beginner–Intermediate",
-    groupSize: "4–6 Photographers",
+    groupSize: "4 Photographers",
     highlights: [
       "Photograph loon parents carrying chicks on their backs",
       "Dawn sessions on glassy, mist-covered lakes",
@@ -98,7 +98,7 @@ export const tours: Tour[] = [
     location: "Algonquin Provincial Park, Ontario",
     duration: "4 Days",
     difficulty: "All Levels",
-    groupSize: "4–8 Photographers",
+    groupSize: "4 Photographers",
     highlights: [
       "Photograph bull moose during the dramatic rutting season",
       "Autumn foliage creating vibrant backdrops",
@@ -200,7 +200,7 @@ export const tours: Tour[] = [
     location: "Southern Ontario Wetlands & Conservation Areas",
     duration: "2 Days",
     difficulty: "Beginner-Friendly",
-    groupSize: "4–6 Photographers",
+    groupSize: "4 Photographers",
     highlights: [
       "Photograph courtship displays and breeding plumage",
       "Species include wood ducks, hooded mergansers, great blue herons",
@@ -210,9 +210,9 @@ export const tours: Tour[] = [
     ],
     animalFacts: [
       { label: "Species Diversity", value: "Over 30 waterfowl species in Ontario" },
-      { label: "Wood Duck", value: "Often called North America's most beautiful duck" },
-      { label: "Great Blue Heron Height", value: "Up to 137 cm (4.5 ft) tall" },
-      { label: "Osprey Dive Speed", value: "Can plunge at 50 km/h into water" },
+      { label: "Long-tailed Duck", value: "Can dive over 60 m deep—one of the deepest diving ducks" },
+      { label: "Ring-necked Duck", value: "Named for a subtle chestnut neck ring, hard to see in the field" },
+      { label: "Bufflehead", value: "One of the smallest diving ducks in North America" },
       { label: "Hooded Merganser", value: "Males have a dramatic fan-shaped crest" },
       { label: "Migration Scale", value: "Millions of waterfowl pass through Ontario annually" },
     ],
@@ -251,7 +251,7 @@ export const tours: Tour[] = [
     location: "Ontario Lakeshores & Rivers",
     duration: "2 Days",
     difficulty: "Beginner-Friendly",
-    groupSize: "4–6 Photographers",
+    groupSize: "4 Photographers",
     highlights: [
       "Photograph cygnets riding on their parents' backs",
       "Capture the iconic heart-shaped pose of mating pairs",
