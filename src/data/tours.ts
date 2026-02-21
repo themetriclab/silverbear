@@ -1,7 +1,7 @@
 import loonImg from "@/assets/loon-chick.jpg";
 import mooseImg from "@/assets/moose.jpg";
 import polarBearImg from "@/assets/polar-bear.jpg";
-import waterfowlImg from "@/assets/waterfowl-extended.jpg";
+import waterfowlImg from "@/assets/waterfowl.jpg";
 import swanImg from "@/assets/swan-extended.jpg";
 
 export interface TourFact {
