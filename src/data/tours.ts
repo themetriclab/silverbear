@@ -14,6 +14,13 @@ export interface TourSection {
   content: string;
 }
 
+export interface TourPricing {
+  label: string;
+  price: string;
+  dates: string;
+  availability: string;
+}
+
 export interface Tour {
   slug: string;
   title: string;
@@ -32,29 +39,33 @@ export interface Tour {
   whyPhotograph: TourSection;
   whatToExpect: TourSection;
   gearTips: string[];
+  pricing?: TourPricing[];
+  priceIncludes?: string[];
+  priceExcludes?: string[];
+  paymentPolicy?: string;
 }
 
 export const tours: Tour[] = [
   {
     slug: "loon-photography-tours",
-    title: "Loons & Chicks Photography Tours",
-    subtitle: "Intimate encounters with the icons of the Canadian wilderness",
+    title: "Loon Photography Tours & Workshops",
+    subtitle: "North America's leading loon photography experience — capture stunning images of common loons and their chicks on pristine Northern Ontario lakes",
     description:
-      "Capture loons and their chicks amid misty landscapes and calm waters, while mastering low-light photography with an expert guide.",
+      "Join Wildlife Discovered on a guided loon photography tour in Northern Ontario. Photograph common loons and their chicks from a purpose-built boat on sparkling northern lakes, with expert instruction and a 90% chick success rate since 1997.",
     image: loonImg,
     month: "July",
     season: "Summer",
-    location: "Northern Ontario Lakes",
-    duration: "3 Days",
-    difficulty: "Beginner–Intermediate",
-    groupSize: "4 Photographers",
+    location: "Northern Ontario, 2.5 Hours North of Toronto",
+    duration: "2–6 Days",
+    difficulty: "All Levels",
+    groupSize: "Maximum 4 Photographers",
     highlights: [
-      "Photograph loon parents carrying chicks on their backs",
-      "Watch and capture parents feeding their young",
-      "Dawn and dusk sessions on glassy, mist-covered lakes",
-      "Learn low-light and reflection photography techniques",
-      "Photograph from a small flat-bottom boat with low sides and swivel seats for comfort and stability",
-      "Potential sightings of beavers, otters, and bald eagles",
+      "Photograph loon parents carrying chicks on their backs — a fleeting behaviour lasting only weeks",
+      "Watch and capture parents feeding their young fish and crayfish up close",
+      "Shoot from just 16 inches above the water for dramatic eye-level perspectives",
+      "Morning and evening sessions timed for the best golden-hour light",
+      "90% loon chick success rate since 1997 across 11 monitored nesting pairs on 9 lakes",
+      "Bonus wildlife: moose, black bear, beaver, muskrat, blue herons, kingfishers, and more",
     ],
     animalFacts: [
       { label: "Scientific Name", value: "Gavia immer (Common Loon)" },
@@ -62,30 +73,49 @@ export const tours: Tour[] = [
       { label: "Dive Depth", value: "Can dive over 60 metres (200 ft)" },
       { label: "Speed", value: "Over 120 km/h in flight" },
       { label: "Lifespan", value: "Up to 30 years in the wild" },
-      { label: "Diet", value: "Primarily fish, also crustaceans and aquatic insects" },
+      { label: "Diet", value: "Primarily fish, also crayfish and aquatic insects" },
     ],
     migrationInfo: {
-      title: "Migration & Seasonal Behaviour",
+      title: "Loon Nesting Season & Behaviour",
       content:
-        "Common Loons breed on freshwater lakes across Canada from May through August. They are fiercely territorial during nesting season, making them relatively predictable to locate. By late September, they migrate south to coastal ocean waters along the Atlantic and Pacific coasts, and the Gulf of Mexico. July is ideal because chicks have recently hatched and ride on their parents' backs—a behaviour that lasts only a few weeks. You'll also witness the parents feeding their young, producing some of the most iconic and tender wildlife imagery possible.",
+        "Common loons breed on freshwater lakes across Canada from May through August, fiercely defending their nesting territories. By late September they migrate south to coastal waters along the Atlantic, Pacific, and Gulf coasts. July is the ideal month because chicks have recently hatched and still ride on their parents' backs — a tender behaviour that lasts only a few weeks. You'll also witness parents feeding their young, creating some of the most iconic and emotionally powerful wildlife images possible. Wildlife Discovered monitors 11 nesting pairs across 9 different lakes, offering photographers a remarkable 90% chick success rate since 1997.",
     },
     whyPhotograph: {
-      title: "Why This Is the Perfect Time to Photograph Them",
+      title: "Why July Is the Best Time for Loon Photography",
       content:
-        "Early summer offers calm lake conditions with stunning morning mist, creating ethereal backdrops. The chicks are small enough to ride on their parents' backs, a fleeting behaviour that typically lasts only 2–3 weeks. The long daylight hours of the Canadian summer provide extended golden-hour windows at both dawn and dusk. Loons are also most vocal during breeding season, giving you the chance to capture dramatic yodelling and wailing postures.",
+        "July offers calm lake conditions with stunning morning mist, creating ethereal backdrops for loon photography. The chicks are small enough to ride on their parents' backs — a fleeting behaviour that typically lasts only 2–3 weeks. The long daylight hours of the Canadian summer provide extended golden-hour windows at both dawn and dusk, perfect for low-light photography. Loons are also most vocal during breeding season, giving you the chance to capture dramatic yodelling and wailing postures. Different lakes offer varied water colours and reflections, ensuring each session produces unique compositions.",
     },
     whatToExpect: {
-      title: "What to Expect on This Tour",
+      title: "What to Expect on This Loon Photography Tour",
       content:
-        "Morning and evening sessions are spent on the water in a small, flat-bottom boat with low sides and swivel seats—designed for stability, comfort, and practicality when shooting at water level. Your guide positions the boat at respectful distances from nesting territories, using years of experience to predict loon behaviour. Sessions focus on technique workshops—exposure for dark plumage against bright water, capturing eye-level compositions, and freezing the split-second moment a loon surfaces with a fish. Midday is free for editing sessions and exploring surrounding trails.",
+        "Each day begins with an early morning session on the water, timed for the best light. You'll photograph from a purpose-built boat with a flat floor, low sides, and comfortable swivel seats that drop down to position your lens just 16 inches from the water surface — perfect for dramatic eye-level loon portraits. A quiet electric trolling motor gets you in close without disturbing the birds, while an outboard gets you to each lake quickly. Your certified captain, guide, and instructor is with you at all times, offering personalized tips and calling out approaching wildlife. Midday is free to download images, explore Algonquin's trails for moose and boreal birds like grey jays and spruce grouse, or simply relax. Then it's back on the water for an evening session to capture loons in warm golden light.",
     },
     gearTips: [
-      "300–600mm telephoto lens (500mm recommended)",
-      "Fast lens (f/4 or wider) for dawn low-light conditions",
-      "Waterproof camera bag or dry bag",
-      "Polarizing filter for cutting water reflections",
-      "Beanbag or gimbal head for boat stability",
+      "300–600mm telephoto lens (500mm recommended for frame-filling loon portraits)",
+      "Fast lens (f/4 or wider) for dawn and dusk low-light conditions",
+      "Waterproof camera bag or dry bag for boat photography",
+      "Polarizing filter for cutting water reflections and boosting colour",
+      "Beanbag or gimbal head for stable shooting from the boat",
     ],
+    pricing: [
+      { label: "3-Day Loons & Chicks Workshop", price: "$1,470.00", dates: "July 06–08, 2026", availability: "Full" },
+      { label: "3-Day Loons & Chicks Workshop", price: "$1,470.00", dates: "July 09–11, 2026", availability: "Full" },
+      { label: "2-Day Loons & Chicks Workshop", price: "$980.00", dates: "July 13–14, 2026", availability: "1 spot left" },
+    ],
+    priceIncludes: [
+      "Pick up and drop off at the hotel",
+      "Light breakfast — yogurt, fruit juice, water, and granola bars",
+      "Personalized photography instruction at all times",
+      "Chilled bottled water on the boat",
+    ],
+    priceExcludes: [
+      "Flights and transportation to the hotel",
+      "Accommodation (recommendations gladly provided)",
+      "All meals except breakfast",
+      "13% HST Ontario taxes",
+    ],
+    paymentPolicy:
+      "A non-refundable 50% deposit plus 13% Ontario sales tax is required to reserve your spot. Balance in full is due 2 months prior to the workshop start date. We accept PayPal or E-transfers. Travel insurance and health insurance are highly recommended.",
   },
   {
     slug: "algonquin-park-photography-tours",
