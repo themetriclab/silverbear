@@ -1,6 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowLeft, Calendar, MapPin, Clock, Users, Mountain, Camera, ChevronRight } from "lucide-react";
+import { ArrowLeft, Calendar, MapPin, Clock, Users, Mountain, Camera, ChevronRight, DollarSign, Check, X, CreditCard } from "lucide-react";
 import { tours } from "@/data/tours";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -143,6 +143,72 @@ const TourDetail = () => {
             ))}
           </div>
         </motion.section>
+
+        {/* Pricing & Dates */}
+        {tour.pricing && tour.pricing.length > 0 && (
+          <motion.section {...fadeUp}>
+            <SectionHeader label="Pricing" title="Available Dates & Rates" />
+            <div className="grid md:grid-cols-3 gap-4 mt-10">
+              {tour.pricing.map((p, i) => (
+                <div key={i} className="bg-card border border-border rounded-lg p-6 flex flex-col">
+                  <p className="text-sm font-medium text-foreground mb-2">{p.label}</p>
+                  <p className="text-2xl font-display font-bold text-primary mb-2">{p.price}</p>
+                  <div className="flex items-center gap-2 mb-3">
+                    <Calendar size={14} className="text-muted-foreground" />
+                    <p className="text-sm text-muted-foreground">{p.dates}</p>
+                  </div>
+                  <span className={`mt-auto inline-block text-xs font-medium tracking-wider uppercase px-3 py-1 rounded-full ${
+                    p.availability.toLowerCase() === "full"
+                      ? "bg-destructive/10 text-destructive"
+                      : "bg-primary/10 text-primary"
+                  }`}>
+                    {p.availability}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </motion.section>
+        )}
+
+        {/* Inclusions & Exclusions */}
+        {(tour.priceIncludes || tour.priceExcludes) && (
+          <motion.section {...fadeUp} className="grid md:grid-cols-2 gap-8">
+            {tour.priceIncludes && (
+              <div>
+                <SectionHeader label="Included" title="What's Included" />
+                <div className="mt-6 space-y-3">
+                  {tour.priceIncludes.map((item, i) => (
+                    <div key={i} className="flex items-start gap-3">
+                      <Check size={16} className="text-primary mt-0.5 shrink-0" />
+                      <p className="text-foreground/90 text-sm">{item}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+            {tour.priceExcludes && (
+              <div>
+                <SectionHeader label="Not Included" title="What's Not Included" />
+                <div className="mt-6 space-y-3">
+                  {tour.priceExcludes.map((item, i) => (
+                    <div key={i} className="flex items-start gap-3">
+                      <X size={16} className="text-muted-foreground mt-0.5 shrink-0" />
+                      <p className="text-muted-foreground text-sm">{item}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </motion.section>
+        )}
+
+        {/* Payment Policy */}
+        {tour.paymentPolicy && (
+          <motion.section {...fadeUp} className="bg-card border border-border rounded-xl p-8 md:p-12">
+            <SectionHeader label="Booking" title="Payment & Registration Policy" />
+            <p className="text-muted-foreground leading-relaxed mt-6 max-w-3xl">{tour.paymentPolicy}</p>
+          </motion.section>
+        )}
 
         {/* CTA */}
         <motion.section {...fadeUp} className="text-center py-12">
