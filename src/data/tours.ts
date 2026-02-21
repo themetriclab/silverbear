@@ -98,9 +98,8 @@ export const tours: Tour[] = [
       "Beanbag or gimbal head for stable shooting from the boat",
     ],
     pricing: [
-      { label: "3-Day Loons & Chicks Workshop", price: "$1,470.00", dates: "July 06–08, 2026", availability: "Full" },
-      { label: "3-Day Loons & Chicks Workshop", price: "$1,470.00", dates: "July 09–11, 2026", availability: "Full" },
-      { label: "2-Day Loons & Chicks Workshop", price: "$980.00", dates: "July 13–14, 2026", availability: "1 spot left" },
+      { label: "3-Day Loons & Chicks Workshop", price: "$1,470.00", dates: "July 2026", availability: "Full" },
+      { label: "2-Day Loons & Chicks Workshop", price: "$980.00", dates: "July 2026", availability: "Full" },
     ],
     priceIncludes: [
       "Pick up and drop off at the hotel",
@@ -170,9 +169,7 @@ export const tours: Tour[] = [
       "Layered clothing — temperatures range from 20°C to as low as -3°C",
     ],
     pricing: [
-      { label: "3-Day Algonquin Wildlife by Boat", price: "$1,500.00", dates: "June 06–08, 2026", availability: "2 spots left" },
-      { label: "3-Day Algonquin Wildlife by Boat", price: "$1,500.00", dates: "June 09–11, 2026", availability: "Full" },
-      { label: "3-Day Algonquin Wildlife by Boat", price: "$1,500.00", dates: "June 12–14, 2026", availability: "Full" },
+      { label: "3-Day Algonquin Wildlife by Boat", price: "$1,500.00", dates: "June 2026", availability: "Full" },
     ],
     priceIncludes: [
       "Light breakfast — yogurt, fruit juice, chilled water, and granola bar",
@@ -321,11 +318,8 @@ export const tours: Tour[] = [
       "Warm layered clothing — spring mornings on the water can be cold",
     ],
     pricing: [
-      { label: "2-Day Late April Waterfowl Workshop", price: "$985.00", dates: "April 27–28, 2026", availability: "Available" },
-      { label: "2-Day Late April Waterfowl Workshop", price: "$985.00", dates: "April 29–30, 2026", availability: "Available" },
-      { label: "2-Day Late May Waterfowl Workshop", price: "$985.00", dates: "May 21–22, 2026", availability: "Available" },
-      { label: "2-Day Late May Waterfowl Workshop", price: "$985.00", dates: "May 23–24, 2026", availability: "Available" },
-      { label: "2-Day Late May Waterfowl Workshop", price: "$985.00", dates: "May 25–26, 2026", availability: "Available" },
+      { label: "2-Day Late April Waterfowl Workshop", price: "$985.00", dates: "April 2026", availability: "Full" },
+      { label: "2-Day Late May Waterfowl Workshop", price: "$985.00", dates: "May 2026", availability: "Full" },
     ],
     priceIncludes: [
       "Personalized instruction and camera setup for flight and low-level photography",
