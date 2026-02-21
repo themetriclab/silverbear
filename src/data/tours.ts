@@ -2,7 +2,7 @@ import loonImg from "@/assets/loon-chick.jpg";
 import mooseImg from "@/assets/moose.jpg";
 import polarBearImg from "@/assets/polar-bear.jpg";
 import waterfowlImg from "@/assets/waterfowl.jpg";
-import swanImg from "@/assets/swan-extended.jpg";
+import swanImg from "@/assets/swan.jpg";
 
 export interface TourFact {
   label: string;
@@ -274,7 +274,6 @@ export const tours: Tour[] = [
     description:
       "Join Wildlife Discovered for an intimate waterfowl and swan photography workshop aboard a custom-built boat on southern Ontario's waters. Two seasonal options: late April for dramatic swan fights, diving ducks, and osprey — or late May for swan cygnets, terns in flight, and fine-art family portraits.",
     image: waterfowlImg,
-    image2: swanImg,
     month: "April – May",
     season: "Spring",
     location: "Southern Ontario, Lake Ontario",
