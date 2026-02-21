@@ -42,17 +42,18 @@ export const tours: Tour[] = [
     description:
       "Capture loons and their chicks amid misty landscapes and calm waters, while mastering low-light photography with an expert guide.",
     image: loonImg,
-    month: "June – July",
-    season: "Early Summer",
+    month: "July",
+    season: "Summer",
     location: "Northern Ontario Lakes",
     duration: "3 Days",
     difficulty: "Beginner–Intermediate",
     groupSize: "4 Photographers",
     highlights: [
       "Photograph loon parents carrying chicks on their backs",
-      "Dawn sessions on glassy, mist-covered lakes",
+      "Watch and capture parents feeding their young",
+      "Dawn and dusk sessions on glassy, mist-covered lakes",
       "Learn low-light and reflection photography techniques",
-      "Canoe-based approaches for water-level perspectives",
+      "Photograph from a small flat-bottom boat with low sides and swivel seats for comfort and stability",
       "Potential sightings of beavers, otters, and bald eagles",
     ],
     animalFacts: [
@@ -66,7 +67,7 @@ export const tours: Tour[] = [
     migrationInfo: {
       title: "Migration & Seasonal Behaviour",
       content:
-        "Common Loons breed on freshwater lakes across Canada from May through August. They are fiercely territorial during nesting season, making them relatively predictable to locate. By late September, they migrate south to coastal ocean waters along the Atlantic and Pacific coasts, and the Gulf of Mexico. June and July are ideal because chicks have recently hatched and ride on their parents' backs—a behaviour that lasts only a few weeks—producing some of the most iconic and tender wildlife imagery possible.",
+        "Common Loons breed on freshwater lakes across Canada from May through August. They are fiercely territorial during nesting season, making them relatively predictable to locate. By late September, they migrate south to coastal ocean waters along the Atlantic and Pacific coasts, and the Gulf of Mexico. July is ideal because chicks have recently hatched and ride on their parents' backs—a behaviour that lasts only a few weeks. You'll also witness the parents feeding their young, producing some of the most iconic and tender wildlife imagery possible.",
     },
     whyPhotograph: {
       title: "Why This Is the Perfect Time to Photograph Them",
@@ -76,14 +77,14 @@ export const tours: Tour[] = [
     whatToExpect: {
       title: "What to Expect on This Tour",
       content:
-        "Each day begins before dawn with a canoe launch onto mirror-still waters. Your guide positions the canoe at respectful distances from nesting territories, using years of experience to predict loon behaviour. Mid-morning sessions focus on technique workshops—exposure for dark plumage against bright water, capturing eye-level compositions, and freezing the split-second moment a loon surfaces with a fish. Afternoons are free for editing sessions and exploring surrounding trails.",
+        "Morning and evening sessions are spent on the water in a small, flat-bottom boat with low sides and swivel seats—designed for stability, comfort, and practicality when shooting at water level. Your guide positions the boat at respectful distances from nesting territories, using years of experience to predict loon behaviour. Sessions focus on technique workshops—exposure for dark plumage against bright water, capturing eye-level compositions, and freezing the split-second moment a loon surfaces with a fish. Midday is free for editing sessions and exploring surrounding trails.",
     },
     gearTips: [
       "300–600mm telephoto lens (500mm recommended)",
       "Fast lens (f/4 or wider) for dawn low-light conditions",
       "Waterproof camera bag or dry bag",
       "Polarizing filter for cutting water reflections",
-      "Beanbag or gimbal head for canoe stability",
+      "Beanbag or gimbal head for boat stability",
     ],
   },
   {
