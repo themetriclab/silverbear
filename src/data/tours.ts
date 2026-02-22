@@ -158,7 +158,7 @@ export const tours: Tour[] = [
     whatToExpect: {
       title: "What to Expect on This Algonquin Photography Tour",
       content:
-        "You'll meet your certified captain and guide at a location in Algonquin Park and head out on the water for early morning light. The wide-bottomed boat with a flat floor and comfortable swivel seats mounted on the centreline keeps everything stable and shake-free — perfect for sharp images with your monopod or tripod. Your guide uses oars, a push pole, or a silent electric motor to slip in close to wildlife without disturbance. A light breakfast is served aboard around 8 am, and a picnic-style lunch break happens around 11:30 am before heading back out for the afternoon. Photography tips and camera settings are shared throughout whenever the moment allows.",
+        "You'll meet your certified captain and guide at a location in Algonquin Park and head out on the water for early morning light. The wide-bottomed boat with a flat floor and comfortable swivel seats mounted on the centreline keeps everything stable and shake-free — perfect for sharp images with your monopod or tripod. Your guide uses oars, a push pole, or a silent electric motor to slip in close to wildlife without disturbance. A light breakfast is served aboard around 8 am, and a picnic-style lunch break happens around 11:30 am before heading back out for the afternoon. Photography tips and camera settings are shared throughout whenever the moment allows. Note: biting insects (mosquitoes, black flies, deer flies) can be intense in June — come prepared with bug spray, a head net, and light long-sleeved clothing.",
     },
     gearTips: [
       "70–200mm and 100–400mm zoom lenses for versatility with moose and eagles",
