@@ -46,7 +46,7 @@ const sliderImages = [
 
 const ImageSliderSection = () => {
   return (
-    <section className="py-16 bg-background">
+    <section className="py-16 bg-background overflow-hidden">
       <ImageAutoSlider images={sliderImages} />
     </section>
   );

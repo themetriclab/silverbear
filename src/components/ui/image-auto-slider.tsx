@@ -30,9 +30,9 @@ export const ImageAutoSlider = ({ images, className = '' }: ImageAutoSliderProps
           filter: brightness(1.1);
         }
       `}</style>
-      <div className={`relative w-full overflow-hidden pointer-events-none ${className}`}>
+      <div className={`relative w-full overflow-hidden ${className}`}>
         <div className="scroll-container relative w-full overflow-hidden">
-          <div className="infinite-scroll flex gap-4 w-max pointer-events-auto">
+          <div className="infinite-scroll flex gap-4 w-max">
             {duplicatedImages.map((image, index) => (
               <div key={index} className="image-item flex-shrink-0 rounded-lg overflow-hidden">
                 <img
