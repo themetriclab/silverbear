@@ -153,7 +153,7 @@ export const tours: Tour[] = [
     whyPhotograph: {
       title: "Why June Is the Best Time for Algonquin Wildlife",
       content:
-        "June places you in Algonquin Park when moose are most active in the waterways, feeding extensively on aquatic vegetation. Bald eagles are nesting and hunting along the lakes, while common loons are in full territorial mode with dramatic displays and nest building. The long daylight hours and soft morning light create ideal conditions. Insects are minimal because you're on the water and away from land. The combination of moose, eagles, loons, and pristine boreal scenery makes this one of the finest wildlife photography experiences in North America.",
+        "June places you in Algonquin Park when moose are most active in the waterways, feeding extensively on aquatic vegetation. Bald eagles are nesting and hunting along the lakes, while common loons are in full territorial mode with dramatic displays and nest building. The long daylight hours and soft morning light create ideal conditions. The combination of moose, eagles, loons, and pristine boreal scenery makes this one of the finest wildlife photography experiences in North America.",
     },
     whatToExpect: {
       title: "What to Expect on This Algonquin Photography Tour",
