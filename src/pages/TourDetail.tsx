@@ -42,6 +42,7 @@ import pbYoungBearRock from "@/assets/polar-bear/young-bear-rock-2.jpg";
 import pbBearsFighting from "@/assets/polar-bear/bears-fighting.jpg";
 import pbBearYellowGrass from "@/assets/polar-bear/bear-yellow-grass.jpg";
 import pbBearFrostyGrass from "@/assets/polar-bear/bear-frosty-grass.jpg";
+import pbPtarmigan from "@/assets/polar-bear/ptarmigan-close.jpg";
 
 import wfBlueBird from "@/assets/waterfowl/blue-bird-perched-2.jpg";
 import wfTern from "@/assets/waterfowl/common-tern.jpg";
@@ -56,7 +57,7 @@ import wfBeaver from "@/assets/waterfowl/beaver.jpg";
 
 const loonSliderImages = [loonChickGreen, loonHighKey2, loonAurora2, loonMist, loonChickGreen2];
 const algonquinSliderImages = [algOtter, algCalfCow, algBull, algMerganser, algBabyBeaver, algEagle, algLoon, algCow, algDucks, algWolf, algMoose];
-const polarBearSliderImages = [pbMotherCubs, pbRedFox, pbErmineWide, pbMomCubStorm, pbBearYellowGrass, pbHareCape, pbMaleSunset, pbBearsFighting, pbFoxSunset, pbYoungBearRock, pbMotherCubSleep, pbRedFoxSunset2, pbErmine1, pbBearFrostyGrass, pbHareSnow, pbMotherCubsLight];
+const polarBearSliderImages = [pbMotherCubs, pbRedFox, pbErmineWide, pbMomCubStorm, pbBearYellowGrass, pbHareCape, pbMaleSunset, pbBearsFighting, pbFoxSunset, pbYoungBearRock, pbMotherCubSleep, pbRedFoxSunset2, pbErmine1, pbPtarmigan, pbBearFrostyGrass, pbHareSnow, pbMotherCubsLight];
 const waterfowlSliderImages = [wfSwanSilhouette, wfTernWater, wfBeaver, wfSwanWarm, wfBlueBird, wfLowRider, wfTern, wfSwanCygnets, wfLongTail, wfSwanCalm];
 
 const fadeUp = {
