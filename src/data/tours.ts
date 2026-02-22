@@ -66,7 +66,6 @@ export const tours: Tour[] = [
       "Shoot from just 16 inches above the water for dramatic eye-level perspectives",
       "Morning and evening sessions timed for the best golden-hour light",
       "90% loon chick success rate since 1997 across 11 monitored nesting pairs on 9 lakes",
-      "Bonus wildlife: moose, black bear, beaver, muskrat, blue herons, kingfishers, and more",
     ],
     animalFacts: [
       { label: "Scientific Name", value: "Gavia immer (Common Loon)" },
