@@ -41,9 +41,21 @@ import pbBearsFighting from "@/assets/polar-bear/bears-fighting.jpg";
 import pbBearYellowGrass from "@/assets/polar-bear/bear-yellow-grass.jpg";
 import pbBearFrostyGrass from "@/assets/polar-bear/bear-frosty-grass.jpg";
 
+import wfBlueBird from "@/assets/waterfowl/blue-bird-perched-2.jpg";
+import wfTern from "@/assets/waterfowl/common-tern.jpg";
+import wfTernWater from "@/assets/waterfowl/common-tern-water.jpg";
+import wfLongTail from "@/assets/waterfowl/long-tail-flight.jpg";
+import wfSwanWarm from "@/assets/waterfowl/swan-warm-light.png";
+import wfSwanSilhouette from "@/assets/waterfowl/swan-silhouette-2.jpg";
+import wfSwanCygnets from "@/assets/waterfowl/swan-cygnets.jpg";
+import wfSwanCalm from "@/assets/waterfowl/swan-calm-water.jpg";
+import wfLowRider from "@/assets/waterfowl/low-rider-swan.jpg";
+import wfBeaver from "@/assets/waterfowl/beaver.jpg";
+
 const loonSliderImages = [loonHighKey2, loonMist, loonChickGreen, loonAurora2];
 const algonquinSliderImages = [algCalfCow, algCow, algEagle, algMerganser, algBull, algLoon, algOtter, algDucks, algWolf, algMoose];
 const polarBearSliderImages = [pbMotherCubs, pbRedFox, pbErmineWide, pbMomCubStorm, pbBearYellowGrass, pbHareCape, pbMaleSunset, pbBearsFighting, pbFoxSunset, pbYoungBearRock, pbMotherCubSleep, pbRedFoxSunset2, pbErmine1, pbBearFrostyGrass, pbHareSnow, pbMotherCubsLight];
+const waterfowlSliderImages = [wfSwanSilhouette, wfTernWater, wfBeaver, wfSwanWarm, wfBlueBird, wfLowRider, wfTern, wfSwanCygnets, wfLongTail, wfSwanCalm];
 
 const fadeUp = {
   initial: { opacity: 0, y: 30 },
@@ -162,6 +174,11 @@ const TourDetail = () => {
         {slug === "polar-bear-photography-tour" && (
           <section className="-mx-6 overflow-hidden">
             <ImageAutoSlider images={polarBearSliderImages} />
+          </section>
+        )}
+        {slug === "waterfowl-and-swan-photography-tours" && (
+          <section className="-mx-6 overflow-hidden">
+            <ImageAutoSlider images={waterfowlSliderImages} />
           </section>
         )}
 
