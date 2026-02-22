@@ -201,8 +201,8 @@ export const tours: Tour[] = [
     highlights: [
       "Photograph polar bears at ground level — eye to eye with the Arctic's apex predator",
       "Small group of only 5 photographers for an intimate, high-quality experience",
-      "Arctic fox, cross fox, silver fox, red fox, arctic hare, and snowy owl photography",
-      "Possible sightings of gyrfalcons, wolves, wolverine, and willow and rock ptarmigan",
+      "Arctic fox, cross fox, silver fox, red fox, arctic hare, willow and rock ptarmigan photography",
+      "Possible sightings of snowy owls, gyrfalcons, wolves, and wolverine",
       "Northern lights photography when skies are clear",
       "Licensed Manitoba guide with 15 years of polar bear experience and WMA permits",
     ],
