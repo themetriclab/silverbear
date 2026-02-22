@@ -16,7 +16,7 @@ export const ImageAutoSlider = ({ images, className = '' }: ImageAutoSliderProps
           100% { transform: translateX(-50%); }
         }
         .infinite-scroll {
-          animation: scroll-right 30s linear infinite;
+          animation: scroll-right 60s linear infinite;
         }
         .scroll-container {
           mask: linear-gradient(90deg, transparent 0%, black 10%, black 90%, transparent 100%);
