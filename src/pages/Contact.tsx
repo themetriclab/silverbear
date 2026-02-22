@@ -1,13 +1,15 @@
 import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Mail, Send, Camera } from "lucide-react";
+import { Mail, Send, Camera, Loader2 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { tours } from "@/data/tours";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
 
 const Contact = () => {
   const [searchParams] = useSearchParams();
@@ -27,10 +29,38 @@ const Contact = () => {
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setSending(true);
+
+    const tourLabel = selectedTour === "custom"
+      ? "General Inquiry"
+      : tours.find((t) => t.slug === selectedTour)?.title || "";
+
+    const { data, error } = await supabase.functions.invoke("send-contact-email", {
+      body: {
+        name: formData.name.trim(),
+        email: formData.email.trim(),
+        phone: formData.phone.trim(),
+        groupSize: formData.groupSize,
+        message: formData.message.trim(),
+        tour: tourLabel,
+      },
+    });
+
+    setSending(false);
+
+    if (error) {
+      toast.error("Something went wrong. Please try again or email us directly.");
+      console.error("Edge function error:", error);
+      return;
+    }
+
     setSubmitted(true);
+    setFormData({ name: "", email: "", phone: "", groupSize: "", message: "" });
+    setSelectedTour("");
   };
 
   return (
@@ -302,9 +332,9 @@ const Contact = () => {
                   />
                 </div>
 
-                <Button type="submit" size="lg" className="w-full gap-2 text-sm tracking-wider uppercase">
-                  <Send className="w-4 h-4" />
-                  Send Inquiry
+                <Button type="submit" size="lg" disabled={sending} className="w-full gap-2 text-sm tracking-wider uppercase">
+                  {sending ? <Loader2 className="w-4 h-4 animate-spin" /> : <Send className="w-4 h-4" />}
+                  {sending ? "Sending…" : "Send Inquiry"}
                 </Button>
               </form>
             )}
