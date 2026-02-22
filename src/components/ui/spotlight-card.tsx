@@ -41,7 +41,7 @@ const SpotlightCard: React.FC<SpotlightCardProps> = ({ children, className = '' 
             var(--spotlight-size) var(--spotlight-size) at
             calc(var(--x, 0) * 1px)
             calc(var(--y, 0) * 1px),
-            hsl(var(--hue, 42) 80% 55% / 0.08), transparent
+            hsl(var(--hue, 42) 60% 40% / 0.06), transparent
           );
           background-color: var(--backdrop, transparent);
           background-size: calc(100% + (2 * var(--border-size))) calc(100% + (2 * var(--border-size)));
@@ -72,23 +72,23 @@ const SpotlightCard: React.FC<SpotlightCardProps> = ({ children, className = '' 
             calc(var(--spotlight-size) * 0.75) calc(var(--spotlight-size) * 0.75) at
             calc(var(--x, 0) * 1px)
             calc(var(--y, 0) * 1px),
-            hsl(var(--hue, 42) 80% 55% / 1), transparent 100%
+            hsl(var(--hue, 42) 65% 38% / 0.8), transparent 100%
           );
-          filter: brightness(2);
+          filter: brightness(1.2);
         }
         [data-glow]::after {
           background-image: radial-gradient(
             calc(var(--spotlight-size) * 0.5) calc(var(--spotlight-size) * 0.5) at
             calc(var(--x, 0) * 1px)
             calc(var(--y, 0) * 1px),
-            hsl(0 100% 100% / 1), transparent 100%
+            hsl(42 50% 70% / 0.4), transparent 100%
           );
         }
         [data-glow] [data-glow] {
           position: absolute;
           inset: 0;
           will-change: filter;
-          opacity: var(--outer, 1);
+          opacity: 0.6;
           border-radius: calc(var(--radius) * 1px);
           border-width: calc(var(--border-size) * 20);
           filter: blur(calc(var(--border-size) * 10));
