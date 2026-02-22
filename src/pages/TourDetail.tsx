@@ -23,6 +23,7 @@ import algOtter from "@/assets/algonquin/river-otter-look-back.png";
 import algDucks from "@/assets/algonquin/ring-neck-duck-pair.png";
 import algWolf from "@/assets/algonquin/wolf-on-rock-2.png";
 import algMoose from "@/assets/algonquin/moose-sipping.png";
+import algBabyBeaver from "@/assets/algonquin/baby-beaver.png";
 
 import pbFoxSunset from "@/assets/polar-bear/arctic-fox-sunset-2.jpg";
 import pbHareSnow from "@/assets/polar-bear/arctic-hare-snow.jpg";
@@ -53,7 +54,7 @@ import wfLowRider from "@/assets/waterfowl/low-rider-swan.jpg";
 import wfBeaver from "@/assets/waterfowl/beaver.jpg";
 
 const loonSliderImages = [loonHighKey2, loonMist, loonChickGreen, loonAurora2];
-const algonquinSliderImages = [algCalfCow, algCow, algEagle, algMerganser, algBull, algLoon, algOtter, algDucks, algWolf, algMoose];
+const algonquinSliderImages = [algOtter, algCalfCow, algBull, algMerganser, algBabyBeaver, algEagle, algLoon, algCow, algDucks, algWolf, algMoose];
 const polarBearSliderImages = [pbMotherCubs, pbRedFox, pbErmineWide, pbMomCubStorm, pbBearYellowGrass, pbHareCape, pbMaleSunset, pbBearsFighting, pbFoxSunset, pbYoungBearRock, pbMotherCubSleep, pbRedFoxSunset2, pbErmine1, pbBearFrostyGrass, pbHareSnow, pbMotherCubsLight];
 const waterfowlSliderImages = [wfSwanSilhouette, wfTernWater, wfBeaver, wfSwanWarm, wfBlueBird, wfLowRider, wfTern, wfSwanCygnets, wfLongTail, wfSwanCalm];
 
