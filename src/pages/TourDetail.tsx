@@ -98,10 +98,12 @@ const TourDetail = () => {
           <SectionHeader label="Overview" title="Tour Highlights" />
           <div className="grid md:grid-cols-2 gap-4 mt-10">
             {tour.highlights.map((h, i) => (
-              <div key={i} className="flex items-start gap-3 bg-card border border-border rounded-lg p-5">
-                <ChevronRight size={18} className="text-primary mt-0.5 shrink-0" />
-                <p className="text-foreground/90 text-sm leading-relaxed">{h}</p>
-              </div>
+              <SpotlightCard key={i} className="p-5">
+                <div className="flex items-start gap-3">
+                  <ChevronRight size={18} className="text-primary mt-0.5 shrink-0" />
+                  <p className="text-foreground/90 text-sm leading-relaxed">{h}</p>
+                </div>
+              </SpotlightCard>
             ))}
           </div>
         </motion.section>
