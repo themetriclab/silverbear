@@ -6,6 +6,14 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import DiagonalSplitImage from "@/components/DiagonalSplitImage";
 import { SpotlightCard } from "@/components/ui/spotlight-card";
+import { ImageAutoSlider } from "@/components/ui/image-auto-slider";
+
+import loonHighKey2 from "@/assets/loon/high-key-loon-2.png";
+import loonMist from "@/assets/loon/loon-in-mist.jpg";
+import loonChickGreen from "@/assets/loon/loon-chick-green.png";
+import loonAurora2 from "@/assets/loon/loon-aurora-water-2.png";
+
+const loonSliderImages = [loonHighKey2, loonMist, loonChickGreen, loonAurora2];
 
 const fadeUp = {
   initial: { opacity: 0, y: 30 },
@@ -34,6 +42,7 @@ const TourDetail = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
+
 
       {/* Hero */}
       <section className="relative h-[70vh] md:h-[80vh] overflow-hidden">
@@ -90,6 +99,13 @@ const TourDetail = () => {
           ))}
         </div>
       </section>
+
+      {/* Tour Image Slider */}
+      {slug === "loon-photography-tours" && (
+        <section className="py-16 bg-background">
+          <ImageAutoSlider images={loonSliderImages} />
+        </section>
+      )}
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-6 py-20 space-y-24">
