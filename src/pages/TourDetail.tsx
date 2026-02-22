@@ -100,12 +100,6 @@ const TourDetail = () => {
         </div>
       </section>
 
-      {/* Tour Image Slider */}
-      {slug === "loon-photography-tours" && (
-        <section className="py-16 bg-background">
-          <ImageAutoSlider images={loonSliderImages} />
-        </section>
-      )}
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-6 py-20 space-y-24">
@@ -123,6 +117,13 @@ const TourDetail = () => {
             ))}
           </div>
         </motion.section>
+
+        {/* Tour Image Slider */}
+        {slug === "loon-photography-tours" && (
+          <section className="-mx-6">
+            <ImageAutoSlider images={loonSliderImages} />
+          </section>
+        )}
 
         {/* Animal Facts */}
         <motion.section {...fadeUp}>
