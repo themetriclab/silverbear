@@ -109,16 +109,14 @@ const TourDetail = () => {
         {/* Animal Facts */}
         <motion.section {...fadeUp}>
           <SectionHeader label="Wildlife" title="Animal Facts" />
-          <SpotlightCard className="p-6 md:p-8 mt-10">
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              {tour.animalFacts.map((fact) => (
-                <div key={fact.label} className="p-4">
-                  <p className="text-xs text-primary uppercase tracking-wider font-medium mb-1">{fact.label}</p>
-                  <p className="text-foreground text-sm font-medium">{fact.value}</p>
-                </div>
-              ))}
-            </div>
-          </SpotlightCard>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-10">
+            {tour.animalFacts.map((fact) => (
+              <SpotlightCard key={fact.label} className="p-5">
+                <p className="text-xs text-primary uppercase tracking-wider font-medium mb-1">{fact.label}</p>
+                <p className="text-foreground text-sm font-medium">{fact.value}</p>
+              </SpotlightCard>
+            ))}
+          </div>
         </motion.section>
 
         {/* Migration Info */}
@@ -142,43 +140,41 @@ const TourDetail = () => {
         {/* Gear Tips */}
         <motion.section {...fadeUp}>
           <SectionHeader label="Preparation" title="Recommended Gear" />
-          <SpotlightCard className="p-6 md:p-8 mt-10">
-            <div className="grid md:grid-cols-2 gap-4">
-              {tour.gearTips.map((tip, i) => (
-                <div key={i} className="flex items-start gap-3 p-4">
+          <div className="grid md:grid-cols-2 gap-4 mt-10">
+            {tour.gearTips.map((tip, i) => (
+              <SpotlightCard key={i} className="p-5">
+                <div className="flex items-start gap-3">
                   <Camera size={16} className="text-primary mt-0.5 shrink-0" />
                   <p className="text-foreground/90 text-sm">{tip}</p>
                 </div>
-              ))}
-            </div>
-          </SpotlightCard>
+              </SpotlightCard>
+            ))}
+          </div>
         </motion.section>
 
         {/* Pricing & Dates */}
         {tour.pricing && tour.pricing.length > 0 && (
           <motion.section {...fadeUp}>
             <SectionHeader label="Pricing" title="Available Dates & Rates" />
-            <SpotlightCard className="p-6 md:p-8 mt-10">
-              <div className="grid md:grid-cols-3 gap-4">
-                {tour.pricing.map((p, i) => (
-                  <div key={i} className="p-5 flex flex-col">
-                    <p className="text-sm font-medium text-foreground mb-2">{p.label}</p>
-                    <p className="text-2xl font-display font-bold text-primary mb-2">{p.price}</p>
-                    <div className="flex items-center gap-2 mb-3">
-                      <Calendar size={14} className="text-muted-foreground" />
-                      <p className="text-sm text-muted-foreground">{p.dates}</p>
-                    </div>
-                    <span className={`mt-auto inline-block text-xs font-medium tracking-wider uppercase px-3 py-1 rounded-full ${
-                      p.availability.toLowerCase() === "full"
-                        ? "bg-destructive/10 text-destructive"
-                        : "bg-primary/10 text-primary"
-                    }`}>
-                      {p.availability}
-                    </span>
+            <div className="grid md:grid-cols-3 gap-4 mt-10">
+              {tour.pricing.map((p, i) => (
+                <SpotlightCard key={i} className="p-6 flex flex-col">
+                  <p className="text-sm font-medium text-foreground mb-2">{p.label}</p>
+                  <p className="text-2xl font-display font-bold text-primary mb-2">{p.price}</p>
+                  <div className="flex items-center gap-2 mb-3">
+                    <Calendar size={14} className="text-muted-foreground" />
+                    <p className="text-sm text-muted-foreground">{p.dates}</p>
                   </div>
-                ))}
-              </div>
-            </SpotlightCard>
+                  <span className={`mt-auto inline-block text-xs font-medium tracking-wider uppercase px-3 py-1 rounded-full ${
+                    p.availability.toLowerCase() === "full"
+                      ? "bg-destructive/10 text-destructive"
+                      : "bg-primary/10 text-primary"
+                  }`}>
+                    {p.availability}
+                  </span>
+                </SpotlightCard>
+              ))}
+            </div>
           </motion.section>
         )}
 
