@@ -13,7 +13,19 @@ import loonMist from "@/assets/loon/loon-in-mist.jpg";
 import loonChickGreen from "@/assets/loon/loon-chick-green.png";
 import loonAurora2 from "@/assets/loon/loon-aurora-water-2.png";
 
+import algCalfCow from "@/assets/algonquin/calf-looking-at-cow.png";
+import algCow from "@/assets/algonquin/cow.jpg";
+import algEagle from "@/assets/algonquin/eagle-perched.png";
+import algMerganser from "@/assets/algonquin/female-merganser-2.png";
+import algBull from "@/assets/algonquin/fav-bull-shot.jpg";
+import algLoon from "@/assets/algonquin/loon-in-aurora-water-3.png";
+import algOtter from "@/assets/algonquin/river-otter-look-back.png";
+import algDucks from "@/assets/algonquin/ring-neck-duck-pair.png";
+import algWolf from "@/assets/algonquin/wolf-on-rock-2.png";
+import algMoose from "@/assets/algonquin/moose-sipping.png";
+
 const loonSliderImages = [loonHighKey2, loonMist, loonChickGreen, loonAurora2];
+const algonquinSliderImages = [algCalfCow, algCow, algEagle, algMerganser, algBull, algLoon, algOtter, algDucks, algWolf, algMoose];
 
 const fadeUp = {
   initial: { opacity: 0, y: 30 },
@@ -120,8 +132,13 @@ const TourDetail = () => {
 
         {/* Tour Image Slider */}
         {slug === "loon-photography-tours" && (
-          <section className="-mx-6">
+          <section className="-mx-6 overflow-hidden">
             <ImageAutoSlider images={loonSliderImages} />
+          </section>
+        )}
+        {slug === "algonquin-park-photography-tours" && (
+          <section className="-mx-6 overflow-hidden">
+            <ImageAutoSlider images={algonquinSliderImages} />
           </section>
         )}
 
