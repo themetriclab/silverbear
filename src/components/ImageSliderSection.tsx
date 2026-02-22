@@ -20,6 +20,7 @@ import snowOwlRaven from "@/assets/slider/snow-owl-raven.jpg";
 import swanSilhouette from "@/assets/slider/swan-silhouette.jpg";
 import wolfRock from "@/assets/slider/wolf-rock.png";
 import wolverineSnowy from "@/assets/slider/wolverine-snowy-hill.jpg";
+import ptarmiganClose from "@/assets/slider/ptarmigan-close.jpg";
 
 const sliderImages = [
   bearSnowstorm,
@@ -42,6 +43,7 @@ const sliderImages = [
   swanSilhouette,
   wolfRock,
   wolverineSnowy,
+  ptarmiganClose,
 ];
 
 const ImageSliderSection = () => {
