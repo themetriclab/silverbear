@@ -217,7 +217,7 @@ export const tours: Tour[] = [
     migrationInfo: {
       title: "The Great Polar Bear Gathering at Hudson Bay",
       content:
-        "Every autumn, roughly 1,000 polar bears congregate along the western coast of Hudson Bay near Churchill, Manitoba, waiting for the sea ice to form. Churchill is the world's premiere location to experience migrating polar bears. The bears have spent the summer fasting on land and are eager to return to the ice to hunt ringed seals. October and November mark the peak of this congregation, with bears sparring, socializing, and resting on the tundra. Once the bay freezes — usually by mid-November — the bears disperse onto the ice and become nearly impossible to photograph.",
+        "Every autumn, roughly 1,000 polar bears congregate along the western coast of Hudson Bay near Churchill, Manitoba, waiting for the sea ice to form. Churchill is the world's premiere location to experience migrating polar bears. The bears have spent the summer fasting on land and are eager to return to the ice to hunt ring and bearded seals. October and November mark the peak of this congregation, with bears sparring, socializing, and resting on the tundra. Once the bay freezes — usually by mid to late November — the bears disperse onto the ice and become nearly impossible to photograph.",
     },
     whyPhotograph: {
       title: "Why Ground-Level Photography Changes Everything",
@@ -227,7 +227,7 @@ export const tours: Tour[] = [
     whatToExpect: {
       title: "What to Expect on This Polar Bear Photography Tour",
       content:
-        "Fly from Winnipeg to Churchill where your guide will pick you up at the airport and take you to a private lodge with private bathrooms, comfortable beds, and a communal kitchen for gathering and reviewing images. After a safety orientation and winter photography tips, you head out in search of polar bears. Full days are spent photographing polar bears, arctic fox, snowy owls, ptarmigan, and more — with a short lunch break in the field. Your guide uses 15 years of experience reading bear patterns and behaviour to position you safely for the best shots. Evenings include dinner at Churchill's finest restaurants and possible northern lights photography when skies are clear.",
+        "Fly from Winnipeg to Churchill where your guide will pick you up at the airport and take you to a private lodge with private bathrooms, comfortable beds, and a communal kitchen for gathering and reviewing images. After a safety orientation and winter photography tips, you head out in search of polar bears. Days are spent photographing polar bears, fox, ptarmigan, and more — with a short lunch break in the field. Your guide uses 15 years of experience reading bear patterns and behaviour to position you safely for the best shots. Evenings include dinner at Churchill's finest restaurants and possible northern lights photography when skies are clear.",
     },
     gearTips: [
       "300–600mm telephoto lens — your most-used focal range for Arctic wildlife",
