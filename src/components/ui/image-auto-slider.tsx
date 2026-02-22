@@ -30,8 +30,8 @@ export const ImageAutoSlider = ({ images, className = '' }: ImageAutoSliderProps
           filter: brightness(1.1);
         }
       `}</style>
-      <div className={`relative w-full overflow-hidden ${className}`}>
-        <div className="scroll-container relative w-full overflow-hidden">
+      <div className={`relative w-full overflow-hidden contain-layout ${className}`} style={{ containIntrinsicSize: 'auto', contain: 'layout paint' }}>
+        <div className="scroll-container relative w-full overflow-hidden" style={{ contain: 'layout paint' }}>
           <div className="infinite-scroll flex gap-4 w-max">
             {duplicatedImages.map((image, index) => (
               <div key={index} className="image-item flex-shrink-0 rounded-lg overflow-hidden">
