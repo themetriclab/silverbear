@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Instagram } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -47,12 +48,23 @@ const Footer = () => {
             <p className="text-muted-foreground text-sm mb-4">
               Interested in a photography tour? Reach out to plan your next adventure.
             </p>
-            <Link
-              to="/contact"
-              className="inline-block px-6 py-2.5 border border-primary text-primary text-sm font-medium tracking-wider uppercase hover:bg-primary hover:text-primary-foreground transition-all duration-300"
-            >
-              Contact Us
-            </Link>
+            <div className="flex items-center gap-4">
+              <Link
+                to="/contact"
+                className="inline-block px-6 py-2.5 border border-primary text-primary text-sm font-medium tracking-wider uppercase hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+              >
+                Contact Us
+              </Link>
+              <a
+                href="https://www.instagram.com/wildlife.discovered"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="Instagram"
+              >
+                <Instagram size={22} />
+              </a>
+            </div>
           </div>
         </div>
 
