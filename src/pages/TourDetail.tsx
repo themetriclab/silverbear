@@ -24,8 +24,20 @@ import algDucks from "@/assets/algonquin/ring-neck-duck-pair.png";
 import algWolf from "@/assets/algonquin/wolf-on-rock-2.png";
 import algMoose from "@/assets/algonquin/moose-sipping.png";
 
+import pbFoxSunset from "@/assets/polar-bear/arctic-fox-sunset-2.jpg";
+import pbHareSnow from "@/assets/polar-bear/arctic-hare-snow.jpg";
+import pbHareCape from "@/assets/polar-bear/arctic-hare-cape.jpg";
+import pbErmineWide from "@/assets/polar-bear/ermine-wide.jpg";
+import pbErmine1 from "@/assets/polar-bear/ermine-1.jpg";
+import pbMomCubStorm from "@/assets/polar-bear/mom-cub-snowstorm-2.jpg";
+import pbMaleSunset from "@/assets/polar-bear/male-sunset.jpg";
+import pbMotherCubSleep from "@/assets/polar-bear/mother-cub-sleeping-2.jpg";
+import pbMotherCubs from "@/assets/polar-bear/mother-cubs.jpg";
+import pbMotherCubsLight from "@/assets/polar-bear/mother-cubs-light-2.jpg";
+
 const loonSliderImages = [loonHighKey2, loonMist, loonChickGreen, loonAurora2];
 const algonquinSliderImages = [algCalfCow, algCow, algEagle, algMerganser, algBull, algLoon, algOtter, algDucks, algWolf, algMoose];
+const polarBearSliderImages = [pbFoxSunset, pbHareSnow, pbHareCape, pbErmineWide, pbErmine1, pbMomCubStorm, pbMaleSunset, pbMotherCubSleep, pbMotherCubs, pbMotherCubsLight];
 
 const fadeUp = {
   initial: { opacity: 0, y: 30 },
@@ -139,6 +151,11 @@ const TourDetail = () => {
         {slug === "algonquin-park-photography-tours" && (
           <section className="-mx-6 overflow-hidden">
             <ImageAutoSlider images={algonquinSliderImages} />
+          </section>
+        )}
+        {slug === "polar-bear-photography-tour" && (
+          <section className="-mx-6 overflow-hidden">
+            <ImageAutoSlider images={polarBearSliderImages} />
           </section>
         )}
 
