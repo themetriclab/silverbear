@@ -41,11 +41,11 @@ const AboutSection = () => {
             <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-6">
               About Me
             </h2>
-            <p className="text-foreground/80 leading-relaxed mb-6">
-              I'm Erik Bertelsen, a professional wildlife photographer, videographer, and expedition
-              guide specializing in unique and wildlife-rich environments. From the Arctic tundra to
-              the wetlands of southern Ontario and the wild landscapes across Canada, I capture
-              authentic wildlife moments through striking photography and immersive film.
+            <p className="text-foreground/80 leading-relaxed mb-6">I am Erik Bertelsen, a professional wildlife guide, photographer, and videographer, specializing in unique and wildlife-rich environments. From the Sub Arctic tundra to the wetlands of southern Ontario and the wild landscapes across Canada, I capture authentic wildlife moments through striking photography and immersive film.
+
+
+
+
             </p>
             <p className="text-foreground/80 leading-relaxed mb-8">
               With years of field experience, I lead guided photography tours that offer safe,
