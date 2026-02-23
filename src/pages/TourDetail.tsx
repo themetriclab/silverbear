@@ -58,7 +58,7 @@ import wfBeaver from "@/assets/waterfowl/beaver.jpg";
 const loonSliderImages = [loonChickGreen, loonHighKey2, loonAurora2, loonMist, loonChickGreen2];
 const algonquinSliderImages = [algWolf, algLoon, algBabyBeaver, algCow, algMerganser, algMoose, algDucks, algEagle, algOtter, algBull, algCalfCow];
 const polarBearSliderImages = [pbErmine1, pbBearYellowGrass, pbMotherCubs, pbFoxSunset, pbHareSnow, pbMaleSunset, pbPtarmigan, pbRedFox, pbMomCubStorm, pbYoungBearRock, pbMotherCubsLight, pbBearsFighting, pbHareCape, pbMotherCubSleep, pbErmineWide, pbBearFrostyGrass, pbRedFoxSunset2];
-const waterfowlSliderImages = [wfSwanSilhouette, wfTernWater, wfBeaver, wfSwanWarm, wfBlueBird, wfLowRider, wfTern, wfSwanCygnets, wfLongTail, wfSwanCalm];
+const waterfowlSliderImages = [wfLongTail, wfSwanWarm, wfBeaver, wfTern, wfSwanCalm, wfBlueBird, wfSwanCygnets, wfTernWater, wfLowRider, wfSwanSilhouette];
 
 const fadeUp = {
   initial: { opacity: 0, y: 30 },
