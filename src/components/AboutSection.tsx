@@ -12,15 +12,15 @@ const AboutSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="relative"
-          >
+            className="relative">
+
             <div className="aspect-[4/5] overflow-hidden rounded-lg">
               <img
                 src={erikImg}
                 alt="Erik Bertelsen - Wildlife Photographer"
                 className="w-full h-full object-cover"
-                loading="lazy"
-              />
+                loading="lazy" />
+
             </div>
             <div className="absolute -bottom-4 -right-4 w-32 h-32 border-2 border-primary rounded-lg -z-10" />
           </motion.div>
@@ -30,12 +30,12 @@ const AboutSection = () => {
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
+            transition={{ duration: 0.8 }}>
+
             <div className="flex items-center gap-4 mb-6">
               <div className="h-px w-12 bg-primary/60" />
-              <span className="text-primary text-sm tracking-[0.3em] uppercase font-medium">
-                The Photographer
+              <span className="text-primary text-sm tracking-[0.3em] uppercase font-medium">THE GUIDE/PHOTOGRAPHER
+
               </span>
             </div>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-6">
@@ -75,8 +75,8 @@ const AboutSection = () => {
           </motion.div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default AboutSection;
