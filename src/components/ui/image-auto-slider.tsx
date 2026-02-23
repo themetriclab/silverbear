@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 interface ImageAutoSliderProps {
   images: string[];
@@ -6,6 +6,8 @@ interface ImageAutoSliderProps {
 }
 
 export const ImageAutoSlider = ({ images, className = '' }: ImageAutoSliderProps) => {
+  const [loadedCount, setLoadedCount] = useState(0);
+  const allLoaded = loadedCount >= images.length;
   const duplicatedImages = [...images, ...images];
 
   return (
@@ -17,6 +19,9 @@ export const ImageAutoSlider = ({ images, className = '' }: ImageAutoSliderProps
         }
         .infinite-scroll {
           animation: scroll-right 60s linear infinite;
+        }
+        .infinite-scroll.paused {
+          animation-play-state: paused;
         }
         .scroll-container {
           mask: linear-gradient(90deg, transparent 0%, black 10%, black 90%, transparent 100%);
@@ -32,16 +37,20 @@ export const ImageAutoSlider = ({ images, className = '' }: ImageAutoSliderProps
       `}</style>
       <div className={`relative w-full overflow-hidden ${className}`}>
         <div className="scroll-container relative w-full overflow-hidden">
-          <div className="infinite-scroll flex gap-4 w-max">
+          <div className={`infinite-scroll flex gap-4 w-max ${!allLoaded ? 'paused' : ''}`}>
             {duplicatedImages.map((image, index) => (
-              <div key={index} className="image-item flex-shrink-0 rounded-lg overflow-hidden">
-              <img
+              <div key={index} className="image-item flex-shrink-0 rounded-lg overflow-hidden" style={{ minWidth: '200px', minHeight: '192px' }}>
+                <img
                   src={image}
                   alt={`Wildlife photo ${(index % images.length) + 1}`}
                   className="h-48 md:h-64 w-auto object-cover rounded-lg"
-                  loading="lazy"
+                  loading={index < images.length ? "eager" : "lazy"}
                   decoding="async"
-                  fetchPriority="low"
+                  onLoad={() => {
+                    if (index < images.length) {
+                      setLoadedCount(prev => prev + 1);
+                    }
+                  }}
                 />
               </div>
             ))}
