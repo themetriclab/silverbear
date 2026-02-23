@@ -54,7 +54,7 @@ serve(async (req) => {
         Authorization: `Bearer ${RESEND_API_KEY}`,
       },
       body: JSON.stringify({
-        from: "Wildlife Discovered <onboarding@resend.dev>",
+        from: "Wildlife Discovered <contact@wildlifediscovered.com>",
         to: ["wildifediscovered@outlook.com"],
         subject: `New Inquiry from ${name}${tour ? ` – ${tour}` : ""}`,
         html: htmlBody,
