@@ -35,11 +35,13 @@ export const ImageAutoSlider = ({ images, className = '' }: ImageAutoSliderProps
           <div className="infinite-scroll flex gap-4 w-max">
             {duplicatedImages.map((image, index) => (
               <div key={index} className="image-item flex-shrink-0 rounded-lg overflow-hidden">
-                <img
+              <img
                   src={image}
                   alt={`Wildlife photo ${(index % images.length) + 1}`}
-                  className="h-64 md:h-80 w-auto object-cover rounded-lg"
+                  className="h-48 md:h-64 w-auto object-cover rounded-lg"
                   loading="lazy"
+                  decoding="async"
+                  fetchPriority="low"
                 />
               </div>
             ))}
