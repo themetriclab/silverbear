@@ -56,7 +56,7 @@ import wfLowRider from "@/assets/waterfowl/low-rider-swan.jpg";
 import wfBeaver from "@/assets/waterfowl/beaver.jpg";
 
 const loonSliderImages = [loonChickGreen, loonHighKey2, loonAurora2, loonMist, loonChickGreen2];
-const algonquinSliderImages = [algOtter, algCalfCow, algBull, algMerganser, algBabyBeaver, algEagle, algLoon, algCow, algDucks, algWolf, algMoose];
+const algonquinSliderImages = [algWolf, algLoon, algBabyBeaver, algCow, algMerganser, algMoose, algDucks, algEagle, algOtter, algBull, algCalfCow];
 const polarBearSliderImages = [pbMotherCubs, pbRedFox, pbErmineWide, pbMomCubStorm, pbBearYellowGrass, pbHareCape, pbMaleSunset, pbBearsFighting, pbFoxSunset, pbYoungBearRock, pbMotherCubSleep, pbRedFoxSunset2, pbErmine1, pbPtarmigan, pbBearFrostyGrass, pbHareSnow, pbMotherCubsLight];
 const waterfowlSliderImages = [wfSwanSilhouette, wfTernWater, wfBeaver, wfSwanWarm, wfBlueBird, wfLowRider, wfTern, wfSwanCygnets, wfLongTail, wfSwanCalm];
 
