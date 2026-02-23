@@ -107,7 +107,7 @@ const Contact = () => {
               <p className="text-muted-foreground leading-relaxed mb-8">
                 Have a question about our wildlife photography tours? Looking for a
                 private or custom experience? Fill out the form and we'll get back
-                to you within 24 hours.
+                to you soon.
               </p>
             </div>
 
@@ -116,8 +116,8 @@ const Contact = () => {
                 {
                   icon: Mail,
                   label: "Email",
-                  value: "wildifediscovered@outlook.com",
-                  href: "mailto:wildifediscovered@outlook.com",
+                  value: "wildlifediscovered@outlook.com",
+                  href: "mailto:wildlifediscovered@outlook.com",
                 },
               ].map((item) => (
                 <div key={item.label} className="flex items-start gap-4">
@@ -179,7 +179,7 @@ const Contact = () => {
                   Thank You!
                 </h3>
                 <p className="text-muted-foreground leading-relaxed max-w-md mx-auto">
-                  We've received your inquiry and will get back to you within 24 hours.
+                  We've received your inquiry and will be in touch soon.
                   In the meantime, explore our tours for more inspiration.
                 </p>
                 <Button
