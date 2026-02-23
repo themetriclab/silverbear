@@ -55,7 +55,7 @@ serve(async (req) => {
       },
       body: JSON.stringify({
         from: "Wildlife Discovered <contact@wildlifediscovered.com>",
-        to: ["wildifediscovered@outlook.com"],
+        to: ["wildlifediscovered@outlook.com"],
         subject: `New Inquiry from ${name}${tour ? ` – ${tour}` : ""}`,
         html: htmlBody,
         reply_to: email,
