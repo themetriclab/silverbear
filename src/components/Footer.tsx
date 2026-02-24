@@ -26,7 +26,6 @@ const Footer = () => {
                 { label: "Home", href: "#home" },
                 { label: "Photo Tours", href: "#tours" },
                 { label: "About", href: "#about" },
-                { label: "Blog", href: "https://wildlifediscovered.ca/blog/" },
               ].map((link) => (
                 <li key={link.label}>
                   <a
