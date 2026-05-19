@@ -221,6 +221,9 @@ export const tours: Tour[] = [
     description:
       "Join Wildlife Discovered on an exclusive ground-level polar bear photography tour in Churchill, Manitoba. Capture stunning images of polar bears, arctic fox, snowy owls, ptarmigan, and the northern lights with a licensed guide and small group of just 5 photographers.",
     image: polarBearImg,
+    h1: "Polar Bear Photography Tours in Churchill, Manitoba",
+    seoTitle: "Polar Bear Photography Tours in Churchill, Manitoba | Wildlife Discovered",
+    seoDescription: "Ground-level polar bear photography tours in Churchill, Manitoba — small group of 5 photographers, licensed Arctic guide, eye-to-eye with polar bears, arctic fox, snowy owls, and the northern lights.",
     month: "October – November",
     season: "Late Autumn",
     location: "Churchill, Manitoba — Polar Bear Capital of the World",
