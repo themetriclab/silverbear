@@ -20,9 +20,16 @@ const ToursSection = () => {
           </h2>
         </div>
 
+        {/* Intro copy — keyword-rich above-the-fold text helps SEO */}
+        <p className="text-center text-muted-foreground max-w-3xl mx-auto -mt-8 mb-16 leading-relaxed">
+          From ground-level <strong className="text-foreground font-medium">polar bear photography tours</strong> in Churchill, Manitoba to
+          intimate <strong className="text-foreground font-medium">moose photography tours</strong> by boat in Algonquin Park, our small-group
+          wildlife photography expeditions across Canada are designed for serious photographers who want authentic encounters in the wild.
+        </p>
+
         {/* Tours grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
-          {tours.map((tour, i) => (
+          {tours.filter((t) => !t.gallerySlug).map((tour, i) => (
             <motion.div
               key={tour.slug}
               initial={{ opacity: 0, y: 30 }}
