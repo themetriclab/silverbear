@@ -21,6 +21,11 @@ export interface TourPricing {
   availability: string;
 }
 
+export interface TourFaq {
+  question: string;
+  answer: string;
+}
+
 export interface Tour {
   slug: string;
   title: string;
@@ -44,6 +49,16 @@ export interface Tour {
   priceIncludes?: string[];
   priceExcludes?: string[];
   paymentPolicy?: string;
+  /** Keyword-rich H1 override shown on the tour page. Falls back to `title`. */
+  h1?: string;
+  /** SEO <title> override. Falls back to `${title} | Wildlife Discovered`. */
+  seoTitle?: string;
+  /** Meta description override. Falls back to `description`. */
+  seoDescription?: string;
+  /** Frequently asked questions, rendered on page + emitted as FAQPage JSON-LD. */
+  faqs?: TourFaq[];
+  /** Slug whose image gallery should be reused (for alias pages like moose → algonquin). */
+  gallerySlug?: string;
 }
 
 export const tours: Tour[] = [
