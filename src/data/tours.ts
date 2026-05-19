@@ -130,6 +130,13 @@ export const tours: Tour[] = [
     ],
     paymentPolicy:
       "A non-refundable 50% deposit plus 13% Ontario sales tax is required to reserve your spot. Balance in full is due 2 months prior to the workshop start date. We accept PayPal or E-transfers. Travel insurance and health insurance are highly recommended.",
+    faqs: [
+      { question: "When is the best time for loon photography in Ontario?", answer: "July is the peak month for loon photography tours in Northern Ontario. Loon chicks have recently hatched and still ride on their parents' backs — a fleeting behaviour that lasts only 2–3 weeks." },
+      { question: "How many photographers are on each loon photography tour?", answer: "A maximum of 4 photographers per boat, ensuring everyone gets a prime shooting position 16 inches above the water." },
+      { question: "What lens is best for photographing loons?", answer: "A 300–600mm telephoto lens is ideal, with 500mm being our most recommended focal length for frame-filling loon and chick portraits." },
+      { question: "Do I need photography experience to join?", answer: "No. Our loon photography workshops welcome all skill levels, from beginners to advanced photographers, with personalised instruction throughout." },
+      { question: "Where do the loon photography tours take place?", answer: "On pristine lakes in Northern Ontario, roughly 2.5 hours north of Toronto, with access to 9 different lakes and 11 monitored nesting pairs." },
+    ],
   },
   {
     slug: "algonquin-park-photography-tours",
@@ -199,6 +206,13 @@ export const tours: Tour[] = [
     ],
     paymentPolicy:
       "A non-refundable 50% deposit plus 13% Ontario tax is required to reserve your spot. Balance in full is due 2 months before the tour start date. We accept PayPal or E-transfers. Travel insurance and health insurance are highly recommended.",
+    faqs: [
+      { question: "When is the best time for moose photography in Algonquin Park?", answer: "June is the prime month. Moose feed extensively on aquatic vegetation in Algonquin's lakes and wetlands, often submerging their heads in the shallows just metres from the boat." },
+      { question: "How close do you get to the moose?", answer: "Often within 20–30 metres. A silent electric motor and push pole allow our purpose-built boat to approach feeding moose without disturbing them." },
+      { question: "Besides moose, what other wildlife can I photograph?", answer: "Bald eagles, common loons in territorial display, otters, beavers, mergansers, and a variety of boreal birds and waterfowl." },
+      { question: "What lenses do I need for Algonquin wildlife photography?", answer: "A 70–200mm and a 100–400mm cover most situations. A wide-angle is useful for landscape-wildlife combinations on the water." },
+      { question: "Are biting insects a problem in June?", answer: "Yes. Mosquitoes, black flies, and deer flies can be intense — bring bug spray, a head net, and light long-sleeved clothing." },
+    ],
   },
   {
     slug: "polar-bear-photography-tour",
@@ -280,6 +294,14 @@ export const tours: Tour[] = [
     ],
     paymentPolicy:
       "A non-refundable $2,000 CAD deposit is required at time of booking. Balance in full is due 90 days prior to departure. Fees are based on double occupancy — single rooms available for an additional supplement. We accept e-transfer, PayPal (add 3.7%), or bank wire (add $17.50). Travel and health insurance are highly recommended.",
+    faqs: [
+      { question: "When is the best time for polar bear photography in Churchill?", answer: "October and November are the peak months. Roughly 1,000 polar bears congregate along the western coast of Hudson Bay near Churchill, Manitoba, waiting for the sea ice to form." },
+      { question: "How is this different from a tundra buggy tour?", answer: "Our polar bear photography tours put you on the ground at eye level with the bears — producing dramatically more powerful and intimate images than elevated buggy platforms." },
+      { question: "How many photographers are in the group?", answer: "Just 5 photographers, ensuring every guest has door access in our 4×4 van for quick exits and re-entry, plus freedom to choose the best angles." },
+      { question: "Is it safe to photograph polar bears at ground level?", answer: "Yes, with a licensed Manitoba guide carrying full WMA permits and 15 years of polar bear field experience reading bear patterns and behaviour." },
+      { question: "What other Arctic wildlife will I photograph?", answer: "Arctic fox, red fox, cross fox, silver fox, arctic hare, ptarmigan, snowy owls, gyrfalcons, and the northern lights when skies are clear." },
+      { question: "What gear do I need for Churchill polar bear photography?", answer: "A 300–600mm telephoto, a wide-angle for landscapes and northern lights, two camera bodies, a sturdy tripod, extra batteries, and serious cold-weather clothing for temperatures down to -20°C." },
+    ],
   },
   {
     slug: "waterfowl-and-swan-photography-tours",
@@ -348,5 +370,11 @@ export const tours: Tour[] = [
     ],
     paymentPolicy:
       "A non-refundable 50% deposit plus 13% Ontario sales tax is required to reserve your spot. Balance in full is due 2 months prior to the workshop start date. We accept PayPal or E-transfers. Travel insurance and health insurance are highly recommended.",
+    faqs: [
+      { question: "When is the best time for swan photography in Ontario?", answer: "Late April for dramatic swan fights, mating displays, diving ducks, and osprey nest building. Late May for swan cygnets riding on parents' backs and terns in flight." },
+      { question: "What's the difference between the two workshop dates?", answer: "Late April is action-driven — fighting swans, diving ducks, osprey. Late May is tender and intimate — cygnets, fine-art family portraits, terns dragging bills through water." },
+      { question: "Can I photograph both swans and osprey on the same workshop?", answer: "Yes. Both workshop dates regularly include osprey hunting, carrying fish, and building or attending nests, alongside the swan and waterfowl photography." },
+      { question: "What lens is best for waterfowl photography?", answer: "A 100–400mm or 200–600mm zoom for flight and wider scenes, plus a 70–200mm f/2.8 for intimate cygnet portraits with shallow depth of field." },
+    ],
   },
 ];
