@@ -83,7 +83,7 @@ const TourDetail = () => {
     );
   }
 
-  const otherTours = tours.filter((t) => t.slug !== slug);
+  const otherTours = tours.filter((t) => t.slug !== slug && !t.gallerySlug);
 
   const siteUrl = "https://wildlifediscovered.com";
   const absoluteImage = tour.image.startsWith("http") ? tour.image : `${siteUrl}${tour.image}`;
