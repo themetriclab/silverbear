@@ -357,9 +357,6 @@ const TourDetail = () => {
         )}
 
         {/* CTA */}
-        <motion.section {...fadeUp} className="text-center py-12">
-          {/* moved below; keep CTA below FAQ */}
-        </motion.section>
         {tour.faqs && tour.faqs.length > 0 && (
           <motion.section {...fadeUp}>
             <SectionHeader label="FAQ" title="Frequently Asked Questions" />
