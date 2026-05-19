@@ -19,23 +19,29 @@ const Footer = () => {
           {/* Links */}
           <div>
             <h4 className="text-sm font-semibold tracking-widest uppercase text-primary mb-4">
-              Quick Links
+              Photography Tours
             </h4>
             <ul className="space-y-2">
-              {[
-                { label: "Home", href: "#home" },
-                { label: "Photo Tours", href: "#tours" },
-                { label: "About", href: "#about" },
-              ].map((link) => (
-                <li key={link.label}>
-                  <a
-                    href={link.href}
-                    className="text-muted-foreground text-sm hover:text-primary transition-colors"
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
+              <li>
+                <Link to="/tours/polar-bear-photography-tour" className="text-muted-foreground text-sm hover:text-primary transition-colors">
+                  Polar Bear Photography Tours
+                </Link>
+              </li>
+              <li>
+                <Link to="/tours/moose-photography-tours" className="text-muted-foreground text-sm hover:text-primary transition-colors">
+                  Moose Photography Tours
+                </Link>
+              </li>
+              <li>
+                <Link to="/tours/loon-photography-tours" className="text-muted-foreground text-sm hover:text-primary transition-colors">
+                  Loon Photography Tours
+                </Link>
+              </li>
+              <li>
+                <Link to="/tours/waterfowl-and-swan-photography-tours" className="text-muted-foreground text-sm hover:text-primary transition-colors">
+                  Waterfowl & Swan Workshops
+                </Link>
+              </li>
             </ul>
           </div>
 

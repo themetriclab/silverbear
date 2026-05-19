@@ -1,6 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowLeft, Calendar, MapPin, Clock, Users, Mountain, Camera, ChevronRight, DollarSign, Check, X, CreditCard } from "lucide-react";
+import { ArrowLeft, Calendar, MapPin, Clock, Users, Mountain, Camera, ChevronRight, DollarSign, Check, X, CreditCard, HelpCircle } from "lucide-react";
 import { tours } from "@/data/tours";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -83,7 +83,7 @@ const TourDetail = () => {
     );
   }
 
-  const otherTours = tours.filter((t) => t.slug !== slug);
+  const otherTours = tours.filter((t) => t.slug !== slug && !t.gallerySlug);
 
   const siteUrl = "https://wildlifediscovered.com";
   const absoluteImage = tour.image.startsWith("http") ? tour.image : `${siteUrl}${tour.image}`;
@@ -98,25 +98,52 @@ const TourDetail = () => {
         : "https://schema.org/InStock",
     url: `${siteUrl}/tours/${tour.slug}`,
   }));
+  const seoTitle = tour.seoTitle ?? `${tour.title} | Wildlife Discovered`;
+  const seoDescription = tour.seoDescription ?? tour.description;
+  const h1 = tour.h1 ?? tour.title;
+  const gallerySlug = tour.gallerySlug ?? tour.slug;
+
   const productLd = {
     "@context": "https://schema.org",
     "@type": "Product",
     name: tour.title,
-    description: tour.description,
+    description: seoDescription,
     image: absoluteImage,
     brand: { "@type": "Brand", name: "Wildlife Discovered" },
     ...(offers && offers.length > 0 ? { offers } : {}),
   };
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: `${siteUrl}/` },
+      { "@type": "ListItem", position: 2, name: "Photography Tours", item: `${siteUrl}/#tours` },
+      { "@type": "ListItem", position: 3, name: tour.title, item: `${siteUrl}/tours/${tour.slug}` },
+    ],
+  };
+  const faqLd = tour.faqs && tour.faqs.length > 0
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: tour.faqs.map((f) => ({
+          "@type": "Question",
+          name: f.question,
+          acceptedAnswer: { "@type": "Answer", text: f.answer },
+        })),
+      }
+    : null;
+  const jsonLd: Record<string, unknown>[] = [productLd, breadcrumbLd];
+  if (faqLd) jsonLd.push(faqLd);
 
   return (
     <div className="min-h-screen bg-background">
       <Seo
-        title={`${tour.title} | Wildlife Discovered`}
-        description={tour.description}
+        title={seoTitle}
+        description={seoDescription}
         path={`/tours/${tour.slug}`}
         image={absoluteImage}
         type="product"
-        jsonLd={productLd}
+        jsonLd={jsonLd}
       />
       <Navbar />
 
@@ -142,7 +169,7 @@ const TourDetail = () => {
             transition={{ duration: 0.8 }}
             className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-foreground max-w-4xl text-shadow-hero"
           >
-            {tour.title}
+            {h1}
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -196,22 +223,22 @@ const TourDetail = () => {
         </motion.section>
 
         {/* Tour Image Slider */}
-        {slug === "loon-photography-tours" && (
+        {gallerySlug === "loon-photography-tours" && (
           <section className="-mx-6 overflow-hidden">
             <ImageAutoSlider images={loonSliderImages} />
           </section>
         )}
-        {slug === "algonquin-park-photography-tours" && (
+        {gallerySlug === "algonquin-park-photography-tours" && (
           <section className="-mx-6 overflow-hidden">
             <ImageAutoSlider images={algonquinSliderImages} />
           </section>
         )}
-        {slug === "polar-bear-photography-tour" && (
+        {gallerySlug === "polar-bear-photography-tour" && (
           <section className="-mx-6 overflow-hidden">
             <ImageAutoSlider images={polarBearSliderImages} />
           </section>
         )}
-        {slug === "waterfowl-and-swan-photography-tours" && (
+        {gallerySlug === "waterfowl-and-swan-photography-tours" && (
           <section className="-mx-6 overflow-hidden">
             <ImageAutoSlider images={waterfowlSliderImages} />
           </section>
@@ -330,6 +357,22 @@ const TourDetail = () => {
         )}
 
         {/* CTA */}
+        {tour.faqs && tour.faqs.length > 0 && (
+          <motion.section {...fadeUp}>
+            <SectionHeader label="FAQ" title="Frequently Asked Questions" />
+            <div className="mt-10 space-y-4">
+              {tour.faqs.map((f, i) => (
+                <SpotlightCard key={i} className="p-6">
+                  <div className="flex items-start gap-3 mb-3">
+                    <HelpCircle size={18} className="text-primary mt-0.5 shrink-0" />
+                    <h3 className="text-foreground font-medium">{f.question}</h3>
+                  </div>
+                  <p className="text-muted-foreground text-sm leading-relaxed pl-7">{f.answer}</p>
+                </SpotlightCard>
+              ))}
+            </div>
+          </motion.section>
+        )}
         <motion.section {...fadeUp} className="text-center py-12">
           <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
             Ready to Capture the Wild?
