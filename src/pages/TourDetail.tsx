@@ -4,6 +4,7 @@ import { ArrowLeft, Calendar, MapPin, Clock, Users, Mountain, Camera, ChevronRig
 import { tours } from "@/data/tours";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Seo from "@/components/Seo";
 import DiagonalSplitImage from "@/components/DiagonalSplitImage";
 import { SpotlightCard } from "@/components/ui/spotlight-card";
 import { ImageAutoSlider } from "@/components/ui/image-auto-slider";
@@ -84,8 +85,39 @@ const TourDetail = () => {
 
   const otherTours = tours.filter((t) => t.slug !== slug);
 
+  const siteUrl = "https://wildlifediscovered.com";
+  const absoluteImage = tour.image.startsWith("http") ? tour.image : `${siteUrl}${tour.image}`;
+  const offers = tour.pricing?.map((p) => ({
+    "@type": "Offer",
+    name: p.label,
+    price: p.price.replace(/[^0-9.]/g, ""),
+    priceCurrency: "CAD",
+    availability:
+      p.availability.toLowerCase() === "full"
+        ? "https://schema.org/SoldOut"
+        : "https://schema.org/InStock",
+    url: `${siteUrl}/tours/${tour.slug}`,
+  }));
+  const productLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: tour.title,
+    description: tour.description,
+    image: absoluteImage,
+    brand: { "@type": "Brand", name: "Wildlife Discovered" },
+    ...(offers && offers.length > 0 ? { offers } : {}),
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      <Seo
+        title={`${tour.title} | Wildlife Discovered`}
+        description={tour.description}
+        path={`/tours/${tour.slug}`}
+        image={absoluteImage}
+        type="product"
+        jsonLd={productLd}
+      />
       <Navbar />
 
 

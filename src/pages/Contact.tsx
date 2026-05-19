@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Mail, Send, Camera, Loader2 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Seo from "@/components/Seo";
 import { tours } from "@/data/tours";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -65,6 +66,11 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Seo
+        title="Contact — Book Your Wildlife Photography Tour | Wildlife Discovered"
+        description="Plan your Canadian wildlife photography adventure with Erik Bertelsen. Contact Wildlife Discovered for loon, moose, polar bear, and swan photography tours."
+        path="/contact"
+      />
       <Navbar />
 
       {/* Hero */}

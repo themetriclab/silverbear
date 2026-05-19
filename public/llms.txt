@@ -1,5 +1,15 @@
 # Wildlife Discovered
 
+> Small-group wildlife photography tours across Canada, led by professional guide Erik Bertelsen.
+
+## Pages
+- [Home](/): Overview of Wildlife Discovered and our wildlife photography tours across Canada.
+- [Loon Photography Tours](/tours/loon-photography-tours): Photograph common loons and chicks from a purpose-built boat in Northern Ontario.
+- [Algonquin Park Wildlife Photography Tours](/tours/algonquin-park-photography-tours): Photograph moose, bald eagles, and loons by boat in Algonquin Park.
+- [Polar Bear Photography Tours](/tours/polar-bear-photography-tour): Ground-level polar bear photography in Churchill, Manitoba.
+- [Waterfowl & Swan Photography Workshops](/tours/waterfowl-and-swan-photography-tours): Low-angle photography of swans, diving ducks, osprey, and terns.
+- [Contact](/contact): Get in touch to plan your wildlife photography adventure.
+
 ## About
 Wildlife Discovered offers small group wildlife photography tours across Canada, led by professional guide and photographer Erik Bertelsen. Tours focus on authentic, wild encounters — no zoos, enclosures, or staged settings.
 
