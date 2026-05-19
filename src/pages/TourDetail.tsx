@@ -358,6 +358,25 @@ const TourDetail = () => {
 
         {/* CTA */}
         <motion.section {...fadeUp} className="text-center py-12">
+          {/* moved below; keep CTA below FAQ */}
+        </motion.section>
+        {tour.faqs && tour.faqs.length > 0 && (
+          <motion.section {...fadeUp}>
+            <SectionHeader label="FAQ" title="Frequently Asked Questions" />
+            <div className="mt-10 space-y-4">
+              {tour.faqs.map((f, i) => (
+                <SpotlightCard key={i} className="p-6">
+                  <div className="flex items-start gap-3 mb-3">
+                    <HelpCircle size={18} className="text-primary mt-0.5 shrink-0" />
+                    <h3 className="text-foreground font-medium">{f.question}</h3>
+                  </div>
+                  <p className="text-muted-foreground text-sm leading-relaxed pl-7">{f.answer}</p>
+                </SpotlightCard>
+              ))}
+            </div>
+          </motion.section>
+        )}
+        <motion.section {...fadeUp} className="text-center py-12">
           <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
             Ready to Capture the Wild?
           </h2>
