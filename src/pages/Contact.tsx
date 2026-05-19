@@ -67,8 +67,8 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-background">
       <Seo
-        title="Contact — Book Your Wildlife Photography Tour | Wildlife Discovered"
-        description="Plan your Canadian wildlife photography adventure with Erik Bertelsen. Contact Wildlife Discovered for loon, moose, polar bear, and swan photography tours."
+        title="Contact — Wildlife Photography Tours Canada"
+        description="Plan your Canadian wildlife photography adventure. Contact Wildlife Discovered for loon, moose, polar bear and swan photography tours."
         path="/contact"
       />
       <Navbar />
