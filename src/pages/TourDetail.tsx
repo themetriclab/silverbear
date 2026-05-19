@@ -223,22 +223,22 @@ const TourDetail = () => {
         </motion.section>
 
         {/* Tour Image Slider */}
-        {slug === "loon-photography-tours" && (
+        {gallerySlug === "loon-photography-tours" && (
           <section className="-mx-6 overflow-hidden">
             <ImageAutoSlider images={loonSliderImages} />
           </section>
         )}
-        {slug === "algonquin-park-photography-tours" && (
+        {gallerySlug === "algonquin-park-photography-tours" && (
           <section className="-mx-6 overflow-hidden">
             <ImageAutoSlider images={algonquinSliderImages} />
           </section>
         )}
-        {slug === "polar-bear-photography-tour" && (
+        {gallerySlug === "polar-bear-photography-tour" && (
           <section className="-mx-6 overflow-hidden">
             <ImageAutoSlider images={polarBearSliderImages} />
           </section>
         )}
-        {slug === "waterfowl-and-swan-photography-tours" && (
+        {gallerySlug === "waterfowl-and-swan-photography-tours" && (
           <section className="-mx-6 overflow-hidden">
             <ImageAutoSlider images={waterfowlSliderImages} />
           </section>
