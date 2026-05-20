@@ -56,7 +56,8 @@ export function NavBar({ items, className }: NavBarProps) {
             <>
               <span className="hidden md:inline">{item.name}</span>
               <span className="md:hidden">
-                <Icon size={18} strokeWidth={2.5} />
+                <Icon size={18} strokeWidth={2.5} aria-hidden="true" />
+                <span className="sr-only">{item.name}</span>
               </span>
               {isActive && (
                 <motion.div
@@ -89,6 +90,7 @@ export function NavBar({ items, className }: NavBarProps) {
               <Link
                 key={item.name}
                 to={item.url}
+                aria-label={item.name}
                 onClick={() => setActiveTab(item.name)}
                 className={classes}
               >
@@ -101,6 +103,7 @@ export function NavBar({ items, className }: NavBarProps) {
             <a
               key={item.name}
               href={item.url}
+              aria-label={item.name}
               onClick={() => setActiveTab(item.name)}
               className={classes}
             >

@@ -28,7 +28,7 @@ const HeroSection = () => {
           transition={{ duration: 1, delay: 0.3 }}
           className="text-5xl md:text-7xl lg:text-8xl font-display font-bold tracking-wide text-foreground text-shadow-hero"
         >
-          WILDLIFE DISCOVERED
+          Wildlife Photography Tours in Canada
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 20 }}

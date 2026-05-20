@@ -1,14 +1,22 @@
 import React, { useState, useEffect } from 'react';
 
+export interface SliderImage {
+  src: string;
+  alt: string;
+}
+
 interface ImageAutoSliderProps {
-  images: string[];
+  images: Array<string | SliderImage>;
   className?: string;
 }
 
 export const ImageAutoSlider = ({ images, className = '' }: ImageAutoSliderProps) => {
+  const normalized: SliderImage[] = images.map((img, i) =>
+    typeof img === 'string' ? { src: img, alt: `Wildlife photo ${i + 1}` } : img
+  );
   const [loadedCount, setLoadedCount] = useState(0);
-  const allLoaded = loadedCount >= images.length;
-  const duplicatedImages = [...images, ...images];
+  const allLoaded = loadedCount >= normalized.length;
+  const duplicatedImages = [...normalized, ...normalized];
 
   return (
     <>
@@ -41,13 +49,13 @@ export const ImageAutoSlider = ({ images, className = '' }: ImageAutoSliderProps
             {duplicatedImages.map((image, index) => (
               <div key={index} className="image-item flex-shrink-0 rounded-lg overflow-hidden" style={{ minWidth: '200px', minHeight: '192px' }}>
                 <img
-                  src={image}
-                  alt={`Wildlife photo ${(index % images.length) + 1}`}
+                  src={image.src}
+                  alt={image.alt}
                   className="h-48 md:h-64 w-auto object-cover rounded-lg"
-                  loading={index < images.length ? "eager" : "lazy"}
+                  loading={index < normalized.length ? "eager" : "lazy"}
                   decoding="async"
                   onLoad={() => {
-                    if (index < images.length) {
+                    if (index < normalized.length) {
                       setLoadedCount(prev => prev + 1);
                     }
                   }}
