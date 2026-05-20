@@ -9,6 +9,7 @@ const HeroSection = () => {
         loop
         muted
         playsInline
+        preload="auto"
         className="absolute inset-0 w-full h-full object-cover"
       >
         <source
@@ -23,9 +24,8 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
         <motion.h1
-          initial={{ opacity: 0, y: 40 }}
+          initial={false}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.3 }}
           className="text-5xl md:text-7xl lg:text-8xl font-display font-bold tracking-wide text-foreground text-shadow-hero"
         >
           Wildlife Photography Tours in Canada
