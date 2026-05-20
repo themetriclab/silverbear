@@ -54,9 +54,9 @@ const AboutSection = () => {
             </p>
 
             <div>
-              <h4 className="text-primary font-semibold mb-3 tracking-wider uppercase text-sm">
+              <h3 className="text-primary font-semibold mb-3 tracking-wider uppercase text-sm">
                 Qualifications
-              </h4>
+              </h3>
               <ul className="space-y-2 text-muted-foreground text-sm">
                 <li className="flex items-center gap-2">
                   <div className="w-1.5 h-1.5 rounded-full bg-primary" />
