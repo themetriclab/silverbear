@@ -86,7 +86,7 @@ const Contact = () => {
               Get In Touch
             </p>
             <h1 className="text-4xl md:text-6xl font-display font-bold text-foreground mb-6">
-              Plan Your <span className="text-primary">Adventure</span>
+              Contact <span className="text-primary">Wildlife Discovered</span>
             </h1>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
               Ready to capture the wild? Whether you have questions about a specific tour
@@ -211,10 +211,10 @@ const Contact = () => {
 
                 {/* Tour Selection */}
                 <div>
-                  <label className="block text-xs font-semibold tracking-widest uppercase text-primary mb-2">
+                  <span id="tour-select-label" className="block text-xs font-semibold tracking-widest uppercase text-primary mb-2">
                     <Camera className="w-3.5 h-3.5 inline mr-1.5 -mt-0.5" />
                     Which tour interests you?
-                  </label>
+                  </span>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                     {tours.map((tour) => (
                       <button
@@ -253,10 +253,11 @@ const Contact = () => {
                 {/* Name & Email */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-semibold tracking-widest uppercase text-muted-foreground mb-2">
+                    <label htmlFor="contact-name" className="block text-xs font-semibold tracking-widest uppercase text-muted-foreground mb-2">
                       Full Name *
                     </label>
                     <Input
+                      id="contact-name"
                       required
                       maxLength={100}
                       placeholder="Your name"
@@ -268,10 +269,11 @@ const Contact = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-semibold tracking-widest uppercase text-muted-foreground mb-2">
+                    <label htmlFor="contact-email" className="block text-xs font-semibold tracking-widest uppercase text-muted-foreground mb-2">
                       Email *
                     </label>
                     <Input
+                      id="contact-email"
                       type="email"
                       required
                       maxLength={255}
@@ -288,10 +290,11 @@ const Contact = () => {
                 {/* Phone & Group Size */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-semibold tracking-widest uppercase text-muted-foreground mb-2">
+                    <label htmlFor="contact-phone" className="block text-xs font-semibold tracking-widest uppercase text-muted-foreground mb-2">
                       Phone
                     </label>
                     <Input
+                      id="contact-phone"
                       type="tel"
                       maxLength={20}
                       placeholder="+1 (555) 000-0000"
@@ -303,10 +306,11 @@ const Contact = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-semibold tracking-widest uppercase text-muted-foreground mb-2">
+                    <label htmlFor="contact-group-size" className="block text-xs font-semibold tracking-widest uppercase text-muted-foreground mb-2">
                       Group Size
                     </label>
                     <Input
+                      id="contact-group-size"
                       type="number"
                       min={1}
                       max={20}
@@ -322,10 +326,11 @@ const Contact = () => {
 
                 {/* Message */}
                 <div>
-                  <label className="block text-xs font-semibold tracking-widest uppercase text-muted-foreground mb-2">
+                  <label htmlFor="contact-message" className="block text-xs font-semibold tracking-widest uppercase text-muted-foreground mb-2">
                     Message *
                   </label>
                   <Textarea
+                    id="contact-message"
                     required
                     maxLength={1000}
                     rows={5}
