@@ -216,23 +216,29 @@ const Contact = () => {
                     Which tour interests you?
                   </span>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                    {tours.map((tour) => (
-                      <button
-                        key={tour.slug}
-                        type="button"
-                        onClick={() => setSelectedTour(tour.slug)}
-                        className={`text-left px-4 py-3 rounded-lg border text-sm transition-all duration-200 ${
-                          selectedTour === tour.slug
-                            ? "border-primary bg-primary/10 text-foreground"
-                            : "border-border bg-secondary/30 text-muted-foreground hover:border-primary/40 hover:text-foreground"
-                        }`}
-                      >
-                        <span className="block font-medium">{tour.title}</span>
-                        <span className="block text-xs mt-0.5 opacity-70">
-                          {tour.month} · {tour.location}
-                        </span>
-                      </button>
-                    ))}
+                    {tours
+                      .filter(
+                        (t) =>
+                          t.slug !== "loon-photography-tours" &&
+                          t.slug !== "waterfowl-and-swan-photography-tours"
+                      )
+                      .map((tour) => (
+                        <button
+                          key={tour.slug}
+                          type="button"
+                          onClick={() => setSelectedTour(tour.slug)}
+                          className={`text-left px-4 py-3 rounded-lg border text-sm transition-all duration-200 ${
+                            selectedTour === tour.slug
+                              ? "border-primary bg-primary/10 text-foreground"
+                              : "border-border bg-secondary/30 text-muted-foreground hover:border-primary/40 hover:text-foreground"
+                          }`}
+                        >
+                          <span className="block font-medium">{tour.title}</span>
+                          <span className="block text-xs mt-0.5 opacity-70">
+                            {tour.month} · {tour.location}
+                          </span>
+                        </button>
+                      ))}
                     <button
                       type="button"
                       onClick={() => setSelectedTour("custom")}
