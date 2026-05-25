@@ -179,6 +179,17 @@ const TourDetail = () => {
           >
             {tour.subtitle}
           </motion.p>
+          {(tour.slug === "loon-photography-tours" || tour.slug === "waterfowl-and-swan-photography-tours") && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="mt-6 inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-destructive/10 border border-destructive/30 text-destructive text-sm font-medium"
+            >
+              <X size={16} />
+              Currently not offering
+            </motion.div>
+          )}
         </div>
       </section>
 
