@@ -22,6 +22,13 @@ const BlogPost = () => {
 
   const related = blogPosts.filter((p) => p.slug !== post.slug).slice(0, 3);
 
+  // For HTML posts, drop the duplicate leading <h1>, cover <img>, and reading-time
+  // line since the page renders its own hero/title above.
+  const htmlBody =
+    post.format === "html"
+      ? post.content.slice(Math.max(0, post.content.indexOf("<h2")))
+      : "";
+
   return (
     <div className="min-h-screen bg-background">
       <Seo
@@ -92,16 +99,23 @@ const BlogPost = () => {
             {post.excerpt}
           </p>
 
-          <div className="prose prose-invert max-w-none">
-            {post.content.split("\n\n").map((para, i) => (
-              <p
-                key={i}
-                className="text-foreground/90 leading-relaxed mb-6 text-lg"
-              >
-                {para}
-              </p>
-            ))}
-          </div>
+          {post.format === "html" ? (
+            <div
+              className="prose prose-invert max-w-none prose-headings:font-display prose-headings:text-primary prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-4 prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3 prose-p:text-foreground/90 prose-p:leading-relaxed prose-p:text-lg prose-li:text-foreground/90 prose-li:leading-relaxed prose-a:text-primary prose-strong:text-foreground prose-ul:my-4 prose-ol:my-4 prose-img:rounded-2xl"
+              dangerouslySetInnerHTML={{ __html: htmlBody }}
+            />
+          ) : (
+            <div className="prose prose-invert max-w-none">
+              {post.content.split("\n\n").map((para, i) => (
+                <p
+                  key={i}
+                  className="text-foreground/90 leading-relaxed mb-6 text-lg"
+                >
+                  {para}
+                </p>
+              ))}
+            </div>
+          )}
 
           <div className="mt-16 pt-8 border-t border-border">
             <Link
