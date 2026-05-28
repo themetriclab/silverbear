@@ -123,8 +123,9 @@ const Blog = () => {
         </div>
       </section>
 
-      {/* Grid by category */}
-      {categories.map((cat) => {
+      {/* Grid by category — only once there are more posts than the Latest row */}
+      {sorted.length > 3 &&
+        categories.map((cat) => {
         const inCat = sorted.filter((p) => p.category === cat);
         return (
           <section key={cat} className="px-6 pb-20">
