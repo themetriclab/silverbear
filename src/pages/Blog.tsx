@@ -51,8 +51,8 @@ const Blog = () => {
           <h3 className="font-display text-2xl text-foreground mb-3 group-hover:text-primary transition-colors line-clamp-2">
             {post.title}
           </h3>
-          <p className="text-muted-foreground text-sm leading-relaxed mb-6">
-            Estimated reading time: {post.readTime} minutes
+          <p className="text-muted-foreground text-sm leading-relaxed mb-6 line-clamp-3">
+            {post.excerpt}
           </p>
           <span className="mt-auto inline-flex items-center gap-2 text-primary text-sm font-medium">
             Read article <ArrowRight size={14} />
