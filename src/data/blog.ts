@@ -1,7 +1,9 @@
 import redFoxSunset from "@/assets/slider/red-fox-sunset.jpg";
 import cameraGuideImg from "@/assets/slider/bear-snowstorm.jpg";
+import polarBearGroundImg from "@/assets/slider/mom-cub-snowstorm.jpg";
 import redFoxHtml from "@/content/blog/ethical-red-fox-photography.html?raw";
 import cameraGuideHtml from "@/content/blog/wildlife-photography-camera-guide.html?raw";
+import groundLevelPolarBearHtml from "@/content/blog/ground-level-polar-bear-churchill.html?raw";
 
 export interface BlogPost {
   slug: string;
@@ -38,6 +40,18 @@ export const blogPosts: BlogPost[] = [
     readTime: 14,
     image: cameraGuideImg,
     content: cameraGuideHtml,
+    format: "html",
+  },
+  {
+    slug: "ground-level-polar-bear-photography-tour-churchill-manitoba",
+    title: "Experience the Ultimate Ground-Level Polar Bear Photography Tour in Churchill, Manitoba",
+    excerpt:
+      "Why ground-level polar bear photography tours in Churchill, Manitoba create immersive, eye-level encounters for serious wildlife photographers.",
+    category: "Polar Bear Tours",
+    date: "2026-05-29",
+    readTime: 12,
+    image: polarBearGroundImg,
+    content: groundLevelPolarBearHtml,
     format: "html",
   },
 ];
