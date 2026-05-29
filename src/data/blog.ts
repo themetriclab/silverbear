@@ -1,5 +1,7 @@
 import redFoxSunset from "@/assets/slider/red-fox-sunset.jpg";
+import cameraGuideImg from "@/assets/slider/bear-snowstorm.jpg";
 import redFoxHtml from "@/content/blog/ethical-red-fox-photography.html?raw";
+import cameraGuideHtml from "@/content/blog/wildlife-photography-camera-guide.html?raw";
 
 export interface BlogPost {
   slug: string;
@@ -24,6 +26,18 @@ export const blogPosts: BlogPost[] = [
     readTime: 12,
     image: redFoxSunset,
     content: redFoxHtml,
+    format: "html",
+  },
+  {
+    slug: "wildlife-photography-camera-guide",
+    title: "Wildlife Photography Camera: The Ultimate Guide to Capturing Stunning Animal Photos",
+    excerpt:
+      "Choosing the right wildlife photography camera — fast autofocus, high frame rates, sensor size, telephoto lenses, and top picks for every budget.",
+    category: "Gear Guide",
+    date: "2026-05-28",
+    readTime: 14,
+    image: cameraGuideImg,
+    content: cameraGuideHtml,
     format: "html",
   },
 ];
