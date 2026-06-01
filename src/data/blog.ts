@@ -1,9 +1,11 @@
 import redFoxSunset from "@/assets/slider/red-fox-sunset.jpg";
 import cameraGuideImg from "@/assets/slider/bear-snowstorm.jpg";
 import polarBearGroundImg from "@/assets/slider/mom-cub-snowstorm.jpg";
+import bestPolarBearImg from "@/assets/slider/young-bear-rock.jpg";
 import redFoxHtml from "@/content/blog/ethical-red-fox-photography.html?raw";
 import cameraGuideHtml from "@/content/blog/wildlife-photography-camera-guide.html?raw";
 import groundLevelPolarBearHtml from "@/content/blog/ground-level-polar-bear-churchill.html?raw";
+import bestPolarBearHtml from "@/content/blog/best-polar-bear-tour-churchill.html?raw";
 
 export interface BlogPost {
   slug: string;
@@ -52,6 +54,18 @@ export const blogPosts: BlogPost[] = [
     readTime: 12,
     image: polarBearGroundImg,
     content: groundLevelPolarBearHtml,
+    format: "html",
+  },
+  {
+    slug: "best-polar-bear-photography-tour-churchill",
+    title: "Discover the Best Polar Bear Photography Tour in Churchill This Fall",
+    excerpt:
+      "Churchill is the polar bear capital of the world — here's why fall is the ideal time for an expert-guided, ethical polar bear photography tour.",
+    category: "Polar Bear Tours",
+    date: "2026-05-30",
+    readTime: 8,
+    image: bestPolarBearImg,
+    content: bestPolarBearHtml,
     format: "html",
   },
 ];
