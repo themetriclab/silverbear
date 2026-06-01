@@ -2,6 +2,7 @@ import redFoxSunset from "@/assets/slider/red-fox-sunset.jpg";
 import cameraGuideImg from "@/assets/slider/bear-snowstorm.jpg";
 import polarBearGroundImg from "@/assets/slider/mom-cub-snowstorm.jpg";
 import bestPolarBearImg from "@/assets/slider/young-bear-rock.jpg";
+import bestPolarBearImg2 from "@/assets/slider/bear-yellow-grass.jpg";
 import redFoxHtml from "@/content/blog/ethical-red-fox-photography.html?raw";
 import cameraGuideHtml from "@/content/blog/wildlife-photography-camera-guide.html?raw";
 import groundLevelPolarBearHtml from "@/content/blog/ground-level-polar-bear-churchill.html?raw";
