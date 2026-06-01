@@ -16,7 +16,9 @@ const formatDate = (iso: string) =>
 const Blog = () => {
   const sorted = [...blogPosts].sort((a, b) => (a.date < b.date ? 1 : -1));
   const latest = sorted.slice(0, 3);
-  const categories = Array.from(new Set(sorted.map((p) => p.category)));
+  const latestSlugs = new Set(latest.map((p) => p.slug));
+  const remaining = sorted.filter((p) => !latestSlugs.has(p.slug));
+  const categories = Array.from(new Set(remaining.map((p) => p.category)));
 
   const PostCard = ({ post, i }: { post: (typeof sorted)[number]; i: number }) => (
     <motion.div
@@ -123,10 +125,10 @@ const Blog = () => {
         </div>
       </section>
 
-      {/* Grid by category — only once there are more posts than the Latest row */}
-      {sorted.length > 3 &&
+      {/* Grid by category — posts not already shown in Latest */}
+      {remaining.length > 0 &&
         categories.map((cat) => {
-        const inCat = sorted.filter((p) => p.category === cat);
+        const inCat = remaining.filter((p) => p.category === cat);
         return (
           <section key={cat} className="px-6 pb-20">
             <div className="max-w-6xl mx-auto">
