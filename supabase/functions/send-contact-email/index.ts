@@ -54,8 +54,8 @@ serve(async (req) => {
         Authorization: `Bearer ${RESEND_API_KEY}`,
       },
       body: JSON.stringify({
-        from: "Wildlife Discovered <contact@wildlifediscovered.com>",
-        to: ["erik@wildlifediscovered.com"],
+        from: "Silver Bear Photo Tours <contact@silverbearphototours.com>",
+        to: ["erik@silverbearphototours.com"],
         subject: `New Inquiry from ${name}${tour ? ` – ${tour}` : ""}`,
         html: htmlBody,
         reply_to: email,

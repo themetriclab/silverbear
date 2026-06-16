@@ -85,7 +85,7 @@ const TourDetail = () => {
 
   const otherTours = tours.filter((t) => t.slug !== slug && !t.gallerySlug);
 
-  const siteUrl = "https://wildlifediscovered.com";
+  const siteUrl = "https://silverbearphototours.com";
   const absoluteImage = tour.image.startsWith("http") ? tour.image : `${siteUrl}${tour.image}`;
   const offers = tour.pricing?.map((p) => ({
     "@type": "Offer",
@@ -98,7 +98,7 @@ const TourDetail = () => {
         : "https://schema.org/InStock",
     url: `${siteUrl}/tours/${tour.slug}`,
   }));
-  const seoTitle = tour.seoTitle ?? `${tour.title} | Wildlife Discovered`;
+  const seoTitle = tour.seoTitle ?? `${tour.title} | Silver Bear Photo Tours`;
   const seoDescription = tour.seoDescription ?? tour.description;
   const h1 = tour.h1 ?? tour.title;
   const gallerySlug = tour.gallerySlug ?? tour.slug;
@@ -109,7 +109,7 @@ const TourDetail = () => {
     name: tour.title,
     description: seoDescription,
     image: absoluteImage,
-    brand: { "@type": "Brand", name: "Wildlife Discovered" },
+    brand: { "@type": "Brand", name: "Silver Bear Photo Tours" },
     ...(offers && offers.length > 0 ? { offers } : {}),
   };
   const breadcrumbLd = {

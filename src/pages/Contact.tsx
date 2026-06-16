@@ -68,7 +68,7 @@ const Contact = () => {
     <div className="min-h-screen bg-background">
       <Seo
         title="Contact — Wildlife Photography Tours Canada"
-        description="Plan your Canadian wildlife photography adventure. Contact Wildlife Discovered for loon, moose, polar bear and swan photography tours."
+        description="Plan your Canadian wildlife photography adventure. Contact Silver Bear Photo Tours for loon, moose, polar bear and swan photography tours."
         path="/contact"
       />
       <Navbar />
@@ -86,7 +86,7 @@ const Contact = () => {
               Get In Touch
             </p>
             <h1 className="text-4xl md:text-6xl font-display font-bold text-foreground mb-6">
-              Contact <span className="text-primary">Wildlife Discovered</span>
+              Contact <span className="text-primary">Silver Bear Photo Tours</span>
             </h1>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
               Ready to capture the wild? Whether you have questions about a specific tour
@@ -122,8 +122,8 @@ const Contact = () => {
                 {
                   icon: Mail,
                   label: "Email",
-                  value: "wildlifediscovered@outlook.com",
-                  href: "mailto:wildlifediscovered@outlook.com",
+                  value: "erik@silverbearphototours.com",
+                  href: "mailto:erik@silverbearphototours.com",
                 },
               ].map((item) => (
                 <div key={item.label} className="flex items-start gap-4">

@@ -64,7 +64,7 @@ const faqs = [
 ];
 
 const MooseOntarioAlgonquinLanding = () => {
-  const siteUrl = "https://wildlifediscovered.com";
+  const siteUrl = "https://silverbearphototours.com";
   const path = "/moose-photography-tours-ontario-algonquin-park";
   const absoluteImage = `${siteUrl}${mooseImg}`;
 
@@ -92,7 +92,7 @@ const MooseOntarioAlgonquinLanding = () => {
     description:
       "Guided moose photography tour in Ontario and Algonquin Park, by boat with expert wildlife photography instruction.",
     image: absoluteImage,
-    brand: { "@type": "Brand", name: "Wildlife Discovered" },
+    brand: { "@type": "Brand", name: "Silver Bear Photo Tours" },
   };
 
   return (
@@ -276,7 +276,7 @@ const MooseOntarioAlgonquinLanding = () => {
           <SectionHeader label="Ethics" title="Ethical Moose Photography" />
           <div className="space-y-4 text-muted-foreground leading-relaxed mt-6">
             <p>
-              Moose are large, sensitive wild animals, and Algonquin Park is their home. Every Wildlife Discovered moose photography tour follows quiet wildlife viewing principles — slow, silent approach with electric motor, oars, or push pole, respectful distances, and zero baiting or pressure on the animals.
+              Moose are large, sensitive wild animals, and Algonquin Park is their home. Every Silver Bear Photo Tours moose photography tour follows quiet wildlife viewing principles — slow, silent approach with electric motor, oars, or push pole, respectful distances, and zero baiting or pressure on the animals.
             </p>
             <p>
               Ethical moose photography protects the population and produces better images. A relaxed, naturally feeding moose makes the photograph; a stressed moose does not.

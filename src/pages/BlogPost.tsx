@@ -32,7 +32,7 @@ const BlogPost = () => {
   return (
     <div className="min-h-screen bg-background">
       <Seo
-        title={`${post.title} | Wildlife Discovered`}
+        title={`${post.title} | Silver Bear Photo Tours`}
         description={post.excerpt}
         path={`/blog/${post.slug}`}
         image={post.image}
@@ -44,12 +44,12 @@ const BlogPost = () => {
           description: post.excerpt,
           image: post.image,
           datePublished: post.date,
-          author: { "@type": "Organization", name: "Wildlife Discovered" },
+          author: { "@type": "Organization", name: "Silver Bear Photo Tours" },
           publisher: {
             "@type": "Organization",
-            name: "Wildlife Discovered",
+            name: "Silver Bear Photo Tours",
           },
-          mainEntityOfPage: `https://wildlifediscovered.com/blog/${post.slug}`,
+          mainEntityOfPage: `https://silverbearphototours.com/blog/${post.slug}`,
         }}
       />
       <Navbar />

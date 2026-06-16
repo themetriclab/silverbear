@@ -24,7 +24,7 @@ const IntroSection = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="mt-16">
 
-          <h2 className="text-3xl md:text-4xl font-display font-semibold text-foreground mb-10">Why Photographers Travel With Wildlife Discovered
+          <h2 className="text-3xl md:text-4xl font-display font-semibold text-foreground mb-10">Why Photographers Travel With Silver Bear Photo Tours
 
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
