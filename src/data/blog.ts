@@ -4,7 +4,7 @@
 //
 // Each post may begin with an optional comment block, e.g.:
 //   <!--
-//   category: Field Craft
+//   category: In the Field
 //   date: 2026-06-07
 //   image: snow-owl-raven.jpg   (a file in src/assets/slider, OR a full https:// URL)
 //   slug: custom-url-slug        (optional; defaults to the file name)
