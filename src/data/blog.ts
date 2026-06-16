@@ -4,7 +4,7 @@
 //
 // Each post may begin with an optional comment block, e.g.:
 //   <!--
-//   category: Field Craft
+//   category: In the Field
 //   date: 2026-06-07
 //   image: snow-owl-raven.jpg   (a file in src/assets/slider, OR a full https:// URL)
 //   slug: custom-url-slug        (optional; defaults to the file name)
@@ -43,7 +43,7 @@ for (const [path, url] of Object.entries(imageModules)) {
   if (name) imageByName[name] = url;
 }
 
-const DEFAULT_CATEGORY = "Field Craft";
+const DEFAULT_CATEGORY = "In the Field";
 const DEFAULT_DATE = "2026-01-01";
 
 const fileNameToSlug = (path: string) =>
