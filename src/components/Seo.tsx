@@ -9,7 +9,7 @@ interface SeoProps {
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
 }
 
-const SITE_URL = "https://wildlifediscovered.com";
+const SITE_URL = "https://silverbearphototours.com";
 
 const Seo = ({ title, description, path, image, type = "website", jsonLd }: SeoProps) => {
   const url = `${SITE_URL}${path}`;

@@ -51,7 +51,7 @@ export interface Tour {
   paymentPolicy?: string;
   /** Keyword-rich H1 override shown on the tour page. Falls back to `title`. */
   h1?: string;
-  /** SEO <title> override. Falls back to `${title} | Wildlife Discovered`. */
+  /** SEO <title> override. Falls back to `${title} | Silver Bear Photo Tours`. */
   seoTitle?: string;
   /** Meta description override. Falls back to `description`. */
   seoDescription?: string;
@@ -67,7 +67,7 @@ export const tours: Tour[] = [
     title: "Loon Photography Tours & Workshops",
     subtitle: "North America's leading loon photography experience — capture stunning images of common loons and their chicks on pristine Northern Ontario lakes",
     description:
-      "Join Wildlife Discovered on a guided loon photography tour in Northern Ontario. Photograph common loons and their chicks from a purpose-built boat on sparkling northern lakes, with expert instruction and a 90% chick success rate since 1997.",
+      "Join Silver Bear Photo Tours on a guided loon photography tour in Northern Ontario. Photograph common loons and their chicks from a purpose-built boat on sparkling northern lakes, with expert instruction and a 90% chick success rate since 1997.",
     seoTitle: "Loon Photography Tours in Northern Ontario",
     seoDescription: "Guided loon photography tours in Northern Ontario. Photograph common loons and their chicks from a purpose-built boat — 90% chick success rate since 1997.",
     image: loonImg,
@@ -95,7 +95,7 @@ export const tours: Tour[] = [
     migrationInfo: {
       title: "Loon Nesting Season & Behaviour",
       content:
-        "Common loons breed on freshwater lakes across Canada from May through August, fiercely defending their nesting territories. By late September they migrate south to coastal waters along the Atlantic, Pacific, and Gulf coasts. July is the ideal month because chicks have recently hatched and still ride on their parents' backs — a tender behaviour that lasts only a few weeks. You'll also witness parents feeding their young, creating some of the most iconic and emotionally powerful wildlife images possible. Wildlife Discovered monitors 11 nesting pairs across 9 different lakes, offering photographers a remarkable 90% chick success rate since 1997.",
+        "Common loons breed on freshwater lakes across Canada from May through August, fiercely defending their nesting territories. By late September they migrate south to coastal waters along the Atlantic, Pacific, and Gulf coasts. July is the ideal month because chicks have recently hatched and still ride on their parents' backs — a tender behaviour that lasts only a few weeks. You'll also witness parents feeding their young, creating some of the most iconic and emotionally powerful wildlife images possible. Silver Bear Photo Tours monitors 11 nesting pairs across 9 different lakes, offering photographers a remarkable 90% chick success rate since 1997.",
     },
     whyPhotograph: {
       title: "Why July Is the Best Time for Loon Photography",
@@ -145,7 +145,7 @@ export const tours: Tour[] = [
     title: "Algonquin Park Wildlife Photography Tours",
     subtitle: "Photograph moose, bald eagles, loons, and boreal wildlife by boat in the heart of Algonquin Park",
     description:
-      "Join Wildlife Discovered on a guided wildlife photography tour by boat in Ontario's world-renowned Algonquin Park. Capture moose feeding on lily pads, bald eagles in flight, territorial loon displays, and more from a stable, purpose-built photography boat.",
+      "Join Silver Bear Photo Tours on a guided wildlife photography tour by boat in Ontario's world-renowned Algonquin Park. Capture moose feeding on lily pads, bald eagles in flight, territorial loon displays, and more from a stable, purpose-built photography boat.",
     seoTitle: "Algonquin Park Wildlife Photography Tours, Ontario",
     seoDescription: "Guided wildlife photography tours by boat in Algonquin Park, Ontario. Photograph moose, bald eagles, loons and boreal wildlife from a stable photo boat.",
     image: mooseImg,
@@ -223,7 +223,7 @@ export const tours: Tour[] = [
     title: "Polar Bear Photography Tours in Churchill, Manitoba",
     subtitle: "Photograph polar bears and Arctic wildlife at ground level in the polar bear capital of the world",
     description:
-      "Join Wildlife Discovered on an exclusive ground-level polar bear photography tour in Churchill, Manitoba. Capture stunning images of polar bears, arctic fox, snowy owls, ptarmigan, and the northern lights with a licensed guide and small group of just 5 photographers.",
+      "Join Silver Bear Photo Tours on an exclusive ground-level polar bear photography tour in Churchill, Manitoba. Capture stunning images of polar bears, arctic fox, snowy owls, ptarmigan, and the northern lights with a licensed guide and small group of just 5 photographers.",
     image: polarBearImg,
     h1: "Polar Bear Photography Tours in Churchill, Manitoba",
     seoTitle: "Polar Bear Photography Tours in Churchill, Manitoba",
@@ -258,7 +258,7 @@ export const tours: Tour[] = [
     whyPhotograph: {
       title: "Why Ground-Level Photography Changes Everything",
       content:
-        "Unlike tundra buggy tours, Wildlife Discovered puts you on the ground at eye level with polar bears — producing dramatically more powerful and intimate images. With only 5 photographers, everyone has access to a door in the 4×4 van for quick exits to photograph fast-moving foxes or bears, and for rapid re-entry if a bear approaches. The small group allows you to move freely, choose better backgrounds and angles, and feel truly immersed in the Arctic environment. The low golden Arctic light during October and November creates dramatic side-lighting and long shadows all day long.",
+        "Unlike tundra buggy tours, Silver Bear Photo Tours puts you on the ground at eye level with polar bears — producing dramatically more powerful and intimate images. With only 5 photographers, everyone has access to a door in the 4×4 van for quick exits to photograph fast-moving foxes or bears, and for rapid re-entry if a bear approaches. The small group allows you to move freely, choose better backgrounds and angles, and feel truly immersed in the Arctic environment. The low golden Arctic light during October and November creates dramatic side-lighting and long shadows all day long.",
     },
     whatToExpect: {
       title: "What to Expect on This Polar Bear Photography Tour",
@@ -315,7 +315,7 @@ export const tours: Tour[] = [
     title: "Waterfowl & Swan Photography Workshops",
     subtitle: "Photograph diving ducks, fighting swans, osprey, terns, and tender swan families from a custom-built low-angle photography boat",
     description:
-      "Join Wildlife Discovered for an intimate waterfowl and swan photography workshop aboard a custom-built boat on southern Ontario's waters. Two seasonal options: late April for dramatic swan fights, diving ducks, and osprey — or late May for swan cygnets, terns in flight, and fine-art family portraits.",
+      "Join Silver Bear Photo Tours for an intimate waterfowl and swan photography workshop aboard a custom-built boat on southern Ontario's waters. Two seasonal options: late April for dramatic swan fights, diving ducks, and osprey — or late May for swan cygnets, terns in flight, and fine-art family portraits.",
     seoTitle: "Waterfowl & Swan Photography Workshops, Ontario",
     seoDescription: "Low-angle waterfowl and swan photography workshops in southern Ontario. Diving ducks, fighting swans, osprey, terns and cygnets from a custom photo boat.",
     image: waterfowlImg,
@@ -391,7 +391,7 @@ export const tours: Tour[] = [
     title: "Moose Photography Tours in Algonquin Park, Ontario",
     subtitle: "Photograph moose feeding on lily pads from a stable, low-angle photography boat in the heart of Algonquin Provincial Park",
     description:
-      "Join Wildlife Discovered on a guided moose photography tour by boat in Ontario's Algonquin Provincial Park. Capture bull moose, cows, and calves feeding on aquatic vegetation at water level — the most intimate moose photography experience in Canada, with a maximum of 4 photographers per boat.",
+      "Join Silver Bear Photo Tours on a guided moose photography tour by boat in Ontario's Algonquin Provincial Park. Capture bull moose, cows, and calves feeding on aquatic vegetation at water level — the most intimate moose photography experience in Canada, with a maximum of 4 photographers per boat.",
     image: mooseImg,
     h1: "Moose Photography Tours in Algonquin Park, Ontario",
     seoTitle: "Moose Photography Tours in Algonquin Park, Ontario",

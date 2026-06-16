@@ -66,7 +66,7 @@ const faqs = [
 ];
 
 const PolarBearChurchillLanding = () => {
-  const siteUrl = "https://wildlifediscovered.com";
+  const siteUrl = "https://silverbearphototours.com";
   const path = "/polar-bear-photography-tours-churchill-manitoba";
   const absoluteImage = `${siteUrl}${polarBearImg}`;
 
@@ -94,7 +94,7 @@ const PolarBearChurchillLanding = () => {
     description:
       "Guided polar bear photography tour in Churchill, Manitoba — small group, ground-level, with expert wildlife photography instruction.",
     image: absoluteImage,
-    brand: { "@type": "Brand", name: "Wildlife Discovered" },
+    brand: { "@type": "Brand", name: "Silver Bear Photo Tours" },
   };
 
   return (
@@ -287,7 +287,7 @@ const PolarBearChurchillLanding = () => {
           <SectionHeader label="Ethics" title="Ethical Wildlife Photography in the Arctic" />
           <div className="space-y-4 text-muted-foreground leading-relaxed mt-6">
             <p>
-              Polar bears are a protected species and Churchill is their home. Every Wildlife Discovered polar bear expedition follows strict Manitoba WMA protocols for safe polar bear viewing — keeping bears wild, undisturbed, and behaving naturally. We never bait, call in, or pressure animals for a frame.
+              Polar bears are a protected species and Churchill is their home. Every Silver Bear Photo Tours polar bear expedition follows strict Manitoba WMA protocols for safe polar bear viewing — keeping bears wild, undisturbed, and behaving naturally. We never bait, call in, or pressure animals for a frame.
             </p>
             <p>
               Our guide carries the permits and the experience to read bear behaviour in real time, ensuring distance and timing that protect both the bears and our small group. Ethical polar bear viewing produces stronger photographs and a healthier population for future photographers to enjoy.

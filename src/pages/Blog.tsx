@@ -67,20 +67,20 @@ const Blog = () => {
   return (
     <div className="min-h-screen bg-background">
       <Seo
-        title="Blog | Wildlife Discovered Journal"
+        title="Blog | Silver Bear Photo Tours Journal"
         description="Field notes, gear reviews, and ethical wildlife photography insights from our expeditions across Canada — polar bears, moose, loons, and more."
         path="/blog"
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "Blog",
-          name: "Wildlife Discovered Journal",
-          url: "https://wildlifediscovered.com/blog",
+          name: "Silver Bear Photo Tours Journal",
+          url: "https://silverbearphototours.com/blog",
           blogPost: sorted.map((p) => ({
             "@type": "BlogPosting",
             headline: p.title,
             datePublished: p.date,
             image: p.image,
-            url: `https://wildlifediscovered.com/blog/${p.slug}`,
+            url: `https://silverbearphototours.com/blog/${p.slug}`,
           })),
         }}
       />
@@ -95,7 +95,7 @@ const Blog = () => {
             transition={{ duration: 0.6 }}
           >
             <p className="text-xs sm:text-sm tracking-[0.3em] uppercase text-primary mb-4">
-              The Wildlife Discovered Journal
+              The Silver Bear Photo Tours Journal
             </p>
             <h1 className="font-display text-5xl sm:text-7xl text-primary leading-none mb-6">
               Blog
