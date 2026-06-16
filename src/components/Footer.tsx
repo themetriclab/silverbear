@@ -9,7 +9,7 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <h3 className="text-xl font-display font-bold text-foreground mb-4">
-              WILDLIFE <span className="text-primary">DISCOVERED</span>
+              SILVER <span className="text-primary">BEAR</span>
             </h3>
             <p className="text-muted-foreground text-sm leading-relaxed">
               Small group wildlife photography tours across Canada's most breathtaking landscapes.
@@ -61,7 +61,7 @@ const Footer = () => {
                 Contact Us
               </Link>
               <a
-                href="https://www.instagram.com/wildlife.discovered"
+                href="https://www.instagram.com/silverbearphototours"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors"
@@ -75,7 +75,7 @@ const Footer = () => {
 
         <div className="mt-16 pt-8 border-t border-border text-center">
           <p className="text-muted-foreground text-xs tracking-wider">
-            © {new Date().getFullYear()} Wildlife Discovered. All rights reserved.
+            © {new Date().getFullYear()} Silver Bear Photo Tours. All rights reserved.
           </p>
         </div>
       </div>
