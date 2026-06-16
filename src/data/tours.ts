@@ -152,7 +152,7 @@ export const tours: Tour[] = [
     month: "June",
     season: "Early Summer",
     location: "Algonquin Provincial Park, Ontario",
-    duration: "2–6 Days",
+    duration: "3–6 Days",
     difficulty: "All Levels",
     groupSize: "Maximum 4 Photographers",
     highlights: [
@@ -168,7 +168,7 @@ export const tours: Tour[] = [
       { label: "Height", value: "Up to 2.1 m (6.9 ft) at the shoulder" },
       { label: "Weight", value: "Males up to 700 kg (1,500 lbs)" },
       { label: "Antler Span", value: "Up to 1.8 m (6 ft) across" },
-      { label: "Population in Algonquin", value: "Approximately 3,000 moose" },
+      { label: "Population in Algonquin", value: "Approximately 2,500+ moose" },
       { label: "Diet", value: "Aquatic vegetation, lily pads, willow, birch, and aspen" },
     ],
     migrationInfo: {
@@ -184,7 +184,7 @@ export const tours: Tour[] = [
     whatToExpect: {
       title: "What to Expect on This Algonquin Photography Tour",
       content:
-        "You'll meet your certified captain and guide at a location in Algonquin Park and head out on the water for early morning light. The wide-bottomed boat with a flat floor and comfortable swivel seats mounted on the centreline keeps everything stable and shake-free — perfect for sharp images with your monopod or tripod. Your guide uses oars, a push pole, or a silent electric motor to slip in close to wildlife without disturbance. A light breakfast is served aboard around 8 am, and a picnic-style lunch break happens around 11:30 am before heading back out for the afternoon. Photography tips and camera settings are shared throughout whenever the moment allows. Note: biting insects (mosquitoes, black flies, deer flies) can be intense in June — come prepared with bug spray, a head net, and light long-sleeved clothing.",
+        "You'll meet your certified captain and guide at a location in Algonquin Park and head out on the water for early morning light. The wide-bottomed boat with a flat floor and comfortable swivel seats mounted on the centreline keeps everything stable and shake-free — perfect for sharp images with your monopod or tripod. Your guide uses oars, a push pole, or a silent electric motor to slip in close to wildlife without disturbance. A light breakfast is served aboard around 8 am. Photography tips and camera settings are shared throughout whenever the moment allows. Note: biting insects (mosquitoes, black flies, deer flies) can be intense in June — come prepared with bug spray, a head net, and light long-sleeved clothing.",
     },
     gearTips: [
       "70–200mm and 100–400mm zoom lenses for versatility with moose and eagles",
@@ -195,11 +195,14 @@ export const tours: Tour[] = [
       "Layered clothing — temperatures range from 20°C to as low as -3°C",
     ],
     pricing: [
-      { label: "3-Day Algonquin Wildlife by Boat", price: "$1,500.00", dates: "June 2026", availability: "Full" },
+      { label: "3-Day Algonquin Wildlife by Boat", price: "$1,500.00", dates: "June 4–6, 2026", availability: "Full" },
+      { label: "3-Day Algonquin Wildlife by Boat", price: "$1,500.00", dates: "June 7–9, 2026", availability: "Full" },
+      { label: "3-Day Algonquin Wildlife by Boat", price: "$1,500.00", dates: "June 10–12, 2026", availability: "Full" },
+      { label: "3-Day Algonquin Wildlife by Boat", price: "$1,500.00", dates: "June 13–15, 2026", availability: "Full" },
+      { label: "3-Day Algonquin Wildlife by Boat", price: "$1,500.00", dates: "June 16–18, 2026", availability: "Full" },
     ],
     priceIncludes: [
-      "Light breakfast — yogurt, fruit juice, chilled water, and granola bar",
-      "Picnic-style lunch — turkey, ham, kaiser bun, and fixings",
+      "Light breakfast — yogurt, fruit juice, fruit cup, chilled water, and granola bar",
       "Photography tips and camera settings guidance throughout the day",
     ],
     priceExcludes: [
