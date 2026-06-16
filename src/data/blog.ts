@@ -43,7 +43,7 @@ for (const [path, url] of Object.entries(imageModules)) {
   if (name) imageByName[name] = url;
 }
 
-const DEFAULT_CATEGORY = "Field Craft";
+const DEFAULT_CATEGORY = "In the Field";
 const DEFAULT_DATE = "2026-01-01";
 
 const fileNameToSlug = (path: string) =>
