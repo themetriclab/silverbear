@@ -265,7 +265,7 @@ export const tours: Tour[] = [
     whatToExpect: {
       title: "What to Expect on This Polar Bear Photography Tour",
       content:
-        "Fly from Winnipeg to Churchill where your guide will pick you up at the airport and take you to a private lodge with private bathrooms, comfortable beds, and a communal kitchen for gathering and reviewing images. After a safety orientation and winter photography tips, you head out in search of polar bears. Days are spent photographing polar bears, fox, ptarmigan, and more — with a short lunch break in the field. Your guide uses 15 years of experience reading bear patterns and behaviour to position you safely for the best shots. Evenings include dinner at Churchill's finest restaurants and possible northern lights photography when skies are clear.",
+        "Fly from Winnipeg to Churchill where your guide will pick you up at the airport and take you to a private lodge with private bathrooms, comfortable beds, and a communal kitchen for gathering and reviewing images. After a safety orientation and winter photography tips, you head out in search of polar bears. Days are spent photographing polar bears, fox, ptarmigan, and more — with a short lunch break in the field. Your guide uses 15 years of experience reading bear patterns and behaviour to position you safely for the best shots. Evenings include dinner at Churchill's finest restaurants and possible northern lights photography when skies are clear. Polar bears are a protected species and Churchill is their home — every expedition follows strict Manitoba WMA protocols for ethical, undisturbed viewing. We never bait, call in, or pressure animals for a photo; ethical viewing produces stronger images and a healthier population for future photographers to enjoy.",
     },
     gearTips: [
       "300–600mm telephoto lens — your most-used focal range for Arctic wildlife",
@@ -310,6 +310,8 @@ export const tours: Tour[] = [
       { question: "Is it safe to photograph polar bears at ground level?", answer: "Yes, with a licensed Manitoba guide carrying full WMA permits and 15 years of polar bear field experience reading bear patterns and behaviour." },
       { question: "What other Arctic wildlife will I photograph?", answer: "Arctic fox, red fox, cross fox, silver fox, arctic hare, ptarmigan, snowy owls, gyrfalcons, and the northern lights when skies are clear." },
       { question: "What gear do I need for Churchill polar bear photography?", answer: "A 300–600mm telephoto, a wide-angle for landscapes and northern lights, two camera bodies, a sturdy tripod, extra batteries, and serious cold-weather clothing for temperatures down to -20°C." },
+      { question: "Is this a polar bear photography workshop or a sightseeing tour?", answer: "This is a true photography workshop, not a sightseeing trip. Your licensed guide gives in-field instruction on camera settings, composition, exposure for snow and Arctic light, telephoto technique, and ethical wildlife viewing throughout each session." },
+      { question: "How do I book this Churchill polar bear photography tour?", answer: "Reach out through our contact page to check current availability for October and November departures. A non-refundable $2,000 CAD deposit secures your spot, with the balance due 90 days before departure." },
     ],
   },
   {
@@ -466,6 +468,9 @@ export const tours: Tour[] = [
       { question: "How many photographers are on each moose tour?", answer: "A maximum of 4 photographers per boat, with comfortable swivel seats on the centreline for shake-free shooting." },
       { question: "What lens is best for photographing moose?", answer: "A 100–400mm zoom covers most situations. A 70–200mm is great for moose with their boreal-forest surroundings, and a wide-angle works for landscape-wildlife compositions." },
       { question: "Where in Canada can I photograph moose?", answer: "Algonquin Provincial Park in Ontario hosts roughly 3,000 moose and is one of the most reliable and accessible places in Canada to photograph them — especially from a boat in June." },
+      { question: "Is this a true moose photography workshop or a moose-watching tour?", answer: "It's a wildlife photography workshop first. The boat, group size, schedule, and instruction are all built around photographers, with in-field guidance on camera settings, telephoto technique, and composition for moose in marsh and wetland scenes." },
+      { question: "Why photograph moose from a boat instead of from shore?", answer: "Boat-based moose photography puts the camera at water level, where feeding moose are most engaged with their surroundings — letting you capture moose reflections, moose in lily pads, and misty-lake compositions that are essentially impossible from shore." },
+      { question: "How do I book a moose photography tour in Algonquin Park?", answer: "Contact us through the contact page to check availability for June departures. A non-refundable 50% deposit plus 13% Ontario tax holds your spot, with the balance due 2 months before the tour start date." },
     ],
   },
 ];

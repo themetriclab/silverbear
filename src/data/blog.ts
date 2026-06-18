@@ -21,6 +21,10 @@ export interface BlogPost {
   image: string;
   content: string;
   format?: "html" | "text";
+  /** SEO <title> override. Falls back to `${title} | Silver Bear Photo Tours`. Keep this concise — under ~60 characters total works best in search results. */
+  seoTitle?: string;
+  /** Meta description override. Falls back to `excerpt`. Aim for ~150-160 characters. */
+  seoDescription?: string;
 }
 
 // Raw HTML for every post.
@@ -109,6 +113,8 @@ const buildPost = (path: string, html: string): BlogPost => {
     image: resolveImage(fm.image, html),
     content: html,
     format: "html",
+    seoTitle: fm.seotitle,
+    seoDescription: fm.seodescription,
   };
 };
 
