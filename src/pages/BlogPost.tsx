@@ -32,8 +32,8 @@ const BlogPost = () => {
   return (
     <div className="min-h-screen bg-background">
       <Seo
-        title={`${post.title} | Silver Bear Photo Tours`}
-        description={post.excerpt}
+        title={post.seoTitle ?? `${post.title} | Silver Bear Photo Tours`}
+        description={post.seoDescription ?? post.excerpt}
         path={`/blog/${post.slug}`}
         image={post.image}
         type="article"
@@ -41,7 +41,7 @@ const BlogPost = () => {
           "@context": "https://schema.org",
           "@type": "BlogPosting",
           headline: post.title,
-          description: post.excerpt,
+          description: post.seoDescription ?? post.excerpt,
           image: post.image,
           datePublished: post.date,
           author: { "@type": "Organization", name: "Silver Bear Photo Tours" },
