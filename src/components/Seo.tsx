@@ -7,18 +7,23 @@ interface SeoProps {
   image?: string;
   type?: "website" | "article" | "product";
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
+  noindex?: boolean;
 }
 
 const SITE_URL = "https://silverbearphototours.com";
 
-const Seo = ({ title, description, path, image, type = "website", jsonLd }: SeoProps) => {
+const Seo = ({ title, description, path, image, type = "website", jsonLd, noindex = false }: SeoProps) => {
   const url = `${SITE_URL}${path}`;
   const ldArray = Array.isArray(jsonLd) ? jsonLd : jsonLd ? [jsonLd] : [];
   return (
     <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
-      <link rel="canonical" href={url} />
+      {noindex ? (
+        <meta name="robots" content="noindex, nofollow" />
+      ) : (
+        <link rel="canonical" href={url} />
+      )}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:url" content={url} />
