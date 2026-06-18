@@ -6,6 +6,16 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://silverbearphototours.com/blog</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://silverbearphototours.com/contact</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://silverbearphototours.com/tours/loon-photography-tours</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -21,28 +31,68 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://silverbearphototours.com/tours/moose-photography-tours</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
     <loc>https://silverbearphototours.com/tours/waterfowl-and-swan-photography-tours</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://silverbearphototours.com/contact</loc>
+    <loc>https://silverbearphototours.com/tours/moose-photography-tours</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://silverbearphototours.com/blog/best-polar-bear-photography-tour-churchill</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://silverbearphototours.com/polar-bear-photography-tours-churchill-manitoba</loc>
+    <loc>https://silverbearphototours.com/blog/best-wildlife-photography-camera</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://silverbearphototours.com/moose-photography-tours-ontario-algonquin-park</loc>
+    <loc>https://silverbearphototours.com/blog/ethical-red-fox-photography</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://silverbearphototours.com/blog/finding-willow-ptarmigan-churchill</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://silverbearphototours.com/blog/ground-level-polar-bear-photography-tour-churchill-manitoba</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://silverbearphototours.com/blog/ground-level-wildlife-photo-tips</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://silverbearphototours.com/blog/photographing-arctic-hares-snow</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://silverbearphototours.com/blog/pine-marten-photography-canada</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://silverbearphototours.com/blog/small-group-polar-bear-photography-tour-churchill</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://silverbearphototours.com/blog/snowy-owl-photography-churchill</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://silverbearphototours.com/blog/wildlife-photography-camera-guide</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>
