@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import heroPoster from "@/assets/waterfowl-extended.jpg";
 
 const HeroSection = () => {
   return (
