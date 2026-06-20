@@ -59,4 +59,402 @@ import wfBeaver from "@/assets/waterfowl/beaver.jpg";
 const loonSliderImages = [loonChickGreen, loonHighKey2, loonAurora2, loonMist, loonChickGreen2];
 const algonquinSliderImages = [algWolf, algLoon, algBabyBeaver, algCow, algMerganser, algMoose, algDucks, algEagle, algOtter, algBull, algCalfCow];
 const polarBearSliderImages = [pbErmine1, pbBearYellowGrass, pbMotherCubs, pbFoxSunset, pbHareSnow, pbMaleSunset, pbPtarmigan, pbRedFox, pbMomCubStorm, pbYoungBearRock, pbMotherCubsLight, pbBearsFighting, pbHareCape, pbMotherCubSleep, pbErmineWide, pbBearFrostyGrass, pbRedFoxSunset2];
-const
+const waterfowlSliderImages = [wfLongTail, wfSwanWarm, wfBeaver, wfTern, wfSwanCalm, wfBlueBird, wfSwanCygnets, wfTernWater, wfLowRider, wfSwanSilhouette];
+
+const fadeUp = {
+  initial: { opacity: 0, y: 30 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true },
+  transition: { duration: 0.6 },
+};
+
+const TourDetail = () => {
+  const { slug } = useParams();
+  const tour = tours.find((t) => t.slug === slug);
+
+  if (!tour) {
+    return (
+      <div className="min-h-screen bg-background flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-display font-bold text-foreground mb-4">Tour Not Found</h1>
+          <Link to="/" className="text-primary hover:underline">← Back to Home</Link>
+        </div>
+      </div>
+    );
+  }
+
+  const otherTours = tours.filter((t) => t.slug !== slug && !t.gallerySlug);
+
+  const siteUrl = "https://silverbearphototours.com";
+  const absoluteImage = tour.image.startsWith("http") ? tour.image : `${siteUrl}${tour.image}`;
+  const offers = tour.pricing?.map((p) => ({
+    "@type": "Offer",
+    name: p.label,
+    price: p.price.replace(/[^0-9.]/g, ""),
+    priceCurrency: "CAD",
+    availability:
+      p.availability.toLowerCase() === "full"
+        ? "https://schema.org/SoldOut"
+        : "https://schema.org/InStock",
+    url: `${siteUrl}/tours/${tour.slug}`,
+  }));
+  const seoTitle = tour.seoTitle ?? `${tour.title} | Silver Bear Photo Tours`;
+  const seoDescription = tour.seoDescription ?? tour.description;
+  const h1 = tour.h1 ?? tour.title;
+  const gallerySlug = tour.gallerySlug ?? tour.slug;
+
+  const productLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: tour.title,
+    description: seoDescription,
+    image: absoluteImage,
+    brand: { "@type": "Brand", name: "Silver Bear Photo Tours" },
+    ...(offers && offers.length > 0 ? { offers } : {}),
+  };
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: `${siteUrl}/` },
+      { "@type": "ListItem", position: 2, name: "Photography Tours", item: `${siteUrl}/tours` },
+      { "@type": "ListItem", position: 3, name: tour.title, item: `${siteUrl}/tours/${tour.slug}` },
+    ],
+  };
+  const faqLd = tour.faqs && tour.faqs.length > 0
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: tour.faqs.map((f) => ({
+          "@type": "Question",
+          name: f.question,
+          acceptedAnswer: { "@type": "Answer", text: f.answer },
+        })),
+      }
+    : null;
+  const jsonLd: Record<string, unknown>[] = [productLd, breadcrumbLd];
+  if (faqLd) jsonLd.push(faqLd);
+
+  return (
+    <div className="min-h-screen bg-background">
+      <Seo
+        title={seoTitle}
+        description={seoDescription}
+        path={`/tours/${tour.slug}`}
+        image={absoluteImage}
+        type="product"
+        jsonLd={jsonLd}
+      />
+      <Navbar />
+
+
+      {/* Hero */}
+      <section className="relative h-[70vh] md:h-[80vh] overflow-hidden">
+        {tour.image2 ? (
+          <DiagonalSplitImage image1={tour.image} image2={tour.image2} alt={tour.title} className="absolute inset-0 w-full h-full" />
+        ) : (
+          <img src={tour.image} alt={tour.title} className="absolute inset-0 w-full h-full object-cover" />
+        )}
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-background/20" />
+        <div className="relative z-10 flex flex-col justify-end h-full max-w-7xl mx-auto px-6 pb-16">
+          <Link
+            to="/tours"
+            className="inline-flex items-center gap-2 text-primary text-sm font-medium tracking-wider uppercase mb-6 hover:gap-3 transition-all"
+          >
+            <ArrowLeft size={16} /> Back to Tours
+          </Link>
+          <motion.h1
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-foreground max-w-4xl text-shadow-hero"
+          >
+            {h1}
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="mt-4 text-lg md:text-xl text-foreground/80 font-light max-w-2xl"
+          >
+            {tour.subtitle}
+          </motion.p>
+          {(tour.slug === "loon-photography-tours" || tour.slug === "waterfowl-and-swan-photography-tours") && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="mt-6 inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-destructive/10 border border-destructive/30 text-destructive text-sm font-medium"
+            >
+              <X size={16} />
+              Currently not offering
+            </motion.div>
+          )}
+        </div>
+      </section>
+
+      {/* Quick Info Bar */}
+      <section className="bg-card border-y border-border">
+        <div className="max-w-7xl mx-auto px-6 py-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+          {[
+            { icon: Calendar, label: "When", value: tour.month },
+            { icon: MapPin, label: "Where", value: tour.location },
+            { icon: Clock, label: "Duration", value: tour.duration },
+            { icon: Users, label: "Group Size", value: tour.groupSize },
+            { icon: Mountain, label: "Difficulty", value: tour.difficulty },
+            { icon: Camera, label: "Season", value: tour.season },
+          ].map((item) => (
+            <div key={item.label} className="flex items-start gap-3">
+              <item.icon size={20} className="text-primary mt-0.5 shrink-0" />
+              <div>
+                <p className="text-xs text-muted-foreground uppercase tracking-wider">{item.label}</p>
+                <p className="text-sm font-medium text-foreground">{item.value}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+
+      {/* Main Content */}
+      <div className="max-w-7xl mx-auto px-6 py-20 space-y-24">
+        {/* Highlights */}
+        <motion.section {...fadeUp}>
+          <SectionHeader label="Overview" title="Tour Highlights" />
+          <div className="grid md:grid-cols-2 gap-4 mt-10">
+            {tour.highlights.map((h, i) => (
+              <SpotlightCard key={i} className="p-5">
+                <div className="flex items-start gap-3">
+                  <ChevronRight size={18} className="text-primary mt-0.5 shrink-0" />
+                  <p className="text-foreground/90 text-sm leading-relaxed">{h}</p>
+                </div>
+              </SpotlightCard>
+            ))}
+          </div>
+        </motion.section>
+
+        {/* Tour Image Slider */}
+        {gallerySlug === "loon-photography-tours" && (
+          <section className="-mx-6 overflow-hidden">
+            <ImageAutoSlider images={loonSliderImages} />
+          </section>
+        )}
+        {gallerySlug === "algonquin-park-photography-tours" && (
+          <section className="-mx-6 overflow-hidden">
+            <ImageAutoSlider images={algonquinSliderImages} />
+          </section>
+        )}
+        {gallerySlug === "polar-bear-photography-tour" && (
+          <section className="-mx-6 overflow-hidden">
+            <ImageAutoSlider images={polarBearSliderImages} />
+          </section>
+        )}
+        {gallerySlug === "waterfowl-and-swan-photography-tours" && (
+          <section className="-mx-6 overflow-hidden">
+            <ImageAutoSlider images={waterfowlSliderImages} />
+          </section>
+        )}
+
+        {/* Pricing & Dates */}
+        {tour.pricing && tour.pricing.length > 0 && (
+          <motion.section {...fadeUp}>
+            <SectionHeader label="Pricing" title="Available Dates & Rates" />
+            {(tour.slug === "loon-photography-tours" || tour.slug === "waterfowl-and-swan-photography-tours") && (
+              <div className="mt-6 inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-destructive/10 border border-destructive/30 text-destructive text-sm font-medium">
+                <X size={16} />
+                Currently not offering
+              </div>
+            )}
+            <div className="grid md:grid-cols-3 gap-4 mt-10">
+              {tour.pricing.map((p, i) => (
+                <SpotlightCard key={i} className="p-6 flex flex-col">
+                  <p className="text-sm font-medium text-foreground mb-2">{p.label}</p>
+                  <p className="text-2xl font-display font-bold text-primary mb-2">{p.price}</p>
+                  <div className="flex items-center gap-2 mb-3">
+                    <Calendar size={14} className="text-muted-foreground" />
+                    <p className="text-sm text-muted-foreground">{p.dates}</p>
+                  </div>
+                  <span className={`mt-auto inline-block text-xs font-medium tracking-wider uppercase px-3 py-1 rounded-full ${
+                    p.availability.toLowerCase() === "full"
+                      ? "bg-destructive/10 text-destructive"
+                      : p.availability.toLowerCase().includes("1 spot")
+                        ? "bg-destructive/20 text-destructive border border-destructive/30"
+                        : "bg-primary/10 text-primary"
+                  }`}>
+                    {p.availability}
+                  </span>
+                </SpotlightCard>
+              ))}
+            </div>
+          </motion.section>
+        )}
+
+        {/* Animal Facts */}
+        <motion.section {...fadeUp}>
+          <SectionHeader label="Wildlife" title="Animal Facts" />
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-10">
+            {tour.animalFacts.map((fact) => (
+              <SpotlightCard key={fact.label} className="p-5">
+                <p className="text-xs text-primary uppercase tracking-wider font-medium mb-1">{fact.label}</p>
+                <p className="text-foreground text-sm font-medium">{fact.value}</p>
+              </SpotlightCard>
+            ))}
+          </div>
+        </motion.section>
+
+        {/* Migration Info */}
+        <motion.section {...fadeUp} className="grid md:grid-cols-2 gap-16 items-start">
+          <div>
+            <SectionHeader label="Migration" title={tour.migrationInfo.title} />
+            <p className="text-muted-foreground leading-relaxed mt-6">{tour.migrationInfo.content}</p>
+          </div>
+          <div>
+            <SectionHeader label="Photography" title={tour.whyPhotograph.title} />
+            <p className="text-muted-foreground leading-relaxed mt-6">{tour.whyPhotograph.content}</p>
+          </div>
+        </motion.section>
+
+        {/* What to Expect */}
+        <motion.section {...fadeUp} className="bg-card border border-border rounded-xl p-8 md:p-12">
+          <SectionHeader label="Experience" title={tour.whatToExpect.title} />
+          <p className="text-muted-foreground leading-relaxed mt-6 max-w-3xl">{tour.whatToExpect.content}</p>
+        </motion.section>
+
+        {/* Gear Tips */}
+        <motion.section {...fadeUp}>
+          <SectionHeader label="Preparation" title="Recommended Gear" />
+          <div className="grid md:grid-cols-2 gap-4 mt-10">
+            {tour.gearTips.map((tip, i) => (
+              <SpotlightCard key={i} className="p-5">
+                <div className="flex items-start gap-3">
+                  <Camera size={16} className="text-primary mt-0.5 shrink-0" />
+                  <p className="text-foreground/90 text-sm">{tip}</p>
+                </div>
+              </SpotlightCard>
+            ))}
+          </div>
+        </motion.section>
+
+
+        {/* Inclusions & Exclusions */}
+        {(tour.priceIncludes || tour.priceExcludes) && (
+          <motion.section {...fadeUp} className="grid md:grid-cols-2 gap-8">
+            {tour.priceIncludes && (
+              <div>
+                <SectionHeader label="Included" title="What's Included" />
+                <div className="mt-6 space-y-3">
+                  {tour.priceIncludes.map((item, i) => (
+                    <div key={i} className="flex items-start gap-3">
+                      <Check size={16} className="text-primary mt-0.5 shrink-0" />
+                      <p className="text-foreground/90 text-sm">{item}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+            {tour.priceExcludes && (
+              <div>
+                <SectionHeader label="Not Included" title="What's Not Included" />
+                <div className="mt-6 space-y-3">
+                  {tour.priceExcludes.map((item, i) => (
+                    <div key={i} className="flex items-start gap-3">
+                      <X size={16} className="text-muted-foreground mt-0.5 shrink-0" />
+                      <p className="text-muted-foreground text-sm">{item}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </motion.section>
+        )}
+
+        {/* Payment Policy */}
+        {tour.paymentPolicy && (
+          <motion.section {...fadeUp} className="bg-card border border-border rounded-xl p-8 md:p-12">
+            <SectionHeader label="Booking" title="Payment & Registration Policy" />
+            <p className="text-muted-foreground leading-relaxed mt-6 max-w-3xl">{tour.paymentPolicy}</p>
+          </motion.section>
+        )}
+
+        {/* CTA */}
+        {tour.faqs && tour.faqs.length > 0 && (
+          <motion.section {...fadeUp}>
+            <SectionHeader label="FAQ" title="Frequently Asked Questions" />
+            <div className="mt-10 space-y-4">
+              {tour.faqs.map((f, i) => (
+                <SpotlightCard key={i} className="p-6">
+                  <div className="flex items-start gap-3 mb-3">
+                    <HelpCircle size={18} className="text-primary mt-0.5 shrink-0" />
+                    <h3 className="text-foreground font-medium">{f.question}</h3>
+                  </div>
+                  <p className="text-muted-foreground text-sm leading-relaxed pl-7">{f.answer}</p>
+                </SpotlightCard>
+              ))}
+            </div>
+          </motion.section>
+        )}
+        <motion.section {...fadeUp} className="text-center py-12">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
+            Ready to Capture the Wild?
+          </h2>
+          <p className="text-muted-foreground mb-8 max-w-lg mx-auto">
+            Secure your spot on the {tour.title}. Limited to {tour.groupSize} per expedition.
+          </p>
+          <Link
+            to={`/contact?tour=${tour.slug}`}
+            className="inline-block px-10 py-4 bg-primary text-primary-foreground font-medium tracking-widest uppercase text-sm hover:bg-primary/90 transition-colors"
+          >
+            Book This Tour
+          </Link>
+        </motion.section>
+
+        {/* Other Tours */}
+        <motion.section {...fadeUp}>
+          <SectionHeader label="Explore" title="Other Expeditions" />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
+            {otherTours.map((t) => (
+              <Link
+                key={t.slug}
+                to={`/tours/${t.slug}`}
+                className="group block bg-card border border-border rounded-lg overflow-hidden hover:border-primary/40 transition-all duration-500"
+              >
+                <div className="relative overflow-hidden aspect-[16/10]">
+                  {t.image2 ? (
+                    <DiagonalSplitImage image1={t.image} image2={t.image2} alt={t.title} className="w-full h-full transition-transform duration-700 group-hover:scale-110" />
+                  ) : (
+                    <img
+                      src={t.image}
+                      alt={t.title}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      loading="lazy"
+                    />
+                  )}
+                </div>
+                <div className="p-4">
+                  <p className="text-xs text-primary font-medium tracking-wider uppercase mb-1">{t.month}</p>
+                  <h3 className="text-sm font-display font-semibold text-foreground group-hover:text-primary transition-colors">
+                    {t.title}
+                  </h3>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </motion.section>
+      </div>
+
+      <Footer />
+    </div>
+  );
+};
+
+const SectionHeader = ({ label, title }: { label: string; title: string }) => (
+  <div>
+    <div className="flex items-center gap-3 mb-3">
+      <div className="h-px w-10 bg-primary/60" />
+      <span className="text-primary text-xs tracking-[0.3em] uppercase font-medium">{label}</span>
+    </div>
+    <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">{title}</h2>
+  </div>
+);
+
+export default TourDetail;
