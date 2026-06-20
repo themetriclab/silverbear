@@ -1,8 +1,17 @@
 import { motion } from "framer-motion";
+import heroPoster from "@/assets/waterfowl-extended.jpg";
 
 const HeroSection = () => {
   return (
     <section id="home" className="relative h-screen w-full overflow-hidden">
+      {/* Poster fallback (shows instantly while the video loads, and stays
+          visible if autoplay is blocked, e.g. iOS Low Power Mode) */}
+      <img
+        src={heroPoster}
+        alt="Wildlife photography in the Canadian wilderness"
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+
       {/* Video background */}
       <video
         autoPlay
@@ -10,6 +19,7 @@ const HeroSection = () => {
         muted
         playsInline
         preload="auto"
+        poster={heroPoster}
         className="absolute inset-0 w-full h-full object-cover"
       >
         <source
