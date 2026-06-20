@@ -277,7 +277,9 @@ const TourDetail = () => {
                   <span className={`mt-auto inline-block text-xs font-medium tracking-wider uppercase px-3 py-1 rounded-full ${
                     p.availability.toLowerCase() === "full"
                       ? "bg-destructive/10 text-destructive"
-                      : "bg-primary/10 text-primary"
+                      : p.availability.toLowerCase().includes("1 spot")
+                        ? "bg-destructive/20 text-destructive border border-destructive/30"
+                        : "bg-primary/10 text-primary"
                   }`}>
                     {p.availability}
                   </span>
