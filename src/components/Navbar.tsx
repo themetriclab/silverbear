@@ -3,7 +3,7 @@ import { NavBar } from "@/components/ui/tubelight-navbar";
 
 const navItems = [
   { name: "Home", url: "/#home", icon: Home },
-  { name: "Tours", url: "/#tours", icon: Compass },
+  { name: "Tours", url: "/tours", icon: Compass },
   { name: "About", url: "/#about", icon: User },
   { name: "Blog", url: "/blog", icon: BookOpen },
   { name: "Contact", url: "/contact", icon: Mail },
