@@ -255,6 +255,38 @@ const TourDetail = () => {
           </section>
         )}
 
+        {/* Pricing & Dates */}
+        {tour.pricing && tour.pricing.length > 0 && (
+          <motion.section {...fadeUp}>
+            <SectionHeader label="Pricing" title="Available Dates & Rates" />
+            {(tour.slug === "loon-photography-tours" || tour.slug === "waterfowl-and-swan-photography-tours") && (
+              <div className="mt-6 inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-destructive/10 border border-destructive/30 text-destructive text-sm font-medium">
+                <X size={16} />
+                Currently not offering
+              </div>
+            )}
+            <div className="grid md:grid-cols-3 gap-4 mt-10">
+              {tour.pricing.map((p, i) => (
+                <SpotlightCard key={i} className="p-6 flex flex-col">
+                  <p className="text-sm font-medium text-foreground mb-2">{p.label}</p>
+                  <p className="text-2xl font-display font-bold text-primary mb-2">{p.price}</p>
+                  <div className="flex items-center gap-2 mb-3">
+                    <Calendar size={14} className="text-muted-foreground" />
+                    <p className="text-sm text-muted-foreground">{p.dates}</p>
+                  </div>
+                  <span className={`mt-auto inline-block text-xs font-medium tracking-wider uppercase px-3 py-1 rounded-full ${
+                    p.availability.toLowerCase() === "full"
+                      ? "bg-destructive/10 text-destructive"
+                      : "bg-primary/10 text-primary"
+                  }`}>
+                    {p.availability}
+                  </span>
+                </SpotlightCard>
+              ))}
+            </div>
+          </motion.section>
+        )}
+
         {/* Animal Facts */}
         <motion.section {...fadeUp}>
           <SectionHeader label="Wildlife" title="Animal Facts" />
@@ -301,37 +333,6 @@ const TourDetail = () => {
           </div>
         </motion.section>
 
-        {/* Pricing & Dates */}
-        {tour.pricing && tour.pricing.length > 0 && (
-          <motion.section {...fadeUp}>
-            <SectionHeader label="Pricing" title="Available Dates & Rates" />
-            {(tour.slug === "loon-photography-tours" || tour.slug === "waterfowl-and-swan-photography-tours") && (
-              <div className="mt-6 inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-destructive/10 border border-destructive/30 text-destructive text-sm font-medium">
-                <X size={16} />
-                Currently not offering
-              </div>
-            )}
-            <div className="grid md:grid-cols-3 gap-4 mt-10">
-              {tour.pricing.map((p, i) => (
-                <SpotlightCard key={i} className="p-6 flex flex-col">
-                  <p className="text-sm font-medium text-foreground mb-2">{p.label}</p>
-                  <p className="text-2xl font-display font-bold text-primary mb-2">{p.price}</p>
-                  <div className="flex items-center gap-2 mb-3">
-                    <Calendar size={14} className="text-muted-foreground" />
-                    <p className="text-sm text-muted-foreground">{p.dates}</p>
-                  </div>
-                  <span className={`mt-auto inline-block text-xs font-medium tracking-wider uppercase px-3 py-1 rounded-full ${
-                    p.availability.toLowerCase() === "full"
-                      ? "bg-destructive/10 text-destructive"
-                      : "bg-primary/10 text-primary"
-                  }`}>
-                    {p.availability}
-                  </span>
-                </SpotlightCard>
-              ))}
-            </div>
-          </motion.section>
-        )}
 
         {/* Inclusions & Exclusions */}
         {(tour.priceIncludes || tour.priceExcludes) && (
