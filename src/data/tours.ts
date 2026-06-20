@@ -405,7 +405,7 @@ export const tours: Tour[] = [
     month: "June",
     season: "Early Summer",
     location: "Algonquin Provincial Park, Ontario",
-    duration: "2–6 Days",
+    duration: "7 Hours",
     difficulty: "All Levels",
     groupSize: "Maximum 4 Photographers",
     highlights: [
@@ -437,7 +437,7 @@ export const tours: Tour[] = [
     whatToExpect: {
       title: "What to Expect on This Moose Photography Tour",
       content:
-        "You'll meet your certified captain and guide at a location in Algonquin Park and head out on the water for early morning light. The wide-bottomed boat with a flat floor and comfortable swivel seats mounted on the centreline keeps everything stable and shake-free — perfect for sharp moose images with your monopod or tripod. Your guide uses oars, a push pole, or a silent electric motor to slip in close to feeding moose without disturbance. A light breakfast is served aboard around 8 am, and a picnic-style lunch break happens around 11:30 am before heading back out for the afternoon. Photography tips and camera settings are shared throughout. Note: biting insects (mosquitoes, black flies, deer flies) can be intense in June — come prepared with bug spray, a head net, and light long-sleeved clothing.",
+        "You'll meet your certified captain and guide at a location in Algonquin Park and head out on the water for early morning light. The wide-bottomed boat with a flat floor and comfortable swivel seats mounted on the centreline keeps everything stable and shake-free — perfect for sharp moose images with your monopod or tripod. Your guide uses oars, a push pole, or a silent electric motor to slip in close to feeding moose without disturbance. A light breakfast is served aboard around 8 am. Photography tips and camera settings are shared throughout. This is a seven-hour tour. Lunch is not included. Note: biting insects (mosquitoes, black flies, deer flies) can be intense in June — come prepared with bug spray, a head net, and light long-sleeved clothing.",
     },
     gearTips: [
       "100–400mm and 70–200mm zoom lenses for versatile moose framing on the water",
@@ -453,12 +453,12 @@ export const tours: Tour[] = [
     ],
     priceIncludes: [
       "Light breakfast — yogurt, fruit juice, chilled water, and granola bar",
-      "Picnic-style lunch — turkey, ham, kaiser bun, and fixings",
       "Photography tips and camera settings guidance throughout the day",
     ],
     priceExcludes: [
       "Accommodation (recommendations provided upon booking)",
       "Transportation to and from the meeting location",
+      "Lunch",
       "Algonquin Park vehicle permit (2-day permit required)",
       "13% HST Ontario taxes",
     ],
