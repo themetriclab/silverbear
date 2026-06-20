@@ -453,7 +453,6 @@ export const tours: Tour[] = [
     ],
     priceIncludes: [
       "Light breakfast — yogurt, fruit juice, chilled water, and granola bar",
-      "Picnic-style lunch — turkey, ham, kaiser bun, and fixings",
       "Photography tips and camera settings guidance throughout the day",
     ],
     priceExcludes: [
