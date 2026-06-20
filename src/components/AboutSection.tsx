@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import erikImg from "@/assets/erik.jpg";
-
 const AboutSection = () => {
   return (
     <section id="about" className="py-24 px-6 bg-background">
@@ -13,46 +12,38 @@ const AboutSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="relative">
-
             <div className="aspect-[4/5] overflow-hidden rounded-lg">
               <img
                 src={erikImg}
                 alt="Erik Bertelsen - Wildlife Photographer"
                 className="w-full h-full object-cover"
                 loading="lazy" />
-
             </div>
             <div className="absolute -bottom-4 -right-4 w-32 h-32 border-2 border-primary rounded-lg -z-10" />
           </motion.div>
-
           {/* Text */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}>
-
             <div className="flex items-center gap-4 mb-6">
               <div className="h-px w-12 bg-primary/60" />
               <span className="text-primary text-sm tracking-[0.3em] uppercase font-medium">THE GUIDE/PHOTOGRAPHER
-
               </span>
             </div>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-6">
               About Me
             </h2>
             <p className="text-foreground/80 leading-relaxed mb-6">I am Erik Bertelsen, a professional wildlife guide, photographer, and videographer, specializing in unique and wildlife-rich environments. From the Sub Arctic tundra to the wetlands of southern Ontario and the wild landscapes across Canada, I capture authentic wildlife moments through striking photography and immersive film.
-
-
-
-
             </p>
             <p className="text-foreground/80 leading-relaxed mb-8">
-              With years of field experience, I lead guided photography tours that offer safe,
-              well-organized access to wild animals in their natural habitats—helping clients create
-              powerful images while deepening their connection to the natural world.
+              With years of field experience, I lead guided wildlife photography tours — including Algonquin wildlife
+              photography tours and Churchill Manitoba photography tours — that offer safe, well-organized access to
+              wild animals in their natural habitats. Silver Bear Photo Tours is built around small groups, hands-on
+              instruction, and best-in-class guiding, helping clients create powerful images while deepening their
+              connection to the natural world.
             </p>
-
             <div>
               <h3 className="text-primary font-semibold mb-3 tracking-wider uppercase text-sm">
                 Qualifications
@@ -76,7 +67,5 @@ const AboutSection = () => {
         </div>
       </div>
     </section>);
-
 };
-
 export default AboutSection;
