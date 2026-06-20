@@ -266,25 +266,33 @@ const TourDetail = () => {
               </div>
             )}
             <div className="grid md:grid-cols-3 gap-4 mt-10">
-              {tour.pricing.map((p, i) => (
-                <SpotlightCard key={i} className="p-6 flex flex-col">
-                  <p className="text-sm font-medium text-foreground mb-2">{p.label}</p>
-                  <p className="text-2xl font-display font-bold text-primary mb-2">{p.price}</p>
-                  <div className="flex items-center gap-2 mb-3">
-                    <Calendar size={14} className="text-muted-foreground" />
-                    <p className="text-sm text-muted-foreground">{p.dates}</p>
-                  </div>
-                  <span className={`mt-auto inline-block text-xs font-medium tracking-wider uppercase px-3 py-1 rounded-full ${
-                    p.availability.toLowerCase() === "full"
-                      ? "bg-destructive/10 text-destructive"
-                      : p.availability.toLowerCase().includes("1 spot")
-                        ? "bg-destructive/20 text-destructive border border-destructive/30"
-                        : "bg-primary/10 text-primary"
-                  }`}>
-                    {p.availability}
-                  </span>
-                </SpotlightCard>
-              ))}
+            {tour.pricing.map((p, i) => {
+                const sameLabelCount = tour.pricing.filter(x => x.label === p.label).length;
+                const sameLabelBefore = tour.pricing.slice(0, i).filter(x => x.label === p.label).length;
+                const tourNumber = sameLabelBefore + 1;
+                const showNumber = sameLabelCount > 1;
+                return (
+                  <SpotlightCard key={i} className="p-6 flex flex-col">
+                    <p className="text-sm font-medium text-foreground mb-2">
+                      {showNumber ? `Tour ${tourNumber} — ${p.label}` : p.label}
+                    </p>
+                    <p className="text-2xl font-display font-bold text-primary mb-2">{p.price}</p>
+                    <div className="flex items-center gap-2 mb-3">
+                      <Calendar size={14} className="text-muted-foreground" />
+                      <p className="text-sm text-muted-foreground">{p.dates}</p>
+                    </div>
+                    <span className={`mt-auto inline-block text-xs font-medium tracking-wider uppercase px-3 py-1 rounded-full ${
+                      p.availability.toLowerCase() === "full"
+                        ? "bg-destructive/10 text-destructive"
+                        : p.availability.toLowerCase().includes("1 spot")
+                          ? "bg-destructive/20 text-destructive border border-destructive/30"
+                          : "bg-primary/10 text-primary"
+                    }`}>
+                      {p.availability}
+                    </span>
+                  </SpotlightCard>
+                );
+              })}
             </div>
           </motion.section>
         )}
