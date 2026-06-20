@@ -15,6 +15,7 @@ const SITE_URL = "https://silverbearphototours.com";
 // ---- Static pages ----
 const staticPages = [
   { loc: "/", changefreq: "weekly", priority: "1.0" },
+  { loc: "/tours", changefreq: "weekly", priority: "0.9" },
   { loc: "/blog", changefreq: "weekly", priority: "0.8" },
   { loc: "/contact", changefreq: "monthly", priority: "0.6" },
 ];
