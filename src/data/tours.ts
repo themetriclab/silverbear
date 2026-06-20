@@ -458,6 +458,7 @@ export const tours: Tour[] = [
     priceExcludes: [
       "Accommodation (recommendations provided upon booking)",
       "Transportation to and from the meeting location",
+      "Lunch",
       "Algonquin Park vehicle permit (2-day permit required)",
       "13% HST Ontario taxes",
     ],
