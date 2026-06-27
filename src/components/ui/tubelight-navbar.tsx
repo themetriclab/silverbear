@@ -55,9 +55,9 @@ export function NavBar({ items, className }: NavBarProps) {
           const content = (
             <>
               <span className="hidden md:inline">{item.name}</span>
-              <span className="md:hidden">
+              <span className="md:hidden flex flex-col items-center gap-0.5">
                 <Icon size={18} strokeWidth={2.5} aria-hidden="true" />
-                <span className="sr-only">{item.name}</span>
+                <span className="text-[10px] font-medium leading-none">{item.name}</span>
               </span>
               {isActive && (
                 <motion.div
@@ -80,7 +80,7 @@ export function NavBar({ items, className }: NavBarProps) {
           );
 
           const classes = cn(
-            "relative cursor-pointer text-sm font-semibold px-6 py-2 rounded-full transition-colors",
+            "relative cursor-pointer text-sm font-semibold px-3 py-2 md:px-6 rounded-full transition-colors",
             "text-foreground/80 hover:text-primary",
             isActive && "bg-muted text-primary"
           );
