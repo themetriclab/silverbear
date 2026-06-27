@@ -179,7 +179,7 @@ const TourDetail = () => {
           >
             {tour.subtitle}
           </motion.p>
-          {(tour.slug === "loon-photography-tours" || tour.slug === "waterfowl-and-swan-photography-tours") && (
+          {(tour.slug === "loon-photography-tours" || tour.slug === "ontario-waterfowl-photography-tours") && (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -239,7 +239,7 @@ const TourDetail = () => {
             <ImageAutoSlider images={loonSliderImages} />
           </section>
         )}
-        {gallerySlug === "algonquin-park-photography-tours" && (
+        {gallerySlug === "algonquin-park-wildlife-photography-tour" && (
           <section className="-mx-6 overflow-hidden">
             <ImageAutoSlider images={algonquinSliderImages} />
           </section>
@@ -249,7 +249,7 @@ const TourDetail = () => {
             <ImageAutoSlider images={polarBearSliderImages} />
           </section>
         )}
-        {gallerySlug === "waterfowl-and-swan-photography-tours" && (
+        {gallerySlug === "ontario-waterfowl-photography-tours" && (
           <section className="-mx-6 overflow-hidden">
             <ImageAutoSlider images={waterfowlSliderImages} />
           </section>
@@ -259,7 +259,7 @@ const TourDetail = () => {
         {tour.pricing && tour.pricing.length > 0 && (
           <motion.section {...fadeUp}>
             <SectionHeader label="Pricing" title="Available Dates & Rates" />
-            {(tour.slug === "loon-photography-tours" || tour.slug === "waterfowl-and-swan-photography-tours") && (
+            {(tour.slug === "loon-photography-tours" || tour.slug === "ontario-waterfowl-photography-tours") && (
               <div className="mt-6 inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-destructive/10 border border-destructive/30 text-destructive text-sm font-medium">
                 <X size={16} />
                 Currently not offering

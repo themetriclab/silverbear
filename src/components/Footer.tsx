@@ -38,7 +38,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/tours/waterfowl-and-swan-photography-tours" className="text-muted-foreground text-sm hover:text-primary transition-colors">
+                <Link to="/tours/ontario-waterfowl-photography-tours" className="text-muted-foreground text-sm hover:text-primary transition-colors">
                   Waterfowl & Swan Workshops
                 </Link>
               </li>
