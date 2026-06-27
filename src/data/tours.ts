@@ -141,12 +141,13 @@ export const tours: Tour[] = [
     ],
   },
   {
-    slug: "algonquin-park-photography-tours",
-    title: "Algonquin Park Wildlife Photography Tours",
+    slug: "algonquin-park-wildlife-photography-tour",
+    title: "Algonquin Park Wildlife Photography Tour by Boat",
     subtitle: "Photograph moose, bald eagles, loons, and boreal wildlife by boat in the heart of Algonquin Park",
     description:
       "Join Silver Bear Photo Tours on a guided wildlife photography tour by boat in Ontario's world-renowned Algonquin Park. Capture moose feeding on lily pads, bald eagles in flight, territorial loon displays, and more from a stable, purpose-built photography boat.",
-    seoTitle: "Algonquin Park Wildlife Photography Tours, Ontario",
+    h1: "Algonquin Park Wildlife Photography Tour by Boat",
+    seoTitle: "Algonquin Park Wildlife Photography Tour by Boat",
     seoDescription: "Guided wildlife photography tours by boat in Algonquin Park, Ontario. Photograph moose, bald eagles, loons and boreal wildlife from a stable photo boat.",
     image: mooseImg,
     month: "June",
@@ -316,7 +317,7 @@ export const tours: Tour[] = [
     ],
   },
   {
-    slug: "waterfowl-and-swan-photography-tours",
+    slug: "ontario-waterfowl-photography-tours",
     title: "Waterfowl & Swan Photography Workshops",
     subtitle: "Photograph diving ducks, fighting swans, osprey, terns, and tender swan families from a custom-built low-angle photography boat",
     description:
@@ -401,7 +402,7 @@ export const tours: Tour[] = [
     h1: "Moose Photography Tours in Algonquin Park, Ontario",
     seoTitle: "Moose Photography Tours in Algonquin Park, Ontario",
     seoDescription: "Small-group moose photography tours by boat in Algonquin Park. Photograph moose feeding on lily pads at water level in June — max 4 photographers.",
-    gallerySlug: "algonquin-park-photography-tours",
+    gallerySlug: "algonquin-park-wildlife-photography-tour",
     month: "June",
     season: "Early Summer",
     location: "Algonquin Provincial Park, Ontario",
