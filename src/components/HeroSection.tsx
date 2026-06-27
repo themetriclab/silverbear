@@ -28,7 +28,7 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-5xl md:text-7xl lg:text-8xl font-display font-bold tracking-wide text-foreground text-shadow-hero"
         >
-          Wildlife Photography Tours in Canada
+          Guided Wildlife Photography Tours in Canada
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 20 }}

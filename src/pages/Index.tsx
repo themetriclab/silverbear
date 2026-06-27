@@ -11,8 +11,8 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Seo
-        title="Polar Bear & Moose Photography Tours in Canada"
-        description="Small-group polar bear photography tours in Churchill and moose photography tours in Algonquin Park — guided wildlife expeditions across Canada."
+        title="Silver Bear Photo Tours | Guided Wildlife Photography Tours in Canada"
+        description="Guided, small-group wildlife photography tours across Canada — photograph polar bears in Churchill, moose in Algonquin Park, loons and more with expert guide Erik Bertelsen."
         path="/"
       />
       <Navbar />
