@@ -220,7 +220,7 @@ const Contact = () => {
                       .filter(
                         (t) =>
                           t.slug !== "loon-photography-tours" &&
-                          t.slug !== "waterfowl-and-swan-photography-tours"
+                          t.slug !== "ontario-waterfowl-photography-tours"
                       )
                       .map((tour) => (
                         <button

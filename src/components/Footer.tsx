@@ -38,7 +38,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/tours/waterfowl-and-swan-photography-tours" className="text-muted-foreground text-sm hover:text-primary transition-colors">
+                <Link to="/tours/ontario-waterfowl-photography-tours" className="text-muted-foreground text-sm hover:text-primary transition-colors">
                   Waterfowl & Swan Workshops
                 </Link>
               </li>
@@ -73,10 +73,13 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-border text-center">
+        <div className="mt-16 pt-8 border-t border-border flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 text-center">
           <p className="text-muted-foreground text-xs tracking-wider">
             © {new Date().getFullYear()} Silver Bear Photo Tours. All rights reserved.
           </p>
+          <Link to="/privacy-policy" className="text-muted-foreground text-xs tracking-wider hover:text-primary transition-colors">
+            Privacy Policy
+          </Link>
         </div>
       </div>
     </footer>

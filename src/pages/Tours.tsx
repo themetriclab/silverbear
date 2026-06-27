@@ -35,8 +35,8 @@ const Tours = () => {
   return (
     <div className="min-h-screen bg-background">
       <Seo
-        title="Wildlife Photography Tours in Canada | Silver Bear Photo Tours"
-        description="Small-group wildlife photography tours across Canada: polar bear tours in Churchill, Manitoba, moose photography tours in Algonquin Park, loon photography tours, and waterfowl photography tours. Expert guiding since 1997."
+        title="Wildlife Photography Tours Ontario & Churchill Polar Bear Tours"
+        description="Small-group wildlife photography tours in Ontario and Churchill polar bear photography tours: Algonquin moose by boat, loons, waterfowl and ground-level polar bears. Expert guiding since 1997."
         path="/tours"
         type="website"
         jsonLd={[breadcrumbLd, itemListLd]}
