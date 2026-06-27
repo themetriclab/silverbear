@@ -1,57 +1,27 @@
-## SEO Audit & Improvements — Silver Bear Photo Tours
+## Goal
 
-Goal: make every route carry unique, keyword-rich metadata, add two missing pages (About, Privacy Policy), clean up tour URLs, and keep the sitemap complete.
+Fix the mismatch where Google shows "Polar Bear & Moose Photography Tours in Canada" instead of the Silver Bear brand title. The cause is the static `index.html` head, which Google indexes before JavaScript runs — it still carries the old keyword title.
 
-Note: `Seo.tsx` already emits per-page `rel="canonical"` and `og:url` (self-referencing each route), and `HelmetProvider` is wired up. So the "canonical" requirement is already satisfied — I'll just confirm every page passes a correct `path` so its canonical is right.
+## Changes
 
-### 1. Per-page titles & descriptions
+Edit `index.html` `<head>` only. Replace the old title across all related tags with the brand title and matching description.
 
-- **Homepage (`src/pages/Index.tsx`)** — set title to exactly `Silver Bear Photo Tours | Guided Wildlife Photography Tours in Canada`; description mentioning moose, polar bears, and small-group guided trips.
-- **Tours (`src/pages/Tours.tsx`)** — retarget title/description around "wildlife photography tours Ontario" and "Churchill polar bear photography tours."
-- **TourDetail (`src/pages/TourDetail.tsx`)** — already pulls `seoTitle`/`seoDescription`/`title` dynamically per tour; verify each tour in `src/data/tours.ts` has a unique keyword-rich title + description (they do). The Algonquin entry gets the new title below.
-- **Contact, Blog, BlogPost** — already use `Seo.tsx` with unique props; confirm/tighten wording. NotFound already sets a noindex title.
+- `<title>` → `Silver Bear Photo Tours | Guided Wildlife Photography Tours in Canada`
+- `<meta name="description">` → `Guided, small-group wildlife photography tours across Canada — photograph polar bears in Churchill, moose in Algonquin Park, loons and more with expert guide Erik Bertelsen.`
+- `<meta property="og:title">` → brand title
+- `<meta name="twitter:title">` → brand title
+- `<meta property="og:description">` → matching description
+- `<meta name="twitter:description">` → matching description
 
-### 2. Algonquin tour title + H1
+This makes the static head match what `Index.tsx`'s `Seo.tsx` already sets client-side, so there is one consistent title for crawlers.
 
-In `src/data/tours.ts`, for the Algonquin tour set `h1` and `seoTitle` to **"Algonquin Park Wildlife Photography Tour by Boat"** so both the visible H1 and the `<title>` match.
+## What this does NOT fix immediately
 
-### 3. Rename tour slugs (with redirects)
+- **Search result update timing:** Google serves results from its cache. The corrected title won't appear in search until Google re-crawls. You can speed this up by requesting indexing for the homepage in Google Search Console.
+- **Favicon in search:** Your live favicon (`public/favicon.png`, the iceberg/polar-bear logo) is already correct. Google caches favicons separately and on a slow schedule; it will refresh on its next crawl. No code change can force this.
 
-Per your choice, rename and keep old URLs working:
+## Technical notes
 
-```text
-algonquin-park-photography-tours      → algonquin-park-wildlife-photography-tour
-waterfowl-and-swan-photography-tours  → ontario-waterfowl-photography-tours
-loon-photography-tours                (unchanged)
-polar-bear-photography-tour           (unchanged)
-```
-
-Touch every reference to the old slugs:
-- `src/data/tours.ts` — `slug` values and any `gallerySlug`/alias entries (e.g. the `moose-photography-tours` alias points at the Algonquin gallery).
-- `src/pages/TourDetail.tsx` — gallery/banner conditionals keyed on the old slugs.
-- `src/pages/Contact.tsx` — the tour-filter excluding loon/waterfowl.
-- `src/components/Footer.tsx` — footer tour links.
-- `src/App.tsx` — add `<Navigate>` redirects from each old `/tours/<old-slug>` to its new URL (301-style client redirect), keeping the existing moose/landing redirects.
-
-### 4. New About page — `/about`
-
-Create `src/pages/AboutPage.tsx` featuring **Erik Bertelsen** as guide (reusing copy/imagery from the existing `AboutSection`), with Navbar/Footer, `Seo` (title/description targeting "wildlife photography guide Canada / Erik Bertelsen"), and `ProfilePage`/`Person` JSON-LD for trust + local SEO. Register the route in `src/App.tsx` and add an "About" link to `src/components/Navbar.tsx`.
-
-### 5. New Privacy Policy page — `/privacy-policy`
-
-Create `src/pages/PrivacyPolicy.tsx` covering what the contact/booking form collects (name, email, phone, group size, message), how it's used (responding to inquiries via email), no selling of data, and contact email `erik@silverbearphototours.com`. Navbar/Footer + `Seo` with `noindex` left OFF (it should be indexable). Register route in `src/App.tsx` and link it in the Footer.
-
-### 6. Hero H1 keyword
-
-In `src/components/HeroSection.tsx`, change the H1 from "Wildlife Photography Tours in Canada" to **"Guided Wildlife Photography Tours in Canada"** so it carries the target keyword phrase.
-
-### 7. Sitemap
-
-The sitemap is auto-generated by `scripts/generate-sitemap.mjs` (runs on build) and reads tour slugs from `tours.ts` and blog files from `src/content/blog/`. I'll:
-- Add `/about` and `/privacy-policy` to the static-pages list in the generator.
-- Regenerate `public/sitemap.xml` so it reflects the renamed tour slugs, both new pages, all blog slugs, and the four tour detail pages.
-
-### Technical notes
-- Slug renames are the main risk; the `<Navigate replace>` redirects from old → new URLs prevent 404s on existing inbound/indexed links.
-- `Seo.tsx` canonical/og tags are client-side (React Helmet) — fine for Google, but non-JS social crawlers see only `index.html`'s static tags. No change needed for this request.
-- After changes: typecheck/build, then trigger an SEO rescan so results refresh.
+- `<link rel="canonical">` is not in `index.html` (it's handled per-route by `Seo.tsx`), so no canonical conflict is introduced.
+- The sitewide `og:*` tags stay in `index.html` as the fallback for non-JS social crawlers — only their text values change.
+- No changes to React components, routing, or the favicon file are needed.
