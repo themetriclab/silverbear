@@ -196,7 +196,7 @@ export const tours: Tour[] = [
       "Layered clothing — temperatures range from 20°C to as low as -3°C",
     ],
     pricing: [
-      { label: "3-Day Algonquin Wildlife by Boat", price: "$1,500.00", dates: "June 4–6, 2027", availability: "Spots Available" },
+      { label: "3-Day Algonquin Wildlife by Boat", price: "$1,500.00", dates: "June 4–6, 2027", availability: "Full" },
       { label: "3-Day Algonquin Wildlife by Boat", price: "$1,500.00", dates: "June 7–9, 2027", availability: "Spots Available" },
       { label: "3-Day Algonquin Wildlife by Boat", price: "$1,500.00", dates: "June 10–12, 2027", availability: "1 Spot Available" },
       { label: "3-Day Algonquin Wildlife by Boat", price: "$1,500.00", dates: "June 13–15, 2027", availability: "Spots Available" },
