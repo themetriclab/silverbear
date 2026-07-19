@@ -163,6 +163,7 @@ export const tours: Tour[] = [
       "Comfortable swivel seats mounted on the centreline for sharp, shake-free images",
       "Use monopod or tripod on the flat boat floor for razor-sharp results",
       "Silent approach with oars, push pole, or electric motor to get close without disturbing wildlife",
+      "Full-day, seven-hour excursion with a light breakfast served on board",
     ],
     animalFacts: [
       { label: "Scientific Name", value: "Alces alces (Moose)" },
