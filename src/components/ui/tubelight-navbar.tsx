@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
-import { LucideIcon } from "lucide-react";
+import { LucideIcon, Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface NavItem {
@@ -19,10 +19,12 @@ export function NavBar({ items, className }: NavBarProps) {
   const location = useLocation();
   const [activeTab, setActiveTab] = useState(items[0].name);
   const [isMobile, setIsMobile] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
+      if (window.innerWidth >= 768) setMenuOpen(false);
     };
     handleResize();
     window.addEventListener("resize", handleResize);
@@ -39,10 +41,88 @@ export function NavBar({ items, className }: NavBarProps) {
     if (match) setActiveTab(match.name);
   }, [location, items]);
 
+  const handleNavClick = (name: string) => {
+    setActiveTab(name);
+    setMenuOpen(false);
+  };
+
+  // Mobile hamburger menu (top-right)
+  if (isMobile) {
+    return (
+      <>
+        <div className={cn("fixed top-4 right-4 z-50", className)}>
+          <button
+            type="button"
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={menuOpen}
+            onClick={() => setMenuOpen((open) => !open)}
+            className="p-3 rounded-full bg-background/80 border border-border backdrop-blur-lg shadow-lg text-foreground hover:text-primary transition-colors"
+          >
+            {menuOpen ? <X size={24} strokeWidth={2.5} aria-hidden="true" /> : <Menu size={24} strokeWidth={2.5} aria-hidden="true" />}
+          </button>
+        </div>
+
+        <AnimatePresence>
+          {menuOpen && (
+            <motion.div
+              initial={{ opacity: 0, x: "100%" }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: "100%" }}
+              transition={{ type: "spring", stiffness: 300, damping: 30 }}
+              className="fixed inset-0 z-40 bg-background/95 backdrop-blur-xl flex flex-col items-center justify-center gap-6"
+            >
+              {items.map((item) => {
+                const Icon = item.icon;
+                const isActive = activeTab === item.name;
+                const isRouterLink = item.url.startsWith("/") && !item.url.startsWith("/#");
+                const classes = cn(
+                  "flex items-center gap-3 text-2xl font-semibold transition-colors",
+                  isActive ? "text-primary" : "text-foreground/80 hover:text-primary"
+                );
+
+                const content = (
+                  <>
+                    <Icon size={28} strokeWidth={2} aria-hidden="true" />
+                    {item.name}
+                  </>
+                );
+
+                if (isRouterLink) {
+                  return (
+                    <Link
+                      key={item.name}
+                      to={item.url}
+                      onClick={() => handleNavClick(item.name)}
+                      className={classes}
+                    >
+                      {content}
+                    </Link>
+                  );
+                }
+
+                return (
+                  <a
+                    key={item.name}
+                    href={item.url}
+                    onClick={() => handleNavClick(item.name)}
+                    className={classes}
+                  >
+                    {content}
+                  </a>
+                );
+              })}
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </>
+    );
+  }
+
+  // Desktop tubelight navbar (top-center)
   return (
     <div
       className={cn(
-        "fixed bottom-0 sm:top-0 left-1/2 -translate-x-1/2 z-50 mb-6 sm:pt-6 pointer-events-none",
+        "fixed top-0 left-1/2 -translate-x-1/2 z-50 pt-6 pointer-events-none",
         className
       )}
     >
