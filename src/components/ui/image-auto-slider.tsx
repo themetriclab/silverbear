@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 export interface SliderImage {
   src: string;
@@ -15,6 +15,7 @@ export const ImageAutoSlider = ({ images, className = '' }: ImageAutoSliderProps
     typeof img === 'string' ? { src: img, alt: `Wildlife photo ${i + 1}` } : img
   );
   const [loadedCount, setLoadedCount] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
   const allLoaded = loadedCount >= normalized.length;
   const duplicatedImages = [...normalized, ...normalized];
 
@@ -39,15 +40,20 @@ export const ImageAutoSlider = ({ images, className = '' }: ImageAutoSliderProps
           transition: transform 0.3s ease, filter 0.3s ease;
         }
         .image-item:hover {
-          transform: scale(1.05);
+          transform: scale(1.5);
           filter: brightness(1.1);
+          z-index: 10;
         }
       `}</style>
       <div className={`relative w-full overflow-hidden ${className}`}>
-        <div className="scroll-container relative w-full overflow-hidden">
-          <div className={`infinite-scroll flex gap-4 w-max ${!allLoaded ? 'paused' : ''}`}>
+        <div
+          className="scroll-container relative w-full overflow-hidden"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          <div className={`infinite-scroll flex gap-4 w-max ${!allLoaded || isHovered ? 'paused' : ''}`}>
             {duplicatedImages.map((image, index) => (
-              <div key={index} className="image-item flex-shrink-0 rounded-lg overflow-hidden" style={{ minWidth: '200px', minHeight: '192px' }}>
+              <div key={index} className="image-item flex-shrink-0 rounded-lg overflow-visible" style={{ minWidth: '200px', minHeight: '192px' }}>
                 <img
                   src={image.src}
                   alt={image.alt}
