@@ -98,18 +98,13 @@ const ReviewCard = ({ review, index }: { review: Review; index: number }) => {
       className="flex flex-col p-6 bg-card border border-border rounded-lg hover:border-primary/40 transition-colors duration-300"
     >
       <div className="flex items-center gap-3">
-        <img
-          src={review.photo}
-          alt=""
-          loading="lazy"
-          referrerPolicy="no-referrer"
-          className="w-10 h-10 rounded-full object-cover bg-muted"
-        />
+        <div className="w-10 h-10 rounded-full bg-card flex items-center justify-center border border-border">
+          <GoogleIcon className="w-5 h-5" aria-hidden="true" />
+        </div>
         <div className="min-w-0">
-          <p className="text-foreground font-semibold truncate">{review.author}</p>
+          <p className="text-muted-foreground text-xs">Google review</p>
           <p className="text-muted-foreground text-xs">{review.when}</p>
         </div>
-        <GoogleIcon className="w-5 h-5 ml-auto shrink-0" />
       </div>
 
       <div className="mt-4">
