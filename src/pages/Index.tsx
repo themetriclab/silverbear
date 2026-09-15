@@ -5,6 +5,7 @@ import ImageSliderSection from "@/components/ImageSliderSection";
 import IntroSection from "@/components/IntroSection";
 import ToursSection from "@/components/ToursSection";
 import AboutSection from "@/components/AboutSection";
+import ReviewsSection from "@/components/ReviewsSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
