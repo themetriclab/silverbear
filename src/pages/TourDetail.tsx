@@ -98,22 +98,6 @@ const IconByName = ({ name, className, size = 20 }: { name?: string; className?:
   return Icon ? <Icon size={size} className={className} /> : null;
 };
 
-const factIcon = (label: string): string => {
-  const lower = label.toLowerCase();
-  if (lower.includes("scientific")) return "Dna";
-  if (lower.includes("weight")) return "Scale";
-  if (lower.includes("height") || lower.includes("standing")) return "Ruler";
-  if (lower.includes("wingspan") || lower.includes("span")) return "Wind";
-  if (lower.includes("speed") || lower.includes("flight")) return "Zap";
-  if (lower.includes("dive") || lower.includes("swimming") || lower.includes("range")) return "Waves";
-  if (lower.includes("lifespan")) return "Hourglass";
-  if (lower.includes("diet")) return "Utensils";
-  if (lower.includes("population")) return "Users";
-  if (lower.includes("fur")) return "PolarBear";
-  if (lower.includes("species") || lower.includes("diversity")) return "Bird";
-  return "Info";
-};
-
 
 const CardDecoration = ({ icon }: { icon?: string }) => (
   <div className="absolute top-0 right-0 p-5 opacity-[0.04] pointer-events-none select-none overflow-hidden">
@@ -356,24 +340,6 @@ const TourDetail = () => {
           </motion.section>
         )}
 
-        {/* Animal Facts */}
-        <motion.section {...fadeUp}>
-          <SectionHeader label="Wildlife" title="Animal Facts" />
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-10">
-            {tour.animalFacts.map((fact, i) => (
-              <SpotlightCard key={fact.label} className="p-5 relative overflow-hidden">
-                <CardDecoration icon={factIcon(fact.label)} />
-                <div className="relative z-10">
-                  <div className="flex items-center gap-2 mb-2">
-                    <IconByName name={factIcon(fact.label)} size={16} className="text-primary" />
-                    <p className="text-xs text-primary uppercase tracking-wider font-medium">{fact.label}</p>
-                  </div>
-                  <p className="text-foreground text-sm font-medium">{fact.value}</p>
-                </div>
-              </SpotlightCard>
-            ))}
-          </div>
-        </motion.section>
 
 
         {/* Migration Info */}
@@ -387,20 +353,24 @@ const TourDetail = () => {
         {/* Why Ground-Level Photography + Photo */}
         <motion.section {...fadeUp}>
           <SectionHeader label="Photography" title={tour.whyPhotograph.title} />
-          <div className="grid md:grid-cols-2 gap-10 items-start mt-10">
-            <p className="text-muted-foreground leading-relaxed">{tour.whyPhotograph.content}</p>
-            <div className="rounded-xl overflow-hidden border border-border">
-              <img
-                src={groupPhotoGroundLevel.url}
-                alt="Photographers photographing polar bears at ground level in Churchill, Manitoba"
-                className="w-full h-auto object-cover"
-                loading="lazy"
-              />
-              <p className="text-center text-sm text-muted-foreground py-4 px-4 bg-card border-t border-border">
-                Guests photographing polar bears at ground level in Churchill, Manitoba
-              </p>
+          {tour.slug === "polar-bear-photography-tour" ? (
+            <div className="grid md:grid-cols-2 gap-10 items-start mt-10">
+              <p className="text-muted-foreground leading-relaxed">{tour.whyPhotograph.content}</p>
+              <div className="rounded-xl overflow-hidden border border-border">
+                <img
+                  src={groupPhotoGroundLevel.url}
+                  alt="Photographers photographing polar bears at ground level in Churchill, Manitoba"
+                  className="w-full h-auto object-cover"
+                  loading="lazy"
+                />
+                <p className="text-center text-sm text-muted-foreground py-4 px-4 bg-card border-t border-border">
+                  Guests photographing polar bears at ground level in Churchill, Manitoba
+                </p>
+              </div>
             </div>
-          </div>
+          ) : (
+            <p className="text-muted-foreground leading-relaxed mt-6 max-w-3xl">{tour.whyPhotograph.content}</p>
+          )}
         </motion.section>
 
         {/* What to Expect */}
