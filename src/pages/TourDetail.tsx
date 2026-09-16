@@ -58,6 +58,7 @@ import wfSwanCygnets from "@/assets/waterfowl/swan-cygnets.jpg";
 import wfSwanCalm from "@/assets/waterfowl/swan-calm-water.jpg";
 import wfLowRider from "@/assets/waterfowl/low-rider-swan.jpg";
 import wfBeaver from "@/assets/waterfowl/beaver.jpg";
+import ReviewsSection from "@/components/ReviewsSection";
 
 const loonSliderImages = [loonChickGreen, loonHighKey2, loonAurora2, loonMist, loonChickGreen2];
 const algonquinSliderImages = [algWolf, algLoon, algBabyBeaver, algCow, algMerganser, algMoose, algDucks, algEagle, algOtter, algBull, algCalfCow];
@@ -380,6 +381,8 @@ const TourDetail = () => {
           <SectionHeader label="Migration" title={tour.migrationInfo.title} />
           <p className="text-muted-foreground leading-relaxed mt-6 max-w-3xl">{tour.migrationInfo.content}</p>
         </motion.section>
+
+        {tour.slug === "polar-bear-photography-tour" && <ReviewsSection />}
 
         {/* Why Ground-Level Photography + Photo */}
         <motion.section {...fadeUp}>
