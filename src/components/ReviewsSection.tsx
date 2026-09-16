@@ -66,13 +66,6 @@ Erik's knowledge of the bears' behaviors and his photography skills make for som
     when: "September 2026",
     text: `I traveled with Silver Bear Tours to Churchill in 2026 to photograph Polar Bears. It was an exceptional trip. The guides could not have worked harder to get us in the right place for all of the perfect shots. The Silver Bear Guides have a vast knowledge of the Polar Bears in this area. They know the bear's habits and where the bears are likely to be depending on conditions. I came home with remarkable photos and have booked to return with them in 2028. Silver Bear Tours is run by phenomenal people who truly care about the bears and give their clients the most incredible experience. Thank you Erik, Julia and Michael. You guys are the best!`,
   },
-  {
-    author: "MJ Haught",
-    photo: "https://lh3.googleusercontent.com/a-/ALV-UjUpsezn2NCPotpkqsqp2qH9CyYwmst2eTE_44lPeW8DHdp7s5fT=s128-c0x00000000-cc-rp-mo",
-    profile: "https://www.google.com/maps/contrib/112568310922211835221/reviews",
-    when: "September 2026",
-    text: `I did the moose trip with Silver Bear Photo Tours, and ended up with some photos that made (picky) me happy. I live on the Pacific coast, and didn't want to fly all the way to Toronto for two or three days. They were very accommodating, and I had five consecutive shooting days. The park is literally Erik's backyard, so he knew just where we needed to be — and when — to catch moose being moose. The excellent bird photography was an unexpected bonus — plus frogs and a cooperative beaver. Erik's love of the wildlife and sense of humor made for a very enjoyable photo tour.`,
-  },
 ];
 
 const REVIEWS_URL = "https://maps.app.goo.gl/vY5jYSAvX7v9cjDm9";
@@ -102,7 +95,7 @@ const ReviewCard = ({ review, index }: { review: Review; index: number }) => {
           <GoogleIcon className="w-5 h-5" aria-hidden="true" />
         </div>
         <div className="min-w-0">
-          <p className="text-muted-foreground text-xs">Google review</p>
+          <p className="text-foreground text-sm font-medium">{review.author}</p>
           <p className="text-muted-foreground text-xs">{review.when}</p>
         </div>
       </div>
@@ -150,7 +143,7 @@ const ReviewsSection = () => {
           </div>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
           {reviews.map((review, i) => (
             <ReviewCard key={review.author} review={review} index={i} />
           ))}
