@@ -381,6 +381,8 @@ const TourDetail = () => {
           <p className="text-muted-foreground leading-relaxed mt-6 max-w-3xl">{tour.migrationInfo.content}</p>
         </motion.section>
 
+        {tour.slug === "polar-bear-photography-tour" && <ReviewsSection />}
+
         {/* Why Ground-Level Photography + Photo */}
         <motion.section {...fadeUp}>
           <SectionHeader label="Photography" title={tour.whyPhotograph.title} />

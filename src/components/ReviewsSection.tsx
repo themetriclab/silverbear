@@ -75,7 +75,7 @@ Erik's knowledge of the bears' behaviors and his photography skills make for som
   },
 ];
 
-const REVIEWS_URL = "https://maps.google.com/?cid=13059153085573553450";
+const REVIEWS_URL = "https://maps.app.goo.gl/vY5jYSAvX7v9cjDm9";
 
 const Stars = () => (
   <div className="flex gap-0.5" aria-label="Rated 5 out of 5 stars">
