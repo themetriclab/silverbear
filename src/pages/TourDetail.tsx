@@ -476,10 +476,27 @@ const TourDetail = () => {
         )}
 
         {/* Payment Policy */}
-        {tour.paymentPolicy && (
+        {(tour.paymentPolicy || tour.bookingNotes) && (
           <motion.section {...fadeUp} className="bg-card border border-border rounded-xl p-8 md:p-12">
             <SectionHeader label="Booking" title="Payment & Registration Policy" />
-            <p className="text-muted-foreground leading-relaxed mt-6 max-w-3xl">{tour.paymentPolicy}</p>
+            {tour.paymentPolicy && (
+              <p className="text-muted-foreground leading-relaxed mt-6 max-w-3xl">{tour.paymentPolicy}</p>
+            )}
+            {tour.bookingNotes && tour.bookingNotes.length > 0 && (
+              <div className="mt-8 space-y-4 max-w-3xl">
+                {tour.bookingNotes.map((note, i) => (
+                  <div key={i} className="rounded-lg border border-primary/25 bg-primary/5 p-6">
+                    <div className="flex items-start gap-3">
+                      <Plane size={18} className="text-primary mt-0.5 shrink-0" />
+                      <div>
+                        <h3 className="text-foreground font-medium">{note.title}</h3>
+                        <p className="text-muted-foreground text-sm leading-relaxed mt-2">{note.content}</p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
           </motion.section>
         )}
 
