@@ -18,13 +18,6 @@ const SectionLabel = ({ children }: { children: React.ReactNode }) => (
   </div>
 );
 
-const quickFacts = [
-  { value: "Maximum 4", label: "Photographers in every Ontario group, so nobody waits behind a crowd of tripods" },
-  { value: "5", label: "Photographers on the Churchill polar bear expedition, plus your guide" },
-  { value: "Eye level", label: "Water-level boats and ground-level Arctic shooting, not shoreline or vehicle glass" },
-  { value: "Since 1997", label: "Guided by professional photographer Erik Bertelsen on every departure" },
-];
-
 const chooseCopy: Record<string, { bestFor: string; planFor: string }> = {
   "ontario-waterfowl-photography-tours": {
     bestFor: "Flight shots, low-angle water work, and a first small-group tour. Spring migration fills the water with tundra swans, diving ducks, osprey, and terns.",
@@ -145,47 +138,6 @@ const Tours = () => {
         </div>
       </section>
 
-      {/* Why our tours are different — unique supporting copy, kept in plain HTML so crawlers read it */}
-      <section className="py-20 px-6">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center">
-            <SectionLabel>Why Silver Bear</SectionLabel>
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-8">
-              What Makes a Silver Bear Photography Tour Different
-            </h2>
-          </div>
-          <div className="text-muted-foreground leading-relaxed space-y-5 text-lg">
-            <p>
-              Every tour we run starts from one idea: get close enough that the animal is still the subject and the frame still feels
-              honest. That means small groups, boats designed for photography rather than for sightseeing, and a guide who already knows
-              where the wildlife is working this week. Most of our expeditions cap at four photographers and the Churchill polar bear tour
-              runs five, so you are never waiting behind fifteen tripods or being handed a pair of binoculars and pointed at the treeline.
-            </p>
-            <p>
-              The access is the other half of it. Our Ontario tours work from purpose-built flat-bottom boats with swivel seats mounted on
-              the centreline, which puts your lens at water level with a moose, a loon, or a swan instead of looking down on them from the
-              shore. In Churchill we get out of the vehicle and photograph polar bears on the ground, eye to eye, which is the frame most
-              visitors never get from a tour bus window.
-            </p>
-            <p>
-              And the wildlife is genuinely wild. No game farms, no enclosures, no baited or staged setups. Some days the animals cooperate
-              and some days they do not, and that is the trade you make for photographs that are real. Erik Bertelsen has guided these
-              waterways and the edge of the Arctic tundra for decades, and each day is planned around weather, light, and animal behaviour
-              rather than a printed schedule.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-14">
-            {quickFacts.map((fact) => (
-              <div key={fact.value} className="p-6 bg-card border border-border rounded-lg hover:border-primary/40 transition-colors duration-300">
-                <div className="text-primary font-display font-semibold text-xl mb-2">{fact.value}</div>
-                <p className="text-muted-foreground text-sm leading-relaxed">{fact.label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Tours grid */}
       <section className="py-24 px-6">
         <div className="max-w-7xl mx-auto">
@@ -242,8 +194,40 @@ const Tours = () => {
         </div>
       </section>
 
+      {/* Why our tours are different — unique supporting copy, kept in plain HTML so crawlers read it */}
+      <section className="py-20 px-6 bg-secondary/30">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center">
+            <SectionLabel>Why Silver Bear</SectionLabel>
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-8">
+              What Makes a Silver Bear Photography Tour Different
+            </h2>
+          </div>
+          <div className="text-muted-foreground leading-relaxed space-y-5 text-lg">
+            <p>
+              Every tour we run starts from one idea: get close enough that the animal is still the subject and the frame still feels
+              honest. That means small groups, boats designed for photography rather than for sightseeing, and a guide who already knows
+              where the wildlife is working this week. Most of our expeditions cap at four photographers and the Churchill polar bear tour
+              runs five, so you are never waiting behind fifteen tripods or being handed a pair of binoculars and pointed at the treeline.
+            </p>
+            <p>
+              The access is the other half of it. Our Ontario tours work from purpose-built flat-bottom boats with swivel seats mounted on
+              the centreline, which puts your lens at water level with a moose, a loon, or a swan instead of looking down on them from the
+              shore. In Churchill we get out of the vehicle and photograph polar bears on the ground, eye to eye, which is the frame most
+              visitors never get from a tour bus window.
+            </p>
+            <p>
+              And the wildlife is genuinely wild. No game farms, no enclosures, no baited or staged setups. Some days the animals cooperate
+              and some days they do not, and that is the trade you make for photographs that are real. Erik Bertelsen has guided these
+              waterways and the edge of the Arctic tundra for decades, and each day is planned around weather, light, and animal behaviour
+              rather than a printed schedule.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* SEO copy block */}
-      <section className="py-16 px-6 bg-secondary/30">
+      <section className="py-16 px-6">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-6">
             Guided Photography Tours Across Canada
