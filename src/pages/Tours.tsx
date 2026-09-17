@@ -10,13 +10,6 @@ import { SpotlightCard } from "@/components/ui/spotlight-card";
 
 const SITE_URL = "https://silverbearphototours.com";
 
-const fadeUp = {
-  initial: { opacity: 0, y: 30 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true },
-  transition: { duration: 0.6 },
-};
-
 const SectionLabel = ({ children }: { children: React.ReactNode }) => (
   <div className="flex items-center justify-center gap-4 mb-6">
     <div className="h-px w-16 bg-primary/60" />
@@ -152,16 +145,16 @@ const Tours = () => {
         </div>
       </section>
 
-      {/* Why our tours are different — unique supporting copy */}
+      {/* Why our tours are different — unique supporting copy, kept in plain HTML so crawlers read it */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto">
-          <motion.div {...fadeUp} className="text-center">
+          <div className="text-center">
             <SectionLabel>Why Silver Bear</SectionLabel>
             <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-8">
               What Makes a Silver Bear Photography Tour Different
             </h2>
-          </motion.div>
-          <motion.div {...fadeUp} className="text-muted-foreground leading-relaxed space-y-5 text-lg">
+          </div>
+          <div className="text-muted-foreground leading-relaxed space-y-5 text-lg">
             <p>
               Every tour we run starts from one idea: get close enough that the animal is still the subject and the frame still feels
               honest. That means small groups, boats designed for photography rather than for sightseeing, and a guide who already knows
@@ -180,16 +173,16 @@ const Tours = () => {
               waterways and the edge of the Arctic tundra for decades, and each day is planned around weather, light, and animal behaviour
               rather than a printed schedule.
             </p>
-          </motion.div>
+          </div>
 
-          <motion.div {...fadeUp} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-14">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-14">
             {quickFacts.map((fact) => (
               <div key={fact.value} className="p-6 bg-card border border-border rounded-lg hover:border-primary/40 transition-colors duration-300">
                 <div className="text-primary font-display font-semibold text-xl mb-2">{fact.value}</div>
                 <p className="text-muted-foreground text-sm leading-relaxed">{fact.label}</p>
               </div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -275,11 +268,11 @@ const Tours = () => {
       {/* How to choose your tour */}
       <section className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
-          <motion.div {...fadeUp} className="text-center">
+          <div className="text-center">
             <SectionLabel>Planning</SectionLabel>
             <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-8">How to Choose Your Tour</h2>
-          </motion.div>
-          <motion.div {...fadeUp} className="text-muted-foreground leading-relaxed space-y-4 max-w-3xl mx-auto text-center mb-14">
+          </div>
+          <div className="text-muted-foreground leading-relaxed space-y-4 max-w-3xl mx-auto text-center mb-14">
             <p>
               Three things decide most of it: the month you can travel, the animal you most want in your portfolio, and how much cold and
               distance you are happy to handle. If your dates are fixed, work backwards from the season. If there is one photograph you have
@@ -289,51 +282,44 @@ const Tours = () => {
               Every trip runs in a narrow window, because the behaviour we photograph only happens for a few weeks a year. That is why the
               calendar matters more than the checklist.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {chooseOrder.map((slug, i) => {
+            {chooseOrder.map((slug) => {
               const tour = tours.find((t) => t.slug === slug);
               const copy = chooseCopy[slug];
               if (!tour || !copy) return null;
               return (
-                <motion.div
+                <Link
                   key={slug}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: i * 0.08 }}
+                  to={`/tours/${tour.slug}`}
+                  className="group block h-full bg-card border border-border rounded-lg p-7 hover:border-primary/40 transition-all duration-500"
                 >
-                  <Link
-                    to={`/tours/${tour.slug}`}
-                    className="group block h-full bg-card border border-border rounded-lg p-7 hover:border-primary/40 transition-all duration-500"
-                  >
-                    <div className="flex flex-wrap items-center gap-x-4 gap-y-2 mb-4">
-                      <h3 className="text-lg font-display font-semibold text-foreground group-hover:text-primary transition-colors">
-                        {tour.title}
-                      </h3>
-                      <span className="inline-flex items-center gap-1.5 text-primary text-xs font-medium tracking-wider uppercase">
-                        <Calendar size={12} />
-                        {tour.month}
-                      </span>
-                    </div>
-                    <p className="text-muted-foreground text-sm leading-relaxed mb-4">{copy.bestFor}</p>
-                    <p className="text-foreground/80 text-sm leading-relaxed mb-5">{copy.planFor}</p>
-                    <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-muted-foreground">
-                      <span className="inline-flex items-center gap-1.5">
-                        <Users size={13} className="text-primary" />
-                        {tour.groupSize}
-                      </span>
-                      <span className="inline-flex items-center gap-1.5">
-                        <MapPin size={13} className="text-primary" />
-                        {tour.difficulty}
-                      </span>
-                      <span className="text-primary text-xs font-medium tracking-wider uppercase group-hover:translate-x-1 transition-transform inline-block">
-                        Tour Details →
-                      </span>
-                    </div>
-                  </Link>
-                </motion.div>
+                  <div className="flex flex-wrap items-center gap-x-4 gap-y-2 mb-4">
+                    <h3 className="text-lg font-display font-semibold text-foreground group-hover:text-primary transition-colors">
+                      {tour.title}
+                    </h3>
+                    <span className="inline-flex items-center gap-1.5 text-primary text-xs font-medium tracking-wider uppercase">
+                      <Calendar size={12} />
+                      {tour.month}
+                    </span>
+                  </div>
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-4">{copy.bestFor}</p>
+                  <p className="text-foreground/80 text-sm leading-relaxed mb-5">{copy.planFor}</p>
+                  <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-muted-foreground">
+                    <span className="inline-flex items-center gap-1.5">
+                      <Users size={13} className="text-primary" />
+                      {tour.groupSize}
+                    </span>
+                    <span className="inline-flex items-center gap-1.5">
+                      <MapPin size={13} className="text-primary" />
+                      {tour.difficulty}
+                    </span>
+                    <span className="text-primary text-xs font-medium tracking-wider uppercase group-hover:translate-x-1 transition-transform inline-block">
+                      Tour Details →
+                    </span>
+                  </div>
+                </Link>
               );
             })}
           </div>
@@ -343,34 +329,26 @@ const Tours = () => {
       {/* FAQ */}
       <section className="py-20 px-6 bg-secondary/30">
         <div className="max-w-4xl mx-auto">
-          <motion.div {...fadeUp} className="text-center">
+          <div className="text-center">
             <SectionLabel>Good to Know</SectionLabel>
             <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-10">
               Questions Photographers Ask Before Booking
             </h2>
-          </motion.div>
+          </div>
           <div className="space-y-4">
-            {faqs.map((f, i) => (
-              <motion.div
-                key={f.question}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.08 }}
-              >
-                <SpotlightCard className="p-6 relative overflow-hidden">
-                  <div className="relative z-10">
-                    <div className="flex items-start gap-3 mb-3">
-                      <HelpCircle size={18} className="text-primary mt-0.5 shrink-0" />
-                      <h3 className="text-foreground font-medium">{f.question}</h3>
-                    </div>
-                    <p className="text-muted-foreground text-sm leading-relaxed pl-7">{f.answer}</p>
+            {faqs.map((f) => (
+              <SpotlightCard key={f.question} className="p-6 relative overflow-hidden">
+                <div className="relative z-10">
+                  <div className="flex items-start gap-3 mb-3">
+                    <HelpCircle size={18} className="text-primary mt-0.5 shrink-0" />
+                    <h3 className="text-foreground font-medium">{f.question}</h3>
                   </div>
-                </SpotlightCard>
-              </motion.div>
+                  <p className="text-muted-foreground text-sm leading-relaxed pl-7">{f.answer}</p>
+                </div>
+              </SpotlightCard>
             ))}
           </div>
-          <motion.div {...fadeUp} className="text-center mt-12">
+          <div className="text-center mt-12">
             <p className="text-muted-foreground mb-5">
               Still not sure which tour fits your dates and your gear?
             </p>
@@ -380,7 +358,7 @@ const Tours = () => {
             >
               Ask Erik a Question
             </Link>
-          </motion.div>
+          </div>
         </div>
       </section>
 
