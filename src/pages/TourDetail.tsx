@@ -1,6 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { icons, ArrowLeft, Calendar, MapPin, Clock, Users, Mountain, Camera, ChevronRight, DollarSign, Check, X, CreditCard, HelpCircle } from "lucide-react";
+import { icons, ArrowLeft, Calendar, MapPin, Clock, Users, Mountain, Camera, ChevronRight, DollarSign, Check, X, CreditCard, HelpCircle, Plane } from "lucide-react";
 import type { TourItineraryDay } from "@/data/tours";
 import { tours } from "@/data/tours";
 
