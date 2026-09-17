@@ -82,6 +82,8 @@ export interface Tour {
   priceIncludes?: string[];
   priceExcludes?: string[];
   paymentPolicy?: string;
+  /** Optional extra notes rendered inside the Booking section. */
+  bookingNotes?: TourSection[];
   /** Optional day-by-day itinerary rendered on the tour page. */
   itinerary?: TourItineraryDay[];
   /** Optional fitness & safety information section. */
@@ -355,6 +357,13 @@ const rawTours: Tour[] = [
     ],
     paymentPolicy:
       "A non-refundable $2,000 CAD deposit is required at time of booking. Once the deposit is received, your spot is confirmed and a detailed itinerary will be emailed to you. Balance in full is due 90 days prior to departure. Fees are based on double occupancy — single rooms are available for the supplement listed above. We accept e-transfer, PayPal (add 3.7%), or bank wire (add $17.50). If the balance is not received by the due date, we will attempt to fill your spot from the waiting list; if the spot is filled, you will receive a credit toward another trip of your choice. Travel and health insurance are highly recommended. Interested in 2028 dates? Contact us to be added to the early-interest list.",
+    bookingNotes: [
+      {
+        title: "Flight Booking Policy",
+        content:
+          "Although the flight price is not included in the tour listed price, our company will book the flights for you as company policy. We do this as part of our logistics to keep everything organized and so we can get enough flights ahead of time.",
+      },
+    ],
     itinerary: [
       { title: "Arrival Day", content: "Fly from Winnipeg to Churchill, Manitoba. Your guide will meet you at the airport and transfer you to the private lodge. After settling into your room with private 3-piece bath, refrigerator, and individual thermostat, you'll receive a short safety orientation and winter photography tips over coffee, tea, and a light snack. Then it's out in search of polar bears. In the evening, the group gathers for dinner at one of Churchill's finer restaurants." },
       { title: "Full Photography Days", content: "Each day begins with an early breakfast before heading out at first light in a 4×4 van built for the tundra. You'll photograph polar bears and Arctic wildlife on the ground at eye level, with plenty of room for gear and clothing. Midday brings a short lunch break, often in the field or back at the lodge depending on wildlife activity. Afternoons and evenings are spent chasing the best light, then reviewing the day over dinner. Northern lights photography is possible when skies are clear." },
