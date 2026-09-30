@@ -20,7 +20,7 @@ type Review = {
 
 const reviews: Review[] = [
   {
-    author: "Vic Toffan",
+    author: "Vic T.",
     photo: "https://lh3.googleusercontent.com/a-/ALV-UjUirS30Bb2uQ1zPdAntCBy4_HPf1eXNTcYyokZkOHUy6nZ6doZrIg=s128-c0x00000000-cc-rp-mo-ba3",
     profile: "https://www.google.com/maps/contrib/109075020222081236390/reviews",
     text: `I've done several photo tours with Silver Bear Photography and can't recommend Erik enough! I've had the opportunity to do the loon tour, moose tour, waterfowl tour, and the ground-level polar bear tour in Churchill.
@@ -44,7 +44,7 @@ They made sure we had amazing ground level photography opportunities while alway
 It was an unforgettable adventure and a privilege to see these magnificent animals in their natural habitat. I would highly recommend this tour to anyone looking for an authentic, responsible, and truly exceptional polar bear photography experience!`,
   },
   {
-    author: "Timothy Harlow",
+    author: "Timothy H.",
     photo: "https://lh3.googleusercontent.com/a-/ALV-UjW9UTULoF_XGx5ptHwTpW4wyxl8tPGaIv3LpZdyfQqdAckev6M=s128-c0x00000000-cc-rp-mo-ba2",
     profile: "https://www.google.com/maps/contrib/106942860869546713654/reviews",
     text: `Erik Bertelsen is an incredible guide. I was with him for a week on a polar bear photo tour around Churchill, Manitoba last November (2025). I had an absolutely fantastic time. Erik has an uncanny ability to spot not just the bears but other small arctic wildlife too. He found us some beautiful arctic hares to photograph as well as many ptarmigans.
@@ -56,25 +56,25 @@ There is nothing like being on the ground with the bears. Nothing! Of course we 
 Erik's knowledge of the bears' behaviors and his photography skills make for some wonderful photos for us clients. Would I recommend Erik and Silver Bear Photo Tours? Yes! 100%, absolutely! If you are serious about photography and want more than a "canned tourist" experience from a huge buggy 12 feet off the ground, you need to book this trip. You will never forget your experience, and by the end of the tour you will have a new friend in Erik and the others on your tour as well.`,
   },
   {
-    author: "Amanda Sutton Tarling",
+    author: "Amanda T.",
     photo: "https://lh3.googleusercontent.com/a-/ALV-UjW7FJRPAS5qK94z-SAYAW_BmlYYf_8I5Ejt0_ZnJZAS1SbEdfF3=s128-c0x00000000-cc-rp-mo",
     profile: "https://www.google.com/maps/contrib/104156120712019948330/reviews",
     text: `I traveled with Silver Bear Tours to Churchill in 2026 to photograph Polar Bears. It was an exceptional trip. The guides could not have worked harder to get us in the right place for all of the perfect shots. The Silver Bear Guides have a vast knowledge of the Polar Bears in this area. They know the bear's habits and where the bears are likely to be depending on conditions. I came home with remarkable photos and have booked to return with them in 2028. Silver Bear Tours is run by phenomenal people who truly care about the bears and give their clients the most incredible experience. Thank you Erik, Julia and Michael. You guys are the best!`,
   },
   {
-    author: "Marilyn Vardy",
+    author: "Marilyn V.",
     photo: "",
     profile: "https://www.google.com/maps/contrib/103976949701645474231/reviews?hl=en",
     text: `I have done three polar bear trips (2023, 2024 and 2025) to Churchill, Manitoba with the Bertelsens. Erik Bertelsen was one of my principal guides in November 2024 and again in November 2025. Erik is very professional and knowledgeable about the local wildlife and how to get great photos and videos. I appreciate his attention to ethical wildlife photography and to the safety of guests. Erik offers great photography tips and is exceptionally good at spotting wildlife. He maintains a safe distance from the polar bears, but knows how to best situate guests so that they can get the most pleasing backgrounds and light for images. There are a limited number of guests assigned to each SUV for the polar bear trips, facilitating quick exits out of the vehicles when bears are spotted and enabling guests to get ground level shots. The polar bear tours offer the potential to photograph other wildlife, such as foxes, willow ptarmigan and Arctic hare. Erik does his best to ensure that guests go home with great memories and images on their cards. I highly recommend his polar bear photography tours in Churchill, Manitoba, Canada.`,
   },
   {
-    author: "Jeff Hunking",
+    author: "Jeff H.",
     photo: "",
     profile: "https://www.google.com/maps/contrib/106541278460442223148/reviews?hl=en",
     text: `I went to Churchill in November 2024. I was with Erik Bertelsen and Silver Bear Photo Tours. As a first time visitor, I had no real idea what to expect. What transpired was an awe inspiring experience. During my week there, I photographed bears with cubs, nursing cubs, sparring bears, ptarmigan, arctic hares and different foxes. What made this even more exciting was shooting at ground level with the bears. As a guide, Erik, would find the bears and then find a safe location to shoot from. His calm demeanor was very reassuring when standing on the tundra facing such an incredible animal. Erik was very personable and easy to work with. He handled everything in a professional manner. I came home with over 10,000 photos and the experience of a lifetime. This was only possible because of Erik and Silver Bear Photo Tours. I would recommend Silver Bear Tours without hesitation!`,
   },
   {
-    author: "Jean-Christian Pioch",
+    author: "Jean-Christian P.",
     photo: "",
     profile: "",
     text: `The polar bear, with its combination of danger and inaccessibility is without context one of the holy grails of wildlife photography. Catching it in its habitat in Hudson Bay is difficult, and finding the right conditions is even more difficult.
@@ -84,6 +84,12 @@ It is a dream I was able to fulfill last November.
 Many thanks to Erik Bertelsen, who guided me, ensured my safety, and put me in position to capture magnificent shot of the Arctic wildlife.
 
 Thanks to Silverbearphototours for an unforgettable experience.`,
+  },
+  {
+    author: "Eric K.",
+    photo: "",
+    profile: "",
+    text: `Great photography guide - demonstrated patience and always conscientious towards the wildlife we encountered. Enthusiastic and welcoming to everyone. Helped us improve our compositions with new ideas and suggestions and also 100% willing and anxious to incorporate our feedback when we had specific requests for different compositions, even when leading late into the evenings. Will return for future trips!`,
   },
 ];
 
