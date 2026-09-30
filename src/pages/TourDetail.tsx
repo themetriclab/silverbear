@@ -526,8 +526,8 @@ const TourDetail = () => {
           </motion.section>
         )}
 
-        {/* Payment Policy */}
-        {(tour.paymentPolicy || tour.bookingNotes) && (
+        {/* Payment Policy (only when there is no pricing section above) */}
+        {!(tour.pricing && tour.pricing.length > 0) && (tour.paymentPolicy || tour.bookingNotes) && (
           <motion.section {...fadeUp} className="bg-card border border-border rounded-xl p-8 md:p-12">
             <SectionHeader label="Booking" title="Payment & Registration Policy" />
             {tour.paymentPolicy && (
