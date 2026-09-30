@@ -354,8 +354,6 @@ const rawTours: Tour[] = [
       "Lunches — purchased at the local grocery store and eaten in the field",
       "Dinners — join the group at Churchill's restaurants (no meal plan, choose anything on the menu)",
       "Alcoholic drinks and snacks",
-      "5% Manitoba tax",
-      "Single occupancy supplement: $800 (5-day), $950 (6-day), $1,200 (7-day), or $1,400 (8-day) plus 5% Manitoba tax",
     ],
     bookingTerms: [
       {
