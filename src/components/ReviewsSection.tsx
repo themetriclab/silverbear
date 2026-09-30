@@ -85,6 +85,12 @@ Many thanks to Erik Bertelsen, who guided me, ensured my safety, and put me in p
 
 Thanks to Silverbearphototours for an unforgettable experience.`,
   },
+  {
+    author: "Eric K.",
+    photo: "",
+    profile: "",
+    text: `Great photography guide - demonstrated patience and always conscientious towards the wildlife we encountered. Enthusiastic and welcoming to everyone. Helped us improve our compositions with new ideas and suggestions and also 100% willing and anxious to incorporate our feedback when we had specific requests for different compositions, even when leading late into the evenings. Will return for future trips!`,
+  },
 ];
 
 const REVIEWS_URL = "https://maps.app.goo.gl/cMdxK4tGf6djV3VDA";
