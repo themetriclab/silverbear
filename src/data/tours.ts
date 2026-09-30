@@ -82,6 +82,8 @@ export interface Tour {
   priceIncludes?: string[];
   priceExcludes?: string[];
   paymentPolicy?: string;
+  /** Optional per-trip-length booking terms rendered under the pricing grid. */
+  bookingTerms?: { label: string; items: string[] }[];
   /** Optional extra notes rendered inside the Booking section. */
   bookingNotes?: TourSection[];
   /** Optional day-by-day itinerary rendered on the tour page. */
