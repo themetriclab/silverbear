@@ -82,6 +82,8 @@ export interface Tour {
   priceIncludes?: string[];
   priceExcludes?: string[];
   paymentPolicy?: string;
+  /** Optional per-trip-length booking terms rendered under the pricing grid. */
+  bookingTerms?: { label: string; items: string[] }[];
   /** Optional extra notes rendered inside the Booking section. */
   bookingNotes?: TourSection[];
   /** Optional day-by-day itinerary rendered on the tour page. */
@@ -353,7 +355,41 @@ const rawTours: Tour[] = [
       "Dinners — join the group at Churchill's restaurants (no meal plan, choose anything on the menu)",
       "Alcoholic drinks and snacks",
       "5% Manitoba tax",
-      "Single occupancy supplement: $900 (5-day), $1,000 (6-day), $1,200 (7-day), or $1,400 (8-day) plus 5% Manitoba tax",
+      "Single occupancy supplement: $800 (5-day), $950 (6-day), $1,200 (7-day), or $1,400 (8-day) plus 5% Manitoba tax",
+    ],
+    bookingTerms: [
+      {
+        label: "5-Day Trip",
+        items: [
+          "$2,000 CAD deposit required at time of booking",
+          "Remaining amount due 90 days prior to departure date",
+          "Single occupancy available for $800 CAD plus 5% Manitoba tax",
+        ],
+      },
+      {
+        label: "6-Day Trip",
+        items: [
+          "$2,000 CAD deposit required at time of booking",
+          "Remaining amount due 90 days prior to departure date",
+          "Single occupancy available for $950 CAD plus 5% Manitoba tax",
+        ],
+      },
+      {
+        label: "7-Day Trip",
+        items: [
+          "$2,000 CAD deposit required at time of booking",
+          "Remaining amount due 90 days prior to departure date",
+          "Single occupancy available for $1,200 CAD plus 5% Manitoba tax",
+        ],
+      },
+      {
+        label: "8-Day Trip",
+        items: [
+          "$2,000 CAD deposit required at time of booking",
+          "Remaining amount due 90 days prior to departure date",
+          "Single occupancy available for $1,400 CAD plus 5% Manitoba tax",
+        ],
+      },
     ],
     paymentPolicy:
       "A non-refundable $2,000 CAD deposit is required at time of booking. Once the deposit is received, your spot is confirmed and a detailed itinerary will be emailed to you. Balance in full is due 90 days prior to departure. Fees are based on double occupancy — single rooms are available for the supplement listed above. We accept e-transfer, PayPal (add 3.7%), or bank wire (add $17.50). If the balance is not received by the due date, we will attempt to fill your spot from the waiting list; if the spot is filled, you will receive a credit toward another trip of your choice. Travel and health insurance are highly recommended. Interested in 2028 dates? Contact us to be added to the early-interest list.",

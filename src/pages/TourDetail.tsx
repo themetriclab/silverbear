@@ -337,7 +337,58 @@ const TourDetail = () => {
               ))}
             </div>
 
+            {tour.bookingTerms && tour.bookingTerms.length > 0 && (
+              <div className="mt-16">
+                <SectionHeader label="Booking" title="Booking Terms for 2026" />
+                <div className="grid md:grid-cols-2 gap-4 mt-10">
+                  {tour.bookingTerms.map((term, i) => (
+                    <SpotlightCard key={i} className="p-6 relative overflow-hidden">
+                      <div className="relative z-10">
+                        <p className="text-sm font-medium text-foreground mb-4">{term.label}</p>
+                        <div className="space-y-2">
+                          {term.items.map((item, j) => (
+                            <div key={j} className="flex items-start gap-3">
+                              <span className="w-2 h-2 rounded-full bg-primary mt-1.5 shrink-0" />
+                              <p className="text-foreground/90 text-sm leading-relaxed">{item}</p>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </SpotlightCard>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {(tour.paymentPolicy || tour.bookingNotes) && (
+              <div className="mt-10 bg-card border border-border rounded-xl p-8 md:p-12">
+                {!tour.bookingTerms && (
+                  <SectionHeader label="Booking" title="Payment & Registration Policy" />
+                )}
+                {tour.paymentPolicy && (
+                  <p className={`text-muted-foreground leading-relaxed max-w-3xl ${tour.bookingTerms ? "" : "mt-6"}`}>
+                    {tour.paymentPolicy}
+                  </p>
+                )}
+                {tour.bookingNotes && tour.bookingNotes.length > 0 && (
+                  <div className="mt-8 space-y-4 max-w-3xl">
+                    {tour.bookingNotes.map((note, i) => (
+                      <div key={i} className="rounded-lg border border-primary/25 bg-primary/5 p-6">
+                        <div className="flex items-start gap-3">
+                          <Plane size={18} className="text-primary mt-0.5 shrink-0" />
+                          <div>
+                            <h3 className="text-foreground font-medium">{note.title}</h3>
+                            <p className="text-muted-foreground text-sm leading-relaxed mt-2">{note.content}</p>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            )}
           </motion.section>
+
         )}
 
 
@@ -475,8 +526,8 @@ const TourDetail = () => {
           </motion.section>
         )}
 
-        {/* Payment Policy */}
-        {(tour.paymentPolicy || tour.bookingNotes) && (
+        {/* Payment Policy (only when there is no pricing section above) */}
+        {!(tour.pricing && tour.pricing.length > 0) && (tour.paymentPolicy || tour.bookingNotes) && (
           <motion.section {...fadeUp} className="bg-card border border-border rounded-xl p-8 md:p-12">
             <SectionHeader label="Booking" title="Payment & Registration Policy" />
             {tour.paymentPolicy && (
