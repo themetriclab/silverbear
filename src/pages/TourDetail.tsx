@@ -1,6 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { icons, ArrowLeft, Calendar, MapPin, Clock, Users, Mountain, Camera, ChevronRight, DollarSign, Check, X, CreditCard, HelpCircle, Plane } from "lucide-react";
+import { icons, ArrowLeft, Calendar, MapPin, Clock, Users, Mountain, Camera, DollarSign, Check, X, CreditCard, HelpCircle, Plane } from "lucide-react";
 import type { TourItineraryDay } from "@/data/tours";
 import { tours } from "@/data/tours";
 
@@ -264,7 +264,7 @@ const TourDetail = () => {
             {tour.highlights.map((h, i) => (
               <SpotlightCard key={i} className="p-5 relative overflow-hidden">
                 <div className="relative z-10 flex items-start gap-3">
-                  <ChevronRight size={18} className="text-primary mt-0.5 shrink-0" />
+                  <span className="w-2 h-2 rounded-full bg-primary mt-1.5 shrink-0" />
                   <p className="text-foreground/90 text-sm leading-relaxed">{h}</p>
                 </div>
               </SpotlightCard>
