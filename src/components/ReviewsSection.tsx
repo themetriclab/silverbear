@@ -91,6 +91,12 @@ Thanks to Silverbearphototours for an unforgettable experience.`,
     profile: "",
     text: `Great photography guide - demonstrated patience and always conscientious towards the wildlife we encountered. Enthusiastic and welcoming to everyone. Helped us improve our compositions with new ideas and suggestions and also 100% willing and anxious to incorporate our feedback when we had specific requests for different compositions, even when leading late into the evenings. Will return for future trips!`,
   },
+  {
+    author: "Sue R.",
+    photo: "",
+    profile: "",
+    text: `I can personally say that Erik is not only a gifted photographer but also an exceptional guide with a remarkable eye for spotting wildlife, often when others might overlook it. What truly sets Erik apart is his passion for what he does and his genuine commitment to the people he guides. He is organized, attentive, and always willing to go the extra mile to make sure his guests are comfortable, well looked after, and in the right place to capture the images they’ve been hoping for. Erik truly cares about helping others succeed, and his knowledge, patience, and dedication make him someone I would wholeheartedly recommend to anyone looking for an outstanding wildlife photography experience.`,
+  },
 ];
 
 const REVIEWS_URL = "https://maps.app.goo.gl/cMdxK4tGf6djV3VDA";
