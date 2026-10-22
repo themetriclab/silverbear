@@ -11,6 +11,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
+import { FunctionsHttpError } from "@supabase/supabase-js";
 
 const Contact = () => {
   const [searchParams] = useSearchParams();
@@ -32,14 +33,35 @@ const Contact = () => {
   });
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
+  const [sendError, setSendError] = useState(false);
+
+  const tourLabel =
+    selectedTour === "custom"
+      ? "General Inquiry"
+      : tours.find((t) => t.slug === selectedTour)?.title || "";
+
+  const backupHref =
+    "mailto:erik@silverbearphototours.com" +
+    "?subject=" +
+    encodeURIComponent(`Website inquiry${tourLabel ? ` - ${tourLabel}` : ""}`) +
+    "&body=" +
+    encodeURIComponent(
+      [
+        `Name: ${formData.name}`,
+        `Email: ${formData.email}`,
+        formData.phone ? `Phone: ${formData.phone}` : "",
+        formData.groupSize ? `Group size: ${formData.groupSize}` : "",
+        tourLabel ? `Tour interest: ${tourLabel}` : "",
+        "",
+        formData.message,
+      ]
+        .filter(Boolean)
+        .join("\n"),
+    );
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSending(true);
-
-    const tourLabel = selectedTour === "custom"
-      ? "General Inquiry"
-      : tours.find((t) => t.slug === selectedTour)?.title || "";
 
     const { data, error } = await supabase.functions.invoke("send-contact-email", {
       body: {
@@ -55,11 +77,17 @@ const Contact = () => {
     setSending(false);
 
     if (error) {
-      toast.error("Something went wrong. Please try again or email us directly.");
-      console.error("Edge function error:", error);
+      const details =
+        error instanceof FunctionsHttpError
+          ? await error.context.text()
+          : error.message;
+      console.error("Contact form send failed:", details);
+      setSendError(true);
+      toast.error("Your message didn't send. A backup option is showing below.");
       return;
     }
 
+    setSendError(false);
     setSubmitted(true);
     setFormData({ name: "", email: "", phone: "", groupSize: "", message: "" });
     setSelectedTour("");
@@ -200,6 +228,9 @@ const Contact = () => {
             ) : (
               <form
                 onSubmit={handleSubmit}
+                onChange={() => {
+                  if (sendError) setSendError(false);
+                }}
                 className="bg-card border border-border rounded-xl p-8 md:p-10 space-y-6"
               >
                 <div>
@@ -350,6 +381,25 @@ const Contact = () => {
                     className="bg-secondary/50 border-border resize-none"
                   />
                 </div>
+
+                {sendError && (
+                  <div className="rounded-lg border border-primary/30 bg-primary/5 p-5">
+                    <p className="font-display font-bold text-foreground mb-2">
+                      Your message didn't send
+                    </p>
+                    <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                      Erik hasn't received it yet, but nothing you typed is lost. Use the
+                      button below to send it from your own email app, or write to
+                      erik@silverbearphototours.com.
+                    </p>
+                    <Button asChild variant="outline" size="sm" className="gap-2">
+                      <a href={backupHref}>
+                        <Mail className="w-4 h-4" />
+                        Send it from my email app
+                      </a>
+                    </Button>
+                  </div>
+                )}
 
                 <Button type="submit" size="lg" disabled={sending} className="w-full gap-2 text-sm tracking-wider uppercase">
                   {sending ? <Loader2 className="w-4 h-4 animate-spin" /> : <Send className="w-4 h-4" />}
