@@ -28,14 +28,9 @@ const ThankYou = () => (
           Your inquiry is on its way to Erik. He personally reads every message and will get back to
           you soon, usually within a day or two. Check your inbox (and your spam folder, just in case).
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button asChild size="lg">
-            <Link to="/tours">Browse Tours</Link>
-          </Button>
-          <Button asChild size="lg" variant="outline">
-            <Link to="/blog">Read the Blog</Link>
-          </Button>
-        </div>
+        <Button asChild size="lg">
+          <Link to="/tours">Browse Tours</Link>
+        </Button>
       </div>
     </section>
     <Footer />
