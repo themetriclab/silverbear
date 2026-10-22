@@ -18,6 +18,7 @@ export function getRoutes(): string[] {
     "/",
     "/tours",
     "/contact",
+    "/thank-you",
     "/about",
     "/privacy-policy",
     "/blog",

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Mail, Send, Camera, Loader2 } from "lucide-react";
 import Navbar from "@/components/Navbar";
@@ -14,6 +14,7 @@ import { toast } from "sonner";
 
 const Contact = () => {
   const [searchParams] = useSearchParams();
+  const navigate = useNavigate();
   const [selectedTour, setSelectedTour] = useState("");
 
   useEffect(() => {
@@ -62,6 +63,7 @@ const Contact = () => {
     setSubmitted(true);
     setFormData({ name: "", email: "", phone: "", groupSize: "", message: "" });
     setSelectedTour("");
+    navigate("/thank-you");
   };
 
   return (
