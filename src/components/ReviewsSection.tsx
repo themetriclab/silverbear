@@ -97,6 +97,12 @@ Thanks to Silverbearphototours for an unforgettable experience.`,
     profile: "",
     text: `I can personally say that Erik is not only a gifted photographer but also an exceptional guide with a remarkable eye for spotting wildlife, often when others might overlook it. What truly sets Erik apart is his passion for what he does and his genuine commitment to the people he guides. He is organized, attentive, and always willing to go the extra mile to make sure his guests are comfortable, well looked after, and in the right place to capture the images they’ve been hoping for. Erik truly cares about helping others succeed, and his knowledge, patience, and dedication make him someone I would wholeheartedly recommend to anyone looking for an outstanding wildlife photography experience.`,
   },
+  {
+    author: "Nathan C.",
+    photo: "",
+    profile: "",
+    text: `Erik guided my wife, daughter and I in Churchill Manitoba to see polar bears and other wildlife. We had a wonderful time, saw and photographed many bears as well as foxes, arctic hares and ptarmigans. We were more than satisfied with our trip.`,
+  },
 ];
 
 const REVIEWS_URL = "https://maps.app.goo.gl/cMdxK4tGf6djV3VDA";
