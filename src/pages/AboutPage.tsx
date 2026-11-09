@@ -110,21 +110,18 @@ const AboutPage = () => {
               A Lifetime in the Field
             </h2>
             <p className="text-foreground/80 leading-relaxed mb-6">
-              Hi there. If you have come across my guided tours, then sounds like you are
-              looking for your next... great wildlife photography tour. My name is Erik
-              Bertelsen, a professional wildlife guide, photographer, and videographer,
-              specializing in unique and wildlife-rich environments. From the Sub Arctic
-              tundra of Churchill, Manitoba to the wetlands of southern Ontario and the
-              wild landscapes across Canada, I capture authentic wildlife moments through
-              striking photography and immersive film.
+              Hi, I'm Erik Bertelsen, a professional wildlife guide, photographer and videographer. If you're looking
+              for your next wildlife photography tour, you're in the right place.
+            </p>
+            <p className="text-foreground/80 leading-relaxed mb-6">
+              Through Silver Bear Photo Tours, I lead Algonquin wildlife photography tours and Churchill polar bear
+              photography tours. As a working polar bear guard in Churchill, safety is built into everything I do. My
+              tours are kept to small groups, with hands-on instruction and well-organized access to wildlife.
             </p>
             <p className="text-foreground/80 leading-relaxed mb-8">
-              With years of field experience, I lead guided wildlife photography tours —
-              including Algonquin Park wildlife photography tours and Churchill, Manitoba
-              polar bear photography tours — that offer safe, well-organized access to wild
-              animals in their natural habitats. Silver Bear Photo Tours is built around
-              small groups, hands-on instruction, and best-in-class guiding, helping clients
-              create powerful images while deepening their connection to the natural world.
+              In Churchill, I guide alongside Mike Bertelson and other trusted local guides. We follow all wildlife
+              regulations and keep a respectful distance, so the animals are never disturbed or stressed and you get
+              natural, unforced photos.
             </p>
             <div>
               <h3 className="text-primary font-semibold mb-3 tracking-wider uppercase text-sm">
