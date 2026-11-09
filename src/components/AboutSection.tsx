@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import erikImg from "@/assets/erik.jpg";
+import erikPhoto from "@/assets/erik-winter-tundra-workshop.jpg.asset.json";
 const AboutSection = () => {
   return (
     <section id="about" className="py-24 px-6 bg-background">
@@ -12,10 +12,10 @@ const AboutSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="relative">
-            <div className="aspect-[4/5] overflow-hidden rounded-lg">
+            <div className="aspect-[4/3] overflow-hidden rounded-lg">
               <img
-                src={erikImg}
-                alt="Erik Bertelsen - Wildlife Photographer"
+                src={erikPhoto.url}
+                alt="Erik Bertelsen guiding a winter tundra wildlife photography workshop"
                 className="w-full h-full object-cover"
                 loading="lazy" />
             </div>
@@ -35,7 +35,7 @@ const AboutSection = () => {
             <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-6">
               About Me
             </h2>
-            <p className="text-foreground/80 leading-relaxed mb-6">I am Erik Bertelsen, a professional wildlife guide, photographer, and videographer, specializing in unique and wildlife-rich environments. From the Sub Arctic tundra to the wetlands of southern Ontario and the wild landscapes across Canada, I capture authentic wildlife moments through striking photography and immersive film.
+            <p className="text-foreground/80 leading-relaxed mb-6">Hi there. If you have come across my guided tours, then sounds like you are looking for your next... great wildlife photography tour. My name is Erik Bertelsen, a professional wildlife guide, photographer, and videographer, specializing in unique and wildlife-rich environments. From the Sub Arctic tundra to the wetlands of southern Ontario and the wild landscapes across Canada, I capture authentic wildlife moments through striking photography and immersive film.
             </p>
             <p className="text-foreground/80 leading-relaxed mb-8">
               With years of field experience, I lead guided wildlife photography tours — including Algonquin wildlife
