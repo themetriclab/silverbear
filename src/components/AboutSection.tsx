@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import erikPhoto from "@/assets/erik-winter-tundra-workshop.jpg.asset.json";
+import erikPhoto from "@/assets/erik-winter-tundra-workshop-2.jpg.asset.json";
 const AboutSection = () => {
   return (
     <section id="about" className="py-24 px-6 bg-background">
@@ -15,7 +15,7 @@ const AboutSection = () => {
             <div className="aspect-[4/3] overflow-hidden rounded-lg">
               <img
                 src={erikPhoto.url}
-                alt="Erik Bertelsen guiding a winter tundra wildlife photography workshop"
+                alt="Photographers on tripods shooting on the winter tundra during a Silver Bear Photo Tours workshop"
                 className="w-full h-full object-cover"
                 loading="lazy" />
             </div>

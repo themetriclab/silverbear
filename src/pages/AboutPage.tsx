@@ -4,7 +4,7 @@ import { Award, Compass, Camera } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Seo from "@/components/Seo";
-import erikPhoto from "@/assets/erik-winter-tundra-workshop.jpg.asset.json";
+import erikPhoto from "@/assets/erik-winter-tundra-workshop-2.jpg.asset.json";
 
 const SITE_URL = "https://silverbearphototours.com";
 
@@ -92,7 +92,7 @@ const AboutPage = () => {
             <div className="aspect-[4/3] overflow-hidden rounded-lg">
               <img
                 src={erikPhoto.url}
-                alt="Erik Bertelsen guiding a winter tundra wildlife photography workshop at Silver Bear Photo Tours"
+                alt="Photographers on tripods shooting on the winter tundra during a Silver Bear Photo Tours workshop at Silver Bear Photo Tours"
                 className="w-full h-full object-cover"
                 loading="lazy"
               />
