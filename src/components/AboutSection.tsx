@@ -45,7 +45,7 @@ const AboutSection = () => {
               tours are kept to small groups, with hands-on instruction and well-organized access to wildlife.
             </p>
             <p className="text-foreground/80 leading-relaxed mb-8">
-              In Churchill, I guide alongside Mike Bertelson and other trusted local guides. We follow all wildlife
+              In Churchill, I guide alongside Mike Bertelsen and other trusted local guides. We follow all wildlife
               regulations and keep a respectful distance, so the animals are never disturbed or stressed and you get
               natural, unforced photos.
             </p>
