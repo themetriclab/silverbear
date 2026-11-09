@@ -92,7 +92,7 @@ const AboutPage = () => {
             <div className="aspect-[4/3] overflow-hidden rounded-lg">
               <img
                 src={erikPhoto.url}
-                alt="Photographers on tripods shooting on the winter tundra during a Silver Bear Photo Tours workshop at Silver Bear Photo Tours"
+                alt="Photographers on tripods shooting on the winter tundra during a Silver Bear Photo Tours workshop"
                 className="w-full h-full object-cover"
                 loading="lazy"
               />
