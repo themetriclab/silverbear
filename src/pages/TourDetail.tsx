@@ -339,7 +339,7 @@ const TourDetail = () => {
 
             {tour.bookingTerms && tour.bookingTerms.length > 0 && (
               <div className="mt-16">
-                <SectionHeader label="Booking" title="Booking Terms for 2026" />
+                <SectionHeader label="Booking" title="Booking Terms for 2027" />
                 <div className="grid md:grid-cols-2 gap-4 mt-10">
                   {tour.bookingTerms.map((term, i) => (
                     <SpotlightCard key={i} className="p-6 relative overflow-hidden">
